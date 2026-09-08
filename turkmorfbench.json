@@ -1,0 +1,4098 @@
+[
+  {
+    "kok": "mırdel",
+    "gorev": "iyelik_1pl",
+    "cevap": "mırdelimiz",
+    "tip": "wug",
+    "soru": "'mırdel' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "araba",
+    "gorev": "cogul",
+    "cevap": "arabalar",
+    "tip": "gercek",
+    "soru": "'araba' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "mırdel",
+    "gorev": "cogul",
+    "cevap": "mırdeller",
+    "tip": "wug",
+    "soru": "'mırdel' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "dratok",
+    "gorev": "iyelik_1sg",
+    "cevap": "dratoğum",
+    "tip": "wug",
+    "soru": "'dratok' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "deniz",
+    "gorev": "hal_yonelme",
+    "cevap": "denize",
+    "tip": "gercek",
+    "soru": "'deniz' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "köpek",
+    "gorev": "iyelik_3sg",
+    "cevap": "köpeği",
+    "tip": "gercek",
+    "soru": "'köpek' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "ateş",
+    "gorev": "iyelik_1sg",
+    "cevap": "ateşim",
+    "tip": "gercek",
+    "soru": "'ateş' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "zompar",
+    "gorev": "hal_yonelme",
+    "cevap": "zompara",
+    "tip": "wug",
+    "soru": "'zompar' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "elma",
+    "gorev": "iyelik_1pl",
+    "cevap": "elmamız",
+    "tip": "gercek",
+    "soru": "'elma' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "şupa",
+    "gorev": "hal_yonelme",
+    "cevap": "şupaya",
+    "tip": "wug",
+    "soru": "'şupa' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kalem",
+    "gorev": "hal_ayrilma",
+    "cevap": "kalemden",
+    "tip": "gercek",
+    "soru": "'kalem' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çocuk",
+    "gorev": "iyelik_1pl",
+    "cevap": "çocuğumuz",
+    "tip": "gercek",
+    "soru": "'çocuk' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "nyupra",
+    "gorev": "hal_yonelme",
+    "cevap": "nyupraya",
+    "tip": "wug",
+    "soru": "'nyupra' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ağaç",
+    "gorev": "cogul",
+    "cevap": "ağaçlar",
+    "tip": "gercek",
+    "soru": "'ağaç' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "çocuk",
+    "gorev": "iyelik_1sg",
+    "cevap": "çocuğum",
+    "tip": "gercek",
+    "soru": "'çocuk' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "ateş",
+    "gorev": "hal_bulunma",
+    "cevap": "ateşte",
+    "tip": "gercek",
+    "soru": "'ateş' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "kuş",
+    "gorev": "hal_bulunma",
+    "cevap": "kuşta",
+    "tip": "gercek",
+    "soru": "'kuş' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "pürsat",
+    "gorev": "iyelik_3sg",
+    "cevap": "pürsadı",
+    "tip": "wug",
+    "soru": "'pürsat' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "yol",
+    "gorev": "hal_ayrilma",
+    "cevap": "yoldan",
+    "tip": "gercek",
+    "soru": "'yol' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zelbik",
+    "gorev": "iyelik_3sg",
+    "cevap": "zelbiği",
+    "tip": "wug",
+    "soru": "'zelbik' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "çamdur",
+    "gorev": "hal_bulunma",
+    "cevap": "çamdurda",
+    "tip": "wug",
+    "soru": "'çamdur' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "gürtan",
+    "gorev": "iyelik_1pl",
+    "cevap": "gürtanımız",
+    "tip": "wug",
+    "soru": "'gürtan' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kuzu",
+    "gorev": "cogul",
+    "cevap": "kuzular",
+    "tip": "gercek",
+    "soru": "'kuzu' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kalem",
+    "gorev": "hal_yonelme",
+    "cevap": "kaleme",
+    "tip": "gercek",
+    "soru": "'kalem' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "flözek",
+    "gorev": "hal_ayrilma",
+    "cevap": "flözekten",
+    "tip": "wug",
+    "soru": "'flözek' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "masa",
+    "gorev": "hal_bulunma",
+    "cevap": "masada",
+    "tip": "gercek",
+    "soru": "'masa' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "mırdel",
+    "gorev": "hal_ayrilma",
+    "cevap": "mırdelden",
+    "tip": "wug",
+    "soru": "'mırdel' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "möşkül",
+    "gorev": "hal_belirtme",
+    "cevap": "möşkülü",
+    "tip": "wug",
+    "soru": "'möşkül' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "sıra",
+    "gorev": "iyelik_1pl",
+    "cevap": "sıramız",
+    "tip": "gercek",
+    "soru": "'sıra' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "fönük",
+    "gorev": "hal_ayrilma",
+    "cevap": "fönükten",
+    "tip": "wug",
+    "soru": "'fönük' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "orman",
+    "gorev": "hal_belirtme",
+    "cevap": "ormanı",
+    "tip": "gercek",
+    "soru": "'orman' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "masa",
+    "gorev": "hal_yonelme",
+    "cevap": "masaya",
+    "tip": "gercek",
+    "soru": "'masa' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "dağ",
+    "gorev": "cogul",
+    "cevap": "dağlar",
+    "tip": "gercek",
+    "soru": "'dağ' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kapı",
+    "gorev": "iyelik_1sg",
+    "cevap": "kapım",
+    "tip": "gercek",
+    "soru": "'kapı' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "şupa",
+    "gorev": "iyelik_3sg",
+    "cevap": "şupası",
+    "tip": "wug",
+    "soru": "'şupa' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "duvar",
+    "gorev": "iyelik_3sg",
+    "cevap": "duvarı",
+    "tip": "gercek",
+    "soru": "'duvar' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "çiçek",
+    "gorev": "iyelik_1pl",
+    "cevap": "çiçeğimiz",
+    "tip": "gercek",
+    "soru": "'çiçek' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "aslan",
+    "gorev": "hal_yonelme",
+    "cevap": "aslana",
+    "tip": "gercek",
+    "soru": "'aslan' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "mırdel",
+    "gorev": "iyelik_1sg",
+    "cevap": "mırdelim",
+    "tip": "wug",
+    "soru": "'mırdel' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "gadros",
+    "gorev": "cogul",
+    "cevap": "gadroslar",
+    "tip": "wug",
+    "soru": "'gadros' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kuzu",
+    "gorev": "iyelik_3sg",
+    "cevap": "kuzusu",
+    "tip": "gercek",
+    "soru": "'kuzu' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yontuç",
+    "gorev": "iyelik_1sg",
+    "cevap": "yontucum",
+    "tip": "wug",
+    "soru": "'yontuç' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "toprak",
+    "gorev": "hal_bulunma",
+    "cevap": "toprakta",
+    "tip": "gercek",
+    "soru": "'toprak' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "bardak",
+    "gorev": "iyelik_3sg",
+    "cevap": "bardağı",
+    "tip": "gercek",
+    "soru": "'bardak' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "yol",
+    "gorev": "cogul",
+    "cevap": "yollar",
+    "tip": "gercek",
+    "soru": "'yol' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "şimtül",
+    "gorev": "iyelik_1pl",
+    "cevap": "şimtülümüz",
+    "tip": "wug",
+    "soru": "'şimtül' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "balık",
+    "gorev": "hal_yonelme",
+    "cevap": "balığa",
+    "tip": "gercek",
+    "soru": "'balık' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "gürtan",
+    "gorev": "iyelik_3sg",
+    "cevap": "gürtanı",
+    "tip": "wug",
+    "soru": "'gürtan' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yontuç",
+    "gorev": "cogul",
+    "cevap": "yontuçlar",
+    "tip": "wug",
+    "soru": "'yontuç' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "orman",
+    "gorev": "iyelik_1pl",
+    "cevap": "ormanımız",
+    "tip": "gercek",
+    "soru": "'orman' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "krint",
+    "gorev": "hal_belirtme",
+    "cevap": "krinti",
+    "tip": "wug",
+    "soru": "'krint' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ekmek",
+    "gorev": "iyelik_1sg",
+    "cevap": "ekmeğim",
+    "tip": "gercek",
+    "soru": "'ekmek' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "dağ",
+    "gorev": "hal_bulunma",
+    "cevap": "dağda",
+    "tip": "gercek",
+    "soru": "'dağ' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "mırdel",
+    "gorev": "iyelik_3sg",
+    "cevap": "mırdeli",
+    "tip": "wug",
+    "soru": "'mırdel' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "çiçek",
+    "gorev": "hal_ayrilma",
+    "cevap": "çiçekten",
+    "tip": "gercek",
+    "soru": "'çiçek' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "kartal",
+    "gorev": "hal_yonelme",
+    "cevap": "kartala",
+    "tip": "gercek",
+    "soru": "'kartal' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kitap",
+    "gorev": "hal_ayrilma",
+    "cevap": "kitaptan",
+    "tip": "gercek",
+    "soru": "'kitap' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "sıra",
+    "gorev": "hal_yonelme",
+    "cevap": "sıraya",
+    "tip": "gercek",
+    "soru": "'sıra' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kum",
+    "gorev": "hal_yonelme",
+    "cevap": "kuma",
+    "tip": "gercek",
+    "soru": "'kum' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "bardak",
+    "gorev": "iyelik_1sg",
+    "cevap": "bardağım",
+    "tip": "gercek",
+    "soru": "'bardak' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "duvar",
+    "gorev": "cogul",
+    "cevap": "duvarlar",
+    "tip": "gercek",
+    "soru": "'duvar' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "deniz",
+    "gorev": "iyelik_3sg",
+    "cevap": "denizi",
+    "tip": "gercek",
+    "soru": "'deniz' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "ev",
+    "gorev": "iyelik_3sg",
+    "cevap": "evi",
+    "tip": "gercek",
+    "soru": "'ev' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "dağ",
+    "gorev": "hal_belirtme",
+    "cevap": "dağı",
+    "tip": "gercek",
+    "soru": "'dağ' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "okul",
+    "gorev": "hal_yonelme",
+    "cevap": "okula",
+    "tip": "gercek",
+    "soru": "'okul' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "taş",
+    "gorev": "cogul",
+    "cevap": "taşlar",
+    "tip": "gercek",
+    "soru": "'taş' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "iyelik_3sg",
+    "cevap": "yaprağı",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "çocuk",
+    "gorev": "hal_belirtme",
+    "cevap": "çocuğu",
+    "tip": "gercek",
+    "soru": "'çocuk' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "bardak",
+    "gorev": "hal_yonelme",
+    "cevap": "bardağa",
+    "tip": "gercek",
+    "soru": "'bardak' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "masa",
+    "gorev": "cogul",
+    "cevap": "masalar",
+    "tip": "gercek",
+    "soru": "'masa' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "pencere",
+    "gorev": "hal_ayrilma",
+    "cevap": "pencereden",
+    "tip": "gercek",
+    "soru": "'pencere' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "fönük",
+    "gorev": "iyelik_3sg",
+    "cevap": "fönüğü",
+    "tip": "wug",
+    "soru": "'fönük' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "pencere",
+    "gorev": "cogul",
+    "cevap": "pencereler",
+    "tip": "gercek",
+    "soru": "'pencere' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "güneş",
+    "gorev": "iyelik_1pl",
+    "cevap": "güneşimiz",
+    "tip": "gercek",
+    "soru": "'güneş' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "güneş",
+    "gorev": "hal_yonelme",
+    "cevap": "güneşe",
+    "tip": "gercek",
+    "soru": "'güneş' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "torbuk",
+    "gorev": "iyelik_3sg",
+    "cevap": "torbuğu",
+    "tip": "wug",
+    "soru": "'torbuk' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "gadros",
+    "gorev": "hal_yonelme",
+    "cevap": "gadrosa",
+    "tip": "wug",
+    "soru": "'gadros' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "torbuk",
+    "gorev": "cogul",
+    "cevap": "torbuklar",
+    "tip": "wug",
+    "soru": "'torbuk' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "gürtan",
+    "gorev": "hal_ayrilma",
+    "cevap": "gürtandan",
+    "tip": "wug",
+    "soru": "'gürtan' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "tırmaz",
+    "gorev": "hal_bulunma",
+    "cevap": "tırmazda",
+    "tip": "wug",
+    "soru": "'tırmaz' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "köpek",
+    "gorev": "cogul",
+    "cevap": "köpekler",
+    "tip": "gercek",
+    "soru": "'köpek' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kartal",
+    "gorev": "hal_belirtme",
+    "cevap": "kartalı",
+    "tip": "gercek",
+    "soru": "'kartal' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çiçek",
+    "gorev": "hal_yonelme",
+    "cevap": "çiçeğe",
+    "tip": "gercek",
+    "soru": "'çiçek' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "toprak",
+    "gorev": "iyelik_1pl",
+    "cevap": "toprağımız",
+    "tip": "gercek",
+    "soru": "'toprak' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "pislen",
+    "gorev": "iyelik_1pl",
+    "cevap": "pislenimiz",
+    "tip": "wug",
+    "soru": "'pislen' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "hal_belirtme",
+    "cevap": "yaprağı",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "nyupra",
+    "gorev": "iyelik_1sg",
+    "cevap": "nyupram",
+    "tip": "wug",
+    "soru": "'nyupra' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "gürtan",
+    "gorev": "hal_belirtme",
+    "cevap": "gürtanı",
+    "tip": "wug",
+    "soru": "'gürtan' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "gadros",
+    "gorev": "iyelik_1sg",
+    "cevap": "gadrosum",
+    "tip": "wug",
+    "soru": "'gadros' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "köpek",
+    "gorev": "hal_bulunma",
+    "cevap": "köpekte",
+    "tip": "gercek",
+    "soru": "'köpek' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "mırdel",
+    "gorev": "hal_bulunma",
+    "cevap": "mırdelde",
+    "tip": "wug",
+    "soru": "'mırdel' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zelbik",
+    "gorev": "cogul",
+    "cevap": "zelbikler",
+    "tip": "wug",
+    "soru": "'zelbik' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "yıldız",
+    "gorev": "iyelik_1pl",
+    "cevap": "yıldızımız",
+    "tip": "gercek",
+    "soru": "'yıldız' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "gadros",
+    "gorev": "iyelik_1pl",
+    "cevap": "gadrosumuz",
+    "tip": "wug",
+    "soru": "'gadros' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "torbuk",
+    "gorev": "hal_yonelme",
+    "cevap": "torbuğa",
+    "tip": "wug",
+    "soru": "'torbuk' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "duvar",
+    "gorev": "iyelik_1pl",
+    "cevap": "duvarımız",
+    "tip": "gercek",
+    "soru": "'duvar' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kitap",
+    "gorev": "cogul",
+    "cevap": "kitaplar",
+    "tip": "gercek",
+    "soru": "'kitap' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "defter",
+    "gorev": "iyelik_1pl",
+    "cevap": "defterimiz",
+    "tip": "gercek",
+    "soru": "'defter' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "deniz",
+    "gorev": "hal_bulunma",
+    "cevap": "denizde",
+    "tip": "gercek",
+    "soru": "'deniz' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çocuk",
+    "gorev": "hal_ayrilma",
+    "cevap": "çocuktan",
+    "tip": "gercek",
+    "soru": "'çocuk' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "gadros",
+    "gorev": "iyelik_3sg",
+    "cevap": "gadrosu",
+    "tip": "wug",
+    "soru": "'gadros' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "okul",
+    "gorev": "iyelik_3sg",
+    "cevap": "okulu",
+    "tip": "gercek",
+    "soru": "'okul' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "zompar",
+    "gorev": "hal_ayrilma",
+    "cevap": "zompardan",
+    "tip": "wug",
+    "soru": "'zompar' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "göz",
+    "gorev": "iyelik_1pl",
+    "cevap": "gözümüz",
+    "tip": "gercek",
+    "soru": "'göz' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "brelak",
+    "gorev": "hal_bulunma",
+    "cevap": "brelakta",
+    "tip": "wug",
+    "soru": "'brelak' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "dağ",
+    "gorev": "iyelik_1sg",
+    "cevap": "dağım",
+    "tip": "gercek",
+    "soru": "'dağ' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "toprak",
+    "gorev": "hal_belirtme",
+    "cevap": "toprağı",
+    "tip": "gercek",
+    "soru": "'toprak' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kum",
+    "gorev": "hal_bulunma",
+    "cevap": "kumda",
+    "tip": "gercek",
+    "soru": "'kum' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pencere",
+    "gorev": "hal_belirtme",
+    "cevap": "pencereyi",
+    "tip": "gercek",
+    "soru": "'pencere' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "taş",
+    "gorev": "iyelik_1sg",
+    "cevap": "taşım",
+    "tip": "gercek",
+    "soru": "'taş' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "iyelik_3sg",
+    "cevap": "yaprağı",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "ağaç",
+    "gorev": "hal_belirtme",
+    "cevap": "ağacı",
+    "tip": "gercek",
+    "soru": "'ağaç' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ağaç",
+    "gorev": "iyelik_1sg",
+    "cevap": "ağacım",
+    "tip": "gercek",
+    "soru": "'ağaç' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "pürsat",
+    "gorev": "iyelik_1pl",
+    "cevap": "pürsadımız",
+    "tip": "wug",
+    "soru": "'pürsat' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kum",
+    "gorev": "cogul",
+    "cevap": "kumlar",
+    "tip": "gercek",
+    "soru": "'kum' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "nyupra",
+    "gorev": "cogul",
+    "cevap": "nyupralar",
+    "tip": "wug",
+    "soru": "'nyupra' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "taş",
+    "gorev": "hal_bulunma",
+    "cevap": "taşta",
+    "tip": "gercek",
+    "soru": "'taş' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "balık",
+    "gorev": "hal_bulunma",
+    "cevap": "balıkta",
+    "tip": "gercek",
+    "soru": "'balık' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "kum",
+    "gorev": "iyelik_3sg",
+    "cevap": "kumu",
+    "tip": "gercek",
+    "soru": "'kum' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "gadros",
+    "gorev": "hal_ayrilma",
+    "cevap": "gadrostan",
+    "tip": "wug",
+    "soru": "'gadros' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "şimtül",
+    "gorev": "hal_bulunma",
+    "cevap": "şimtülde",
+    "tip": "wug",
+    "soru": "'şimtül' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kuş",
+    "gorev": "iyelik_1pl",
+    "cevap": "kuşumuz",
+    "tip": "gercek",
+    "soru": "'kuş' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kalem",
+    "gorev": "iyelik_1pl",
+    "cevap": "kalemimiz",
+    "tip": "gercek",
+    "soru": "'kalem' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "ev",
+    "gorev": "hal_belirtme",
+    "cevap": "evi",
+    "tip": "gercek",
+    "soru": "'ev' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "krint",
+    "gorev": "cogul",
+    "cevap": "krintler",
+    "tip": "wug",
+    "soru": "'krint' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "dağ",
+    "gorev": "iyelik_1pl",
+    "cevap": "dağımız",
+    "tip": "gercek",
+    "soru": "'dağ' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "elma",
+    "gorev": "cogul",
+    "cevap": "elmalar",
+    "tip": "gercek",
+    "soru": "'elma' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "dratok",
+    "gorev": "hal_belirtme",
+    "cevap": "dratoğu",
+    "tip": "wug",
+    "soru": "'dratok' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "möşkül",
+    "gorev": "hal_ayrilma",
+    "cevap": "möşkülden",
+    "tip": "wug",
+    "soru": "'möşkül' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kevlan",
+    "gorev": "iyelik_1pl",
+    "cevap": "kevlanımız",
+    "tip": "wug",
+    "soru": "'kevlan' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "toprak",
+    "gorev": "hal_ayrilma",
+    "cevap": "topraktan",
+    "tip": "gercek",
+    "soru": "'toprak' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "gürtan",
+    "gorev": "iyelik_1sg",
+    "cevap": "gürtanım",
+    "tip": "wug",
+    "soru": "'gürtan' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kedi",
+    "gorev": "cogul",
+    "cevap": "kediler",
+    "tip": "gercek",
+    "soru": "'kedi' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "pislen",
+    "gorev": "hal_yonelme",
+    "cevap": "pislene",
+    "tip": "wug",
+    "soru": "'pislen' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kitap",
+    "gorev": "hal_belirtme",
+    "cevap": "kitabı",
+    "tip": "gercek",
+    "soru": "'kitap' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çocuk",
+    "gorev": "hal_bulunma",
+    "cevap": "çocukta",
+    "tip": "gercek",
+    "soru": "'çocuk' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "elma",
+    "gorev": "hal_yonelme",
+    "cevap": "elmaya",
+    "tip": "gercek",
+    "soru": "'elma' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "duvar",
+    "gorev": "hal_yonelme",
+    "cevap": "duvara",
+    "tip": "gercek",
+    "soru": "'duvar' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "defter",
+    "gorev": "hal_belirtme",
+    "cevap": "defteri",
+    "tip": "gercek",
+    "soru": "'defter' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "okul",
+    "gorev": "cogul",
+    "cevap": "okullar",
+    "tip": "gercek",
+    "soru": "'okul' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "möşkül",
+    "gorev": "cogul",
+    "cevap": "möşküller",
+    "tip": "wug",
+    "soru": "'möşkül' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kartal",
+    "gorev": "hal_bulunma",
+    "cevap": "kartalda",
+    "tip": "gercek",
+    "soru": "'kartal' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zelbik",
+    "gorev": "hal_ayrilma",
+    "cevap": "zelbikten",
+    "tip": "wug",
+    "soru": "'zelbik' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "taş",
+    "gorev": "iyelik_1pl",
+    "cevap": "taşımız",
+    "tip": "gercek",
+    "soru": "'taş' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "ateş",
+    "gorev": "iyelik_1pl",
+    "cevap": "ateşimiz",
+    "tip": "gercek",
+    "soru": "'ateş' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yatak",
+    "gorev": "iyelik_1pl",
+    "cevap": "yatağımız",
+    "tip": "gercek",
+    "soru": "'yatak' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "ev",
+    "gorev": "hal_yonelme",
+    "cevap": "eve",
+    "tip": "gercek",
+    "soru": "'ev' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "tırmaz",
+    "gorev": "hal_yonelme",
+    "cevap": "tırmaza",
+    "tip": "wug",
+    "soru": "'tırmaz' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kalem",
+    "gorev": "iyelik_3sg",
+    "cevap": "kalemi",
+    "tip": "gercek",
+    "soru": "'kalem' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "cogul",
+    "cevap": "yapraklar",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "çiçek",
+    "gorev": "iyelik_1sg",
+    "cevap": "çiçeğim",
+    "tip": "gercek",
+    "soru": "'çiçek' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kuzu",
+    "gorev": "hal_bulunma",
+    "cevap": "kuzuda",
+    "tip": "gercek",
+    "soru": "'kuzu' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çiçek",
+    "gorev": "cogul",
+    "cevap": "çiçekler",
+    "tip": "gercek",
+    "soru": "'çiçek' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kartal",
+    "gorev": "iyelik_3sg",
+    "cevap": "kartalı",
+    "tip": "gercek",
+    "soru": "'kartal' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kuzu",
+    "gorev": "hal_yonelme",
+    "cevap": "kuzuya",
+    "tip": "gercek",
+    "soru": "'kuzu' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "orman",
+    "gorev": "hal_yonelme",
+    "cevap": "ormana",
+    "tip": "gercek",
+    "soru": "'orman' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "dratok",
+    "gorev": "hal_ayrilma",
+    "cevap": "dratoktan",
+    "tip": "wug",
+    "soru": "'dratok' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "yıldız",
+    "gorev": "hal_bulunma",
+    "cevap": "yıldızda",
+    "tip": "gercek",
+    "soru": "'yıldız' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "sokak",
+    "gorev": "cogul",
+    "cevap": "sokaklar",
+    "tip": "gercek",
+    "soru": "'sokak' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "nyupra",
+    "gorev": "iyelik_3sg",
+    "cevap": "nyuprası",
+    "tip": "wug",
+    "soru": "'nyupra' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "toprak",
+    "gorev": "iyelik_1sg",
+    "cevap": "toprağım",
+    "tip": "gercek",
+    "soru": "'toprak' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kuş",
+    "gorev": "cogul",
+    "cevap": "kuşlar",
+    "tip": "gercek",
+    "soru": "'kuş' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "deniz",
+    "gorev": "hal_ayrilma",
+    "cevap": "denizden",
+    "tip": "gercek",
+    "soru": "'deniz' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "duvar",
+    "gorev": "hal_ayrilma",
+    "cevap": "duvardan",
+    "tip": "gercek",
+    "soru": "'duvar' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "orman",
+    "gorev": "iyelik_1sg",
+    "cevap": "ormanım",
+    "tip": "gercek",
+    "soru": "'orman' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "deniz",
+    "gorev": "hal_belirtme",
+    "cevap": "denizi",
+    "tip": "gercek",
+    "soru": "'deniz' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "brelak",
+    "gorev": "hal_yonelme",
+    "cevap": "brelağa",
+    "tip": "wug",
+    "soru": "'brelak' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "orman",
+    "gorev": "hal_ayrilma",
+    "cevap": "ormandan",
+    "tip": "gercek",
+    "soru": "'orman' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kapı",
+    "gorev": "iyelik_1pl",
+    "cevap": "kapımız",
+    "tip": "gercek",
+    "soru": "'kapı' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "çamdur",
+    "gorev": "cogul",
+    "cevap": "çamdurlar",
+    "tip": "wug",
+    "soru": "'çamdur' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kapı",
+    "gorev": "hal_ayrilma",
+    "cevap": "kapıdan",
+    "tip": "gercek",
+    "soru": "'kapı' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "fönük",
+    "gorev": "cogul",
+    "cevap": "fönükler",
+    "tip": "wug",
+    "soru": "'fönük' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "göz",
+    "gorev": "hal_yonelme",
+    "cevap": "göze",
+    "tip": "gercek",
+    "soru": "'göz' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "köpek",
+    "gorev": "iyelik_1pl",
+    "cevap": "köpeğimiz",
+    "tip": "gercek",
+    "soru": "'köpek' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "göz",
+    "gorev": "hal_bulunma",
+    "cevap": "gözde",
+    "tip": "gercek",
+    "soru": "'göz' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "hal_bulunma",
+    "cevap": "yaprakta",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "kartal",
+    "gorev": "iyelik_1sg",
+    "cevap": "kartalım",
+    "tip": "gercek",
+    "soru": "'kartal' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "balık",
+    "gorev": "iyelik_3sg",
+    "cevap": "balığı",
+    "tip": "gercek",
+    "soru": "'balık' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "krint",
+    "gorev": "hal_ayrilma",
+    "cevap": "krintten",
+    "tip": "wug",
+    "soru": "'krint' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "torbuk",
+    "gorev": "hal_bulunma",
+    "cevap": "torbukta",
+    "tip": "wug",
+    "soru": "'torbuk' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "elma",
+    "gorev": "hal_ayrilma",
+    "cevap": "elmadan",
+    "tip": "gercek",
+    "soru": "'elma' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "hal_ayrilma",
+    "cevap": "yapraktan",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "aslan",
+    "gorev": "hal_ayrilma",
+    "cevap": "aslandan",
+    "tip": "gercek",
+    "soru": "'aslan' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "gürtan",
+    "gorev": "cogul",
+    "cevap": "gürtanlar",
+    "tip": "wug",
+    "soru": "'gürtan' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "sokak",
+    "gorev": "hal_yonelme",
+    "cevap": "sokağa",
+    "tip": "gercek",
+    "soru": "'sokak' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "flözek",
+    "gorev": "hal_bulunma",
+    "cevap": "flözekte",
+    "tip": "wug",
+    "soru": "'flözek' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "masa",
+    "gorev": "hal_ayrilma",
+    "cevap": "masadan",
+    "tip": "gercek",
+    "soru": "'masa' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "blan",
+    "gorev": "iyelik_1sg",
+    "cevap": "blanım",
+    "tip": "wug",
+    "soru": "'blan' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "taş",
+    "gorev": "hal_ayrilma",
+    "cevap": "taştan",
+    "tip": "gercek",
+    "soru": "'taş' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "hal_yonelme",
+    "cevap": "yaprağa",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "bardak",
+    "gorev": "hal_bulunma",
+    "cevap": "bardakta",
+    "tip": "gercek",
+    "soru": "'bardak' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "ekmek",
+    "gorev": "hal_yonelme",
+    "cevap": "ekmeğe",
+    "tip": "gercek",
+    "soru": "'ekmek' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çocuk",
+    "gorev": "cogul",
+    "cevap": "çocuklar",
+    "tip": "gercek",
+    "soru": "'çocuk' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "yol",
+    "gorev": "hal_yonelme",
+    "cevap": "yola",
+    "tip": "gercek",
+    "soru": "'yol' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kuzu",
+    "gorev": "hal_belirtme",
+    "cevap": "kuzuyu",
+    "tip": "gercek",
+    "soru": "'kuzu' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "taş",
+    "gorev": "iyelik_3sg",
+    "cevap": "taşı",
+    "tip": "gercek",
+    "soru": "'taş' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kedi",
+    "gorev": "hal_bulunma",
+    "cevap": "kedide",
+    "tip": "gercek",
+    "soru": "'kedi' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "krint",
+    "gorev": "iyelik_1pl",
+    "cevap": "krintimiz",
+    "tip": "wug",
+    "soru": "'krint' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "defter",
+    "gorev": "hal_yonelme",
+    "cevap": "deftere",
+    "tip": "gercek",
+    "soru": "'defter' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ev",
+    "gorev": "cogul",
+    "cevap": "evler",
+    "tip": "gercek",
+    "soru": "'ev' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "ev",
+    "gorev": "hal_ayrilma",
+    "cevap": "evden",
+    "tip": "gercek",
+    "soru": "'ev' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ekmek",
+    "gorev": "cogul",
+    "cevap": "ekmekler",
+    "tip": "gercek",
+    "soru": "'ekmek' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kum",
+    "gorev": "hal_belirtme",
+    "cevap": "kumu",
+    "tip": "gercek",
+    "soru": "'kum' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zompar",
+    "gorev": "cogul",
+    "cevap": "zomparlar",
+    "tip": "wug",
+    "soru": "'zompar' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "brelak",
+    "gorev": "hal_belirtme",
+    "cevap": "brelağı",
+    "tip": "wug",
+    "soru": "'brelak' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pürsat",
+    "gorev": "hal_belirtme",
+    "cevap": "pürsadı",
+    "tip": "wug",
+    "soru": "'pürsat' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "defter",
+    "gorev": "iyelik_1sg",
+    "cevap": "defterim",
+    "tip": "gercek",
+    "soru": "'defter' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kalem",
+    "gorev": "hal_bulunma",
+    "cevap": "kalemde",
+    "tip": "gercek",
+    "soru": "'kalem' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "araba",
+    "gorev": "iyelik_1sg",
+    "cevap": "arabam",
+    "tip": "gercek",
+    "soru": "'araba' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "toprak",
+    "gorev": "iyelik_3sg",
+    "cevap": "toprağı",
+    "tip": "gercek",
+    "soru": "'toprak' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "araba",
+    "gorev": "iyelik_3sg",
+    "cevap": "arabası",
+    "tip": "gercek",
+    "soru": "'araba' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "sokak",
+    "gorev": "hal_bulunma",
+    "cevap": "sokakta",
+    "tip": "gercek",
+    "soru": "'sokak' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "orman",
+    "gorev": "hal_bulunma",
+    "cevap": "ormanda",
+    "tip": "gercek",
+    "soru": "'orman' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çocuk",
+    "gorev": "hal_yonelme",
+    "cevap": "çocuğa",
+    "tip": "gercek",
+    "soru": "'çocuk' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pencere",
+    "gorev": "hal_bulunma",
+    "cevap": "pencerede",
+    "tip": "gercek",
+    "soru": "'pencere' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "şimtül",
+    "gorev": "cogul",
+    "cevap": "şimtüller",
+    "tip": "wug",
+    "soru": "'şimtül' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "zabrek",
+    "gorev": "iyelik_1pl",
+    "cevap": "zabreğimiz",
+    "tip": "wug",
+    "soru": "'zabrek' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kevlan",
+    "gorev": "iyelik_3sg",
+    "cevap": "kevlanı",
+    "tip": "wug",
+    "soru": "'kevlan' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "gürtan",
+    "gorev": "hal_bulunma",
+    "cevap": "gürtanda",
+    "tip": "wug",
+    "soru": "'gürtan' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "defter",
+    "gorev": "hal_bulunma",
+    "cevap": "defterde",
+    "tip": "gercek",
+    "soru": "'defter' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "bardak",
+    "gorev": "cogul",
+    "cevap": "bardaklar",
+    "tip": "gercek",
+    "soru": "'bardak' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kapı",
+    "gorev": "hal_bulunma",
+    "cevap": "kapıda",
+    "tip": "gercek",
+    "soru": "'kapı' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "blan",
+    "gorev": "iyelik_1pl",
+    "cevap": "blanımız",
+    "tip": "wug",
+    "soru": "'blan' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "çiçek",
+    "gorev": "hal_bulunma",
+    "cevap": "çiçekte",
+    "tip": "gercek",
+    "soru": "'çiçek' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "ateş",
+    "gorev": "cogul",
+    "cevap": "ateşler",
+    "tip": "gercek",
+    "soru": "'ateş' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "tırmaz",
+    "gorev": "iyelik_1sg",
+    "cevap": "tırmazım",
+    "tip": "wug",
+    "soru": "'tırmaz' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "ekmek",
+    "gorev": "hal_ayrilma",
+    "cevap": "ekmekten",
+    "tip": "gercek",
+    "soru": "'ekmek' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "kevlan",
+    "gorev": "hal_yonelme",
+    "cevap": "kevlana",
+    "tip": "wug",
+    "soru": "'kevlan' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "nyupra",
+    "gorev": "iyelik_1pl",
+    "cevap": "nyupramız",
+    "tip": "wug",
+    "soru": "'nyupra' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "ağaç",
+    "gorev": "iyelik_3sg",
+    "cevap": "ağacı",
+    "tip": "gercek",
+    "soru": "'ağaç' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kartal",
+    "gorev": "iyelik_1pl",
+    "cevap": "kartalımız",
+    "tip": "gercek",
+    "soru": "'kartal' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "glodek",
+    "gorev": "iyelik_1sg",
+    "cevap": "glodeğim",
+    "tip": "wug",
+    "soru": "'glodek' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kuş",
+    "gorev": "iyelik_3sg",
+    "cevap": "kuşu",
+    "tip": "gercek",
+    "soru": "'kuş' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "sokak",
+    "gorev": "hal_belirtme",
+    "cevap": "sokağı",
+    "tip": "gercek",
+    "soru": "'sokak' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zabrek",
+    "gorev": "hal_belirtme",
+    "cevap": "zabreği",
+    "tip": "wug",
+    "soru": "'zabrek' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kuş",
+    "gorev": "iyelik_1sg",
+    "cevap": "kuşum",
+    "tip": "gercek",
+    "soru": "'kuş' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "şupa",
+    "gorev": "hal_belirtme",
+    "cevap": "şupayı",
+    "tip": "wug",
+    "soru": "'şupa' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "dratok",
+    "gorev": "iyelik_1pl",
+    "cevap": "dratoğumuz",
+    "tip": "wug",
+    "soru": "'dratok' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "şupa",
+    "gorev": "hal_ayrilma",
+    "cevap": "şupadan",
+    "tip": "wug",
+    "soru": "'şupa' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ağaç",
+    "gorev": "hal_ayrilma",
+    "cevap": "ağaçtan",
+    "tip": "gercek",
+    "soru": "'ağaç' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "aslan",
+    "gorev": "cogul",
+    "cevap": "aslanlar",
+    "tip": "gercek",
+    "soru": "'aslan' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "ev",
+    "gorev": "iyelik_1pl",
+    "cevap": "evimiz",
+    "tip": "gercek",
+    "soru": "'ev' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yatak",
+    "gorev": "iyelik_3sg",
+    "cevap": "yatağı",
+    "tip": "gercek",
+    "soru": "'yatak' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "fönük",
+    "gorev": "hal_bulunma",
+    "cevap": "fönükte",
+    "tip": "wug",
+    "soru": "'fönük' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "zabrek",
+    "gorev": "hal_yonelme",
+    "cevap": "zabreğe",
+    "tip": "wug",
+    "soru": "'zabrek' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pislen",
+    "gorev": "cogul",
+    "cevap": "pislenler",
+    "tip": "wug",
+    "soru": "'pislen' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "zelbik",
+    "gorev": "hal_bulunma",
+    "cevap": "zelbikte",
+    "tip": "wug",
+    "soru": "'zelbik' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "şimtül",
+    "gorev": "hal_ayrilma",
+    "cevap": "şimtülden",
+    "tip": "wug",
+    "soru": "'şimtül' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "güneş",
+    "gorev": "iyelik_3sg",
+    "cevap": "güneşi",
+    "tip": "gercek",
+    "soru": "'güneş' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "elma",
+    "gorev": "iyelik_3sg",
+    "cevap": "elması",
+    "tip": "gercek",
+    "soru": "'elma' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "zompar",
+    "gorev": "hal_bulunma",
+    "cevap": "zomparda",
+    "tip": "wug",
+    "soru": "'zompar' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "sıra",
+    "gorev": "cogul",
+    "cevap": "sıralar",
+    "tip": "gercek",
+    "soru": "'sıra' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "brelak",
+    "gorev": "iyelik_1sg",
+    "cevap": "brelağım",
+    "tip": "wug",
+    "soru": "'brelak' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "balık",
+    "gorev": "cogul",
+    "cevap": "balıklar",
+    "tip": "gercek",
+    "soru": "'balık' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "yıldız",
+    "gorev": "cogul",
+    "cevap": "yıldızlar",
+    "tip": "gercek",
+    "soru": "'yıldız' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "blan",
+    "gorev": "hal_ayrilma",
+    "cevap": "blandan",
+    "tip": "wug",
+    "soru": "'blan' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "güneş",
+    "gorev": "hal_ayrilma",
+    "cevap": "güneşten",
+    "tip": "gercek",
+    "soru": "'güneş' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "pislen",
+    "gorev": "iyelik_1sg",
+    "cevap": "pislenim",
+    "tip": "wug",
+    "soru": "'pislen' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "durak",
+    "gorev": "hal_ayrilma",
+    "cevap": "duraktan",
+    "tip": "gercek",
+    "soru": "'durak' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "tırmaz",
+    "gorev": "iyelik_1pl",
+    "cevap": "tırmazımız",
+    "tip": "wug",
+    "soru": "'tırmaz' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "pencere",
+    "gorev": "iyelik_3sg",
+    "cevap": "penceresi",
+    "tip": "gercek",
+    "soru": "'pencere' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "durak",
+    "gorev": "iyelik_1sg",
+    "cevap": "durağım",
+    "tip": "gercek",
+    "soru": "'durak' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "balık",
+    "gorev": "iyelik_1pl",
+    "cevap": "balığımız",
+    "tip": "gercek",
+    "soru": "'balık' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "blan",
+    "gorev": "cogul",
+    "cevap": "blanlar",
+    "tip": "wug",
+    "soru": "'blan' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "elma",
+    "gorev": "iyelik_1sg",
+    "cevap": "elmam",
+    "tip": "gercek",
+    "soru": "'elma' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "göz",
+    "gorev": "iyelik_3sg",
+    "cevap": "gözü",
+    "tip": "gercek",
+    "soru": "'göz' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kevlan",
+    "gorev": "cogul",
+    "cevap": "kevlanlar",
+    "tip": "wug",
+    "soru": "'kevlan' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kitap",
+    "gorev": "iyelik_3sg",
+    "cevap": "kitabı",
+    "tip": "gercek",
+    "soru": "'kitap' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "deniz",
+    "gorev": "iyelik_1sg",
+    "cevap": "denizim",
+    "tip": "gercek",
+    "soru": "'deniz' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "aslan",
+    "gorev": "hal_bulunma",
+    "cevap": "aslanda",
+    "tip": "gercek",
+    "soru": "'aslan' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "okul",
+    "gorev": "iyelik_1pl",
+    "cevap": "okulumuz",
+    "tip": "gercek",
+    "soru": "'okul' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "tırmaz",
+    "gorev": "hal_ayrilma",
+    "cevap": "tırmazdan",
+    "tip": "wug",
+    "soru": "'tırmaz' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yontuç",
+    "gorev": "hal_yonelme",
+    "cevap": "yontuca",
+    "tip": "wug",
+    "soru": "'yontuç' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kum",
+    "gorev": "hal_ayrilma",
+    "cevap": "kumdan",
+    "tip": "gercek",
+    "soru": "'kum' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kitap",
+    "gorev": "hal_bulunma",
+    "cevap": "kitapta",
+    "tip": "gercek",
+    "soru": "'kitap' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "şimtül",
+    "gorev": "hal_belirtme",
+    "cevap": "şimtülü",
+    "tip": "wug",
+    "soru": "'şimtül' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pislen",
+    "gorev": "hal_ayrilma",
+    "cevap": "pislenden",
+    "tip": "wug",
+    "soru": "'pislen' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "okul",
+    "gorev": "hal_bulunma",
+    "cevap": "okulda",
+    "tip": "gercek",
+    "soru": "'okul' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kuş",
+    "gorev": "hal_belirtme",
+    "cevap": "kuşu",
+    "tip": "gercek",
+    "soru": "'kuş' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "durak",
+    "gorev": "iyelik_3sg",
+    "cevap": "durağı",
+    "tip": "gercek",
+    "soru": "'durak' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "defter",
+    "gorev": "cogul",
+    "cevap": "defterler",
+    "tip": "gercek",
+    "soru": "'defter' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "köpek",
+    "gorev": "iyelik_1sg",
+    "cevap": "köpeğim",
+    "tip": "gercek",
+    "soru": "'köpek' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "sıra",
+    "gorev": "hal_bulunma",
+    "cevap": "sırada",
+    "tip": "gercek",
+    "soru": "'sıra' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kapı",
+    "gorev": "hal_belirtme",
+    "cevap": "kapıyı",
+    "tip": "gercek",
+    "soru": "'kapı' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "tırmaz",
+    "gorev": "hal_belirtme",
+    "cevap": "tırmazı",
+    "tip": "wug",
+    "soru": "'tırmaz' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yol",
+    "gorev": "iyelik_3sg",
+    "cevap": "yolu",
+    "tip": "gercek",
+    "soru": "'yol' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "ateş",
+    "gorev": "iyelik_3sg",
+    "cevap": "ateşi",
+    "tip": "gercek",
+    "soru": "'ateş' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "duvar",
+    "gorev": "hal_belirtme",
+    "cevap": "duvarı",
+    "tip": "gercek",
+    "soru": "'duvar' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çiçek",
+    "gorev": "iyelik_3sg",
+    "cevap": "çiçeği",
+    "tip": "gercek",
+    "soru": "'çiçek' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kuzu",
+    "gorev": "iyelik_1pl",
+    "cevap": "kuzumuz",
+    "tip": "gercek",
+    "soru": "'kuzu' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "brelak",
+    "gorev": "hal_ayrilma",
+    "cevap": "brelaktan",
+    "tip": "wug",
+    "soru": "'brelak' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "yıldız",
+    "gorev": "iyelik_1sg",
+    "cevap": "yıldızım",
+    "tip": "gercek",
+    "soru": "'yıldız' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "pislen",
+    "gorev": "iyelik_3sg",
+    "cevap": "pisleni",
+    "tip": "wug",
+    "soru": "'pislen' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "araba",
+    "gorev": "iyelik_1pl",
+    "cevap": "arabamız",
+    "tip": "gercek",
+    "soru": "'araba' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "dağ",
+    "gorev": "hal_ayrilma",
+    "cevap": "dağdan",
+    "tip": "gercek",
+    "soru": "'dağ' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yıldız",
+    "gorev": "hal_ayrilma",
+    "cevap": "yıldızdan",
+    "tip": "gercek",
+    "soru": "'yıldız' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "nyupra",
+    "gorev": "hal_bulunma",
+    "cevap": "nyuprada",
+    "tip": "wug",
+    "soru": "'nyupra' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kitap",
+    "gorev": "iyelik_1pl",
+    "cevap": "kitabımız",
+    "tip": "gercek",
+    "soru": "'kitap' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "taş",
+    "gorev": "hal_belirtme",
+    "cevap": "taşı",
+    "tip": "gercek",
+    "soru": "'taş' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "sokak",
+    "gorev": "hal_ayrilma",
+    "cevap": "sokaktan",
+    "tip": "gercek",
+    "soru": "'sokak' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "defter",
+    "gorev": "hal_ayrilma",
+    "cevap": "defterden",
+    "tip": "gercek",
+    "soru": "'defter' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ev",
+    "gorev": "iyelik_1sg",
+    "cevap": "evim",
+    "tip": "gercek",
+    "soru": "'ev' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "torbuk",
+    "gorev": "iyelik_1sg",
+    "cevap": "torbuğum",
+    "tip": "wug",
+    "soru": "'torbuk' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "deniz",
+    "gorev": "iyelik_1pl",
+    "cevap": "denizimiz",
+    "tip": "gercek",
+    "soru": "'deniz' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yıldız",
+    "gorev": "hal_yonelme",
+    "cevap": "yıldıza",
+    "tip": "gercek",
+    "soru": "'yıldız' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "duvar",
+    "gorev": "iyelik_1sg",
+    "cevap": "duvarım",
+    "tip": "gercek",
+    "soru": "'duvar' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "taş",
+    "gorev": "hal_yonelme",
+    "cevap": "taşa",
+    "tip": "gercek",
+    "soru": "'taş' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "okul",
+    "gorev": "iyelik_1sg",
+    "cevap": "okulum",
+    "tip": "gercek",
+    "soru": "'okul' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kevlan",
+    "gorev": "iyelik_1sg",
+    "cevap": "kevlanım",
+    "tip": "wug",
+    "soru": "'kevlan' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "fönük",
+    "gorev": "iyelik_1pl",
+    "cevap": "fönüğümüz",
+    "tip": "wug",
+    "soru": "'fönük' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "sokak",
+    "gorev": "iyelik_1sg",
+    "cevap": "sokağım",
+    "tip": "gercek",
+    "soru": "'sokak' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "glodek",
+    "gorev": "hal_belirtme",
+    "cevap": "glodeği",
+    "tip": "wug",
+    "soru": "'glodek' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ateş",
+    "gorev": "hal_belirtme",
+    "cevap": "ateşi",
+    "tip": "gercek",
+    "soru": "'ateş' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pencere",
+    "gorev": "iyelik_1pl",
+    "cevap": "penceremiz",
+    "tip": "gercek",
+    "soru": "'pencere' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "sıra",
+    "gorev": "hal_ayrilma",
+    "cevap": "sıradan",
+    "tip": "gercek",
+    "soru": "'sıra' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çamdur",
+    "gorev": "hal_belirtme",
+    "cevap": "çamduru",
+    "tip": "wug",
+    "soru": "'çamdur' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "glodek",
+    "gorev": "hal_ayrilma",
+    "cevap": "glodekten",
+    "tip": "wug",
+    "soru": "'glodek' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "köpek",
+    "gorev": "hal_ayrilma",
+    "cevap": "köpekten",
+    "tip": "gercek",
+    "soru": "'köpek' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "dratok",
+    "gorev": "hal_yonelme",
+    "cevap": "dratoğa",
+    "tip": "wug",
+    "soru": "'dratok' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kedi",
+    "gorev": "hal_ayrilma",
+    "cevap": "kediden",
+    "tip": "gercek",
+    "soru": "'kedi' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yontuç",
+    "gorev": "hal_bulunma",
+    "cevap": "yontuçta",
+    "tip": "wug",
+    "soru": "'yontuç' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "zompar",
+    "gorev": "hal_belirtme",
+    "cevap": "zomparı",
+    "tip": "wug",
+    "soru": "'zompar' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "flözek",
+    "gorev": "hal_yonelme",
+    "cevap": "flözeğe",
+    "tip": "wug",
+    "soru": "'flözek' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "göz",
+    "gorev": "hal_ayrilma",
+    "cevap": "gözden",
+    "tip": "gercek",
+    "soru": "'göz' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "araba",
+    "gorev": "hal_belirtme",
+    "cevap": "arabayı",
+    "tip": "gercek",
+    "soru": "'araba' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kalem",
+    "gorev": "hal_belirtme",
+    "cevap": "kalemi",
+    "tip": "gercek",
+    "soru": "'kalem' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "blan",
+    "gorev": "iyelik_3sg",
+    "cevap": "blanı",
+    "tip": "wug",
+    "soru": "'blan' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yatak",
+    "gorev": "hal_bulunma",
+    "cevap": "yatakta",
+    "tip": "gercek",
+    "soru": "'yatak' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "kartal",
+    "gorev": "cogul",
+    "cevap": "kartallar",
+    "tip": "gercek",
+    "soru": "'kartal' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "şupa",
+    "gorev": "iyelik_1sg",
+    "cevap": "şupam",
+    "tip": "wug",
+    "soru": "'şupa' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "toprak",
+    "gorev": "hal_yonelme",
+    "cevap": "toprağa",
+    "tip": "gercek",
+    "soru": "'toprak' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "krint",
+    "gorev": "hal_yonelme",
+    "cevap": "krinte",
+    "tip": "wug",
+    "soru": "'krint' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ekmek",
+    "gorev": "iyelik_1pl",
+    "cevap": "ekmeğimiz",
+    "tip": "gercek",
+    "soru": "'ekmek' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "yatak",
+    "gorev": "hal_ayrilma",
+    "cevap": "yataktan",
+    "tip": "gercek",
+    "soru": "'yatak' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "güneş",
+    "gorev": "iyelik_1sg",
+    "cevap": "güneşim",
+    "tip": "gercek",
+    "soru": "'güneş' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "zabrek",
+    "gorev": "iyelik_1sg",
+    "cevap": "zabreğim",
+    "tip": "wug",
+    "soru": "'zabrek' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "pencere",
+    "gorev": "iyelik_1sg",
+    "cevap": "pencerem",
+    "tip": "gercek",
+    "soru": "'pencere' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "balık",
+    "gorev": "iyelik_1sg",
+    "cevap": "balığım",
+    "tip": "gercek",
+    "soru": "'balık' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "glodek",
+    "gorev": "iyelik_3sg",
+    "cevap": "glodeği",
+    "tip": "wug",
+    "soru": "'glodek' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "glodek",
+    "gorev": "cogul",
+    "cevap": "glodekler",
+    "tip": "wug",
+    "soru": "'glodek' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kedi",
+    "gorev": "iyelik_1pl",
+    "cevap": "kedimiz",
+    "tip": "gercek",
+    "soru": "'kedi' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "çamdur",
+    "gorev": "iyelik_1sg",
+    "cevap": "çamdurum",
+    "tip": "wug",
+    "soru": "'çamdur' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "möşkül",
+    "gorev": "iyelik_1sg",
+    "cevap": "möşkülüm",
+    "tip": "wug",
+    "soru": "'möşkül' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kartal",
+    "gorev": "hal_ayrilma",
+    "cevap": "kartaldan",
+    "tip": "gercek",
+    "soru": "'kartal' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "dağ",
+    "gorev": "hal_yonelme",
+    "cevap": "dağa",
+    "tip": "gercek",
+    "soru": "'dağ' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zelbik",
+    "gorev": "hal_belirtme",
+    "cevap": "zelbiği",
+    "tip": "wug",
+    "soru": "'zelbik' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çamdur",
+    "gorev": "iyelik_1pl",
+    "cevap": "çamdurumuz",
+    "tip": "wug",
+    "soru": "'çamdur' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "pürsat",
+    "gorev": "hal_yonelme",
+    "cevap": "pürsada",
+    "tip": "wug",
+    "soru": "'pürsat' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "durak",
+    "gorev": "iyelik_1pl",
+    "cevap": "durağımız",
+    "tip": "gercek",
+    "soru": "'durak' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "krint",
+    "gorev": "iyelik_1sg",
+    "cevap": "krintim",
+    "tip": "wug",
+    "soru": "'krint' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "zompar",
+    "gorev": "iyelik_3sg",
+    "cevap": "zomparı",
+    "tip": "wug",
+    "soru": "'zompar' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "gürtan",
+    "gorev": "hal_yonelme",
+    "cevap": "gürtana",
+    "tip": "wug",
+    "soru": "'gürtan' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zelbik",
+    "gorev": "iyelik_1pl",
+    "cevap": "zelbiğimiz",
+    "tip": "wug",
+    "soru": "'zelbik' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kapı",
+    "gorev": "iyelik_3sg",
+    "cevap": "kapısı",
+    "tip": "gercek",
+    "soru": "'kapı' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "masa",
+    "gorev": "iyelik_1pl",
+    "cevap": "masamız",
+    "tip": "gercek",
+    "soru": "'masa' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yıldız",
+    "gorev": "iyelik_3sg",
+    "cevap": "yıldızı",
+    "tip": "gercek",
+    "soru": "'yıldız' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "sıra",
+    "gorev": "iyelik_1sg",
+    "cevap": "sıram",
+    "tip": "gercek",
+    "soru": "'sıra' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "aslan",
+    "gorev": "hal_belirtme",
+    "cevap": "aslanı",
+    "tip": "gercek",
+    "soru": "'aslan' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "blan",
+    "gorev": "hal_belirtme",
+    "cevap": "blanı",
+    "tip": "wug",
+    "soru": "'blan' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yol",
+    "gorev": "hal_belirtme",
+    "cevap": "yolu",
+    "tip": "gercek",
+    "soru": "'yol' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "okul",
+    "gorev": "hal_ayrilma",
+    "cevap": "okuldan",
+    "tip": "gercek",
+    "soru": "'okul' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kum",
+    "gorev": "iyelik_1pl",
+    "cevap": "kumumuz",
+    "tip": "gercek",
+    "soru": "'kum' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kedi",
+    "gorev": "hal_belirtme",
+    "cevap": "kediyi",
+    "tip": "gercek",
+    "soru": "'kedi' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "araba",
+    "gorev": "hal_yonelme",
+    "cevap": "arabaya",
+    "tip": "gercek",
+    "soru": "'araba' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "durak",
+    "gorev": "hal_bulunma",
+    "cevap": "durakta",
+    "tip": "gercek",
+    "soru": "'durak' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "çamdur",
+    "gorev": "hal_ayrilma",
+    "cevap": "çamdurdan",
+    "tip": "wug",
+    "soru": "'çamdur' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kedi",
+    "gorev": "iyelik_3sg",
+    "cevap": "kedisi",
+    "tip": "gercek",
+    "soru": "'kedi' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "okul",
+    "gorev": "hal_belirtme",
+    "cevap": "okulu",
+    "tip": "gercek",
+    "soru": "'okul' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "iyelik_1pl",
+    "cevap": "yaprağımız",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "yontuç",
+    "gorev": "hal_ayrilma",
+    "cevap": "yontuçtan",
+    "tip": "wug",
+    "soru": "'yontuç' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "iyelik_1sg",
+    "cevap": "yaprağım",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "köpek",
+    "gorev": "hal_belirtme",
+    "cevap": "köpeği",
+    "tip": "gercek",
+    "soru": "'köpek' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kuzu",
+    "gorev": "iyelik_1sg",
+    "cevap": "kuzum",
+    "tip": "gercek",
+    "soru": "'kuzu' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "ekmek",
+    "gorev": "iyelik_3sg",
+    "cevap": "ekmeği",
+    "tip": "gercek",
+    "soru": "'ekmek' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "deniz",
+    "gorev": "cogul",
+    "cevap": "denizler",
+    "tip": "gercek",
+    "soru": "'deniz' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kalem",
+    "gorev": "iyelik_1sg",
+    "cevap": "kalemim",
+    "tip": "gercek",
+    "soru": "'kalem' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kevlan",
+    "gorev": "hal_ayrilma",
+    "cevap": "kevlandan",
+    "tip": "wug",
+    "soru": "'kevlan' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yol",
+    "gorev": "hal_bulunma",
+    "cevap": "yolda",
+    "tip": "gercek",
+    "soru": "'yol' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "dağ",
+    "gorev": "iyelik_3sg",
+    "cevap": "dağı",
+    "tip": "gercek",
+    "soru": "'dağ' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "tırmaz",
+    "gorev": "iyelik_3sg",
+    "cevap": "tırmazı",
+    "tip": "wug",
+    "soru": "'tırmaz' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "dratok",
+    "gorev": "iyelik_3sg",
+    "cevap": "dratoğu",
+    "tip": "wug",
+    "soru": "'dratok' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "hal_bulunma",
+    "cevap": "yaprakta",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "iyelik_1pl",
+    "cevap": "yaprağımız",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "flözek",
+    "gorev": "hal_belirtme",
+    "cevap": "flözeği",
+    "tip": "wug",
+    "soru": "'flözek' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "brelak",
+    "gorev": "iyelik_1pl",
+    "cevap": "brelağımız",
+    "tip": "wug",
+    "soru": "'brelak' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "hal_yonelme",
+    "cevap": "yaprağa",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pürsat",
+    "gorev": "cogul",
+    "cevap": "pürsatlar",
+    "tip": "wug",
+    "soru": "'pürsat' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "torbuk",
+    "gorev": "hal_belirtme",
+    "cevap": "torbuğu",
+    "tip": "wug",
+    "soru": "'torbuk' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "glodek",
+    "gorev": "hal_yonelme",
+    "cevap": "glodeğe",
+    "tip": "wug",
+    "soru": "'glodek' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "şimtül",
+    "gorev": "iyelik_1sg",
+    "cevap": "şimtülüm",
+    "tip": "wug",
+    "soru": "'şimtül' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "zelbik",
+    "gorev": "iyelik_1sg",
+    "cevap": "zelbiğim",
+    "tip": "wug",
+    "soru": "'zelbik' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "köpek",
+    "gorev": "hal_yonelme",
+    "cevap": "köpeğe",
+    "tip": "gercek",
+    "soru": "'köpek' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kitap",
+    "gorev": "iyelik_1sg",
+    "cevap": "kitabım",
+    "tip": "gercek",
+    "soru": "'kitap' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "ağaç",
+    "gorev": "iyelik_1pl",
+    "cevap": "ağacımız",
+    "tip": "gercek",
+    "soru": "'ağaç' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "göz",
+    "gorev": "hal_belirtme",
+    "cevap": "gözü",
+    "tip": "gercek",
+    "soru": "'göz' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "aslan",
+    "gorev": "iyelik_1sg",
+    "cevap": "aslanım",
+    "tip": "gercek",
+    "soru": "'aslan' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "sokak",
+    "gorev": "iyelik_3sg",
+    "cevap": "sokağı",
+    "tip": "gercek",
+    "soru": "'sokak' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "çamdur",
+    "gorev": "iyelik_3sg",
+    "cevap": "çamduru",
+    "tip": "wug",
+    "soru": "'çamdur' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "tırmaz",
+    "gorev": "cogul",
+    "cevap": "tırmazlar",
+    "tip": "wug",
+    "soru": "'tırmaz' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kitap",
+    "gorev": "hal_yonelme",
+    "cevap": "kitaba",
+    "tip": "gercek",
+    "soru": "'kitap' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pürsat",
+    "gorev": "hal_bulunma",
+    "cevap": "pürsatta",
+    "tip": "wug",
+    "soru": "'pürsat' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "yol",
+    "gorev": "iyelik_1sg",
+    "cevap": "yolum",
+    "tip": "gercek",
+    "soru": "'yol' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "möşkül",
+    "gorev": "iyelik_1pl",
+    "cevap": "möşkülümüz",
+    "tip": "wug",
+    "soru": "'möşkül' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "şimtül",
+    "gorev": "hal_yonelme",
+    "cevap": "şimtüle",
+    "tip": "wug",
+    "soru": "'şimtül' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "elma",
+    "gorev": "hal_bulunma",
+    "cevap": "elmada",
+    "tip": "gercek",
+    "soru": "'elma' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "brelak",
+    "gorev": "cogul",
+    "cevap": "brelaklar",
+    "tip": "wug",
+    "soru": "'brelak' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "dratok",
+    "gorev": "cogul",
+    "cevap": "dratoklar",
+    "tip": "wug",
+    "soru": "'dratok' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "ağaç",
+    "gorev": "hal_bulunma",
+    "cevap": "ağaçta",
+    "tip": "gercek",
+    "soru": "'ağaç' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "elma",
+    "gorev": "hal_belirtme",
+    "cevap": "elmayı",
+    "tip": "gercek",
+    "soru": "'elma' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yatak",
+    "gorev": "iyelik_1sg",
+    "cevap": "yatağım",
+    "tip": "gercek",
+    "soru": "'yatak' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kapı",
+    "gorev": "hal_yonelme",
+    "cevap": "kapıya",
+    "tip": "gercek",
+    "soru": "'kapı' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "möşkül",
+    "gorev": "iyelik_3sg",
+    "cevap": "möşkülü",
+    "tip": "wug",
+    "soru": "'möşkül' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "krint",
+    "gorev": "iyelik_3sg",
+    "cevap": "krinti",
+    "tip": "wug",
+    "soru": "'krint' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "glodek",
+    "gorev": "iyelik_1pl",
+    "cevap": "glodeğimiz",
+    "tip": "wug",
+    "soru": "'glodek' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "hal_belirtme",
+    "cevap": "yaprağı",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "mırdel",
+    "gorev": "hal_yonelme",
+    "cevap": "mırdele",
+    "tip": "wug",
+    "soru": "'mırdel' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "araba",
+    "gorev": "hal_ayrilma",
+    "cevap": "arabadan",
+    "tip": "gercek",
+    "soru": "'araba' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "iyelik_1sg",
+    "cevap": "yaprağım",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "pencere",
+    "gorev": "hal_yonelme",
+    "cevap": "pencereye",
+    "tip": "gercek",
+    "soru": "'pencere' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "möşkül",
+    "gorev": "hal_yonelme",
+    "cevap": "möşküle",
+    "tip": "wug",
+    "soru": "'möşkül' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zabrek",
+    "gorev": "hal_bulunma",
+    "cevap": "zabrekte",
+    "tip": "wug",
+    "soru": "'zabrek' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "kedi",
+    "gorev": "hal_yonelme",
+    "cevap": "kediye",
+    "tip": "gercek",
+    "soru": "'kedi' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zabrek",
+    "gorev": "cogul",
+    "cevap": "zabrekler",
+    "tip": "wug",
+    "soru": "'zabrek' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "yatak",
+    "gorev": "cogul",
+    "cevap": "yataklar",
+    "tip": "gercek",
+    "soru": "'yatak' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "kevlan",
+    "gorev": "hal_bulunma",
+    "cevap": "kevlanda",
+    "tip": "wug",
+    "soru": "'kevlan' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ev",
+    "gorev": "hal_bulunma",
+    "cevap": "evde",
+    "tip": "gercek",
+    "soru": "'ev' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pislen",
+    "gorev": "hal_belirtme",
+    "cevap": "pisleni",
+    "tip": "wug",
+    "soru": "'pislen' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "bardak",
+    "gorev": "iyelik_1pl",
+    "cevap": "bardağımız",
+    "tip": "gercek",
+    "soru": "'bardak' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "flözek",
+    "gorev": "cogul",
+    "cevap": "flözekler",
+    "tip": "wug",
+    "soru": "'flözek' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "pürsat",
+    "gorev": "hal_ayrilma",
+    "cevap": "pürsattan",
+    "tip": "wug",
+    "soru": "'pürsat' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "kuzu",
+    "gorev": "hal_ayrilma",
+    "cevap": "kuzudan",
+    "tip": "gercek",
+    "soru": "'kuzu' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yontuç",
+    "gorev": "iyelik_3sg",
+    "cevap": "yontucu",
+    "tip": "wug",
+    "soru": "'yontuç' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "kum",
+    "gorev": "iyelik_1sg",
+    "cevap": "kumum",
+    "tip": "gercek",
+    "soru": "'kum' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kuş",
+    "gorev": "hal_yonelme",
+    "cevap": "kuşa",
+    "tip": "gercek",
+    "soru": "'kuş' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yontuç",
+    "gorev": "iyelik_1pl",
+    "cevap": "yontucumuz",
+    "tip": "wug",
+    "soru": "'yontuç' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "ekmek",
+    "gorev": "hal_belirtme",
+    "cevap": "ekmeği",
+    "tip": "gercek",
+    "soru": "'ekmek' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "pislen",
+    "gorev": "hal_bulunma",
+    "cevap": "pislende",
+    "tip": "wug",
+    "soru": "'pislen' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "göz",
+    "gorev": "cogul",
+    "cevap": "gözler",
+    "tip": "gercek",
+    "soru": "'göz' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "zompar",
+    "gorev": "iyelik_1sg",
+    "cevap": "zomparım",
+    "tip": "wug",
+    "soru": "'zompar' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yol",
+    "gorev": "iyelik_1pl",
+    "cevap": "yolumuz",
+    "tip": "gercek",
+    "soru": "'yol' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yatak",
+    "gorev": "hal_yonelme",
+    "cevap": "yatağa",
+    "tip": "gercek",
+    "soru": "'yatak' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "krint",
+    "gorev": "hal_bulunma",
+    "cevap": "krintte",
+    "tip": "wug",
+    "soru": "'krint' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "toprak",
+    "gorev": "cogul",
+    "cevap": "topraklar",
+    "tip": "gercek",
+    "soru": "'toprak' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "masa",
+    "gorev": "hal_belirtme",
+    "cevap": "masayı",
+    "tip": "gercek",
+    "soru": "'masa' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "araba",
+    "gorev": "hal_bulunma",
+    "cevap": "arabada",
+    "tip": "gercek",
+    "soru": "'araba' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zabrek",
+    "gorev": "iyelik_3sg",
+    "cevap": "zabreği",
+    "tip": "wug",
+    "soru": "'zabrek' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "bardak",
+    "gorev": "hal_ayrilma",
+    "cevap": "bardaktan",
+    "tip": "gercek",
+    "soru": "'bardak' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "yatak",
+    "gorev": "hal_belirtme",
+    "cevap": "yatağı",
+    "tip": "gercek",
+    "soru": "'yatak' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "ağaç",
+    "gorev": "hal_yonelme",
+    "cevap": "ağaca",
+    "tip": "gercek",
+    "soru": "'ağaç' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "blan",
+    "gorev": "hal_bulunma",
+    "cevap": "blanda",
+    "tip": "wug",
+    "soru": "'blan' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "masa",
+    "gorev": "iyelik_3sg",
+    "cevap": "masası",
+    "tip": "gercek",
+    "soru": "'masa' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "cogul",
+    "cevap": "yapraklar",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "ekmek",
+    "gorev": "hal_bulunma",
+    "cevap": "ekmekte",
+    "tip": "gercek",
+    "soru": "'ekmek' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "flözek",
+    "gorev": "iyelik_1pl",
+    "cevap": "flözeğimiz",
+    "tip": "wug",
+    "soru": "'flözek' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "yaprak",
+    "gorev": "hal_ayrilma",
+    "cevap": "yapraktan",
+    "tip": "gercek",
+    "soru": "'yaprak' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "durak",
+    "gorev": "hal_belirtme",
+    "cevap": "durağı",
+    "tip": "gercek",
+    "soru": "'durak' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "aslan",
+    "gorev": "iyelik_3sg",
+    "cevap": "aslanı",
+    "tip": "gercek",
+    "soru": "'aslan' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "durak",
+    "gorev": "hal_yonelme",
+    "cevap": "durağa",
+    "tip": "gercek",
+    "soru": "'durak' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "fönük",
+    "gorev": "iyelik_1sg",
+    "cevap": "fönüğüm",
+    "tip": "wug",
+    "soru": "'fönük' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "zompar",
+    "gorev": "iyelik_1pl",
+    "cevap": "zomparımız",
+    "tip": "wug",
+    "soru": "'zompar' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kalem",
+    "gorev": "cogul",
+    "cevap": "kalemler",
+    "tip": "gercek",
+    "soru": "'kalem' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "yontuç",
+    "gorev": "hal_belirtme",
+    "cevap": "yontucu",
+    "tip": "wug",
+    "soru": "'yontuç' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "nyupra",
+    "gorev": "hal_ayrilma",
+    "cevap": "nyupradan",
+    "tip": "wug",
+    "soru": "'nyupra' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "balık",
+    "gorev": "hal_ayrilma",
+    "cevap": "balıktan",
+    "tip": "gercek",
+    "soru": "'balık' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "duvar",
+    "gorev": "hal_bulunma",
+    "cevap": "duvarda",
+    "tip": "gercek",
+    "soru": "'duvar' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "aslan",
+    "gorev": "iyelik_1pl",
+    "cevap": "aslanımız",
+    "tip": "gercek",
+    "soru": "'aslan' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "çiçek",
+    "gorev": "hal_belirtme",
+    "cevap": "çiçeği",
+    "tip": "gercek",
+    "soru": "'çiçek' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "durak",
+    "gorev": "cogul",
+    "cevap": "duraklar",
+    "tip": "gercek",
+    "soru": "'durak' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "sıra",
+    "gorev": "hal_belirtme",
+    "cevap": "sırayı",
+    "tip": "gercek",
+    "soru": "'sıra' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "brelak",
+    "gorev": "iyelik_3sg",
+    "cevap": "brelağı",
+    "tip": "wug",
+    "soru": "'brelak' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "göz",
+    "gorev": "iyelik_1sg",
+    "cevap": "gözüm",
+    "tip": "gercek",
+    "soru": "'göz' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "şupa",
+    "gorev": "iyelik_1pl",
+    "cevap": "şupamız",
+    "tip": "wug",
+    "soru": "'şupa' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "ateş",
+    "gorev": "hal_ayrilma",
+    "cevap": "ateşten",
+    "tip": "gercek",
+    "soru": "'ateş' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "flözek",
+    "gorev": "iyelik_1sg",
+    "cevap": "flözeğim",
+    "tip": "wug",
+    "soru": "'flözek' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "pürsat",
+    "gorev": "iyelik_1sg",
+    "cevap": "pürsadım",
+    "tip": "wug",
+    "soru": "'pürsat' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "flözek",
+    "gorev": "iyelik_3sg",
+    "cevap": "flözeği",
+    "tip": "wug",
+    "soru": "'flözek' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "çamdur",
+    "gorev": "hal_yonelme",
+    "cevap": "çamdura",
+    "tip": "wug",
+    "soru": "'çamdur' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "güneş",
+    "gorev": "hal_bulunma",
+    "cevap": "güneşte",
+    "tip": "gercek",
+    "soru": "'güneş' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "dratok",
+    "gorev": "hal_bulunma",
+    "cevap": "dratokta",
+    "tip": "wug",
+    "soru": "'dratok' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "sıra",
+    "gorev": "iyelik_3sg",
+    "cevap": "sırası",
+    "tip": "gercek",
+    "soru": "'sıra' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "şupa",
+    "gorev": "hal_bulunma",
+    "cevap": "şupada",
+    "tip": "wug",
+    "soru": "'şupa' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "fönük",
+    "gorev": "hal_yonelme",
+    "cevap": "fönüğe",
+    "tip": "wug",
+    "soru": "'fönük' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "çocuk",
+    "gorev": "iyelik_3sg",
+    "cevap": "çocuğu",
+    "tip": "gercek",
+    "soru": "'çocuk' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "masa",
+    "gorev": "iyelik_1sg",
+    "cevap": "masam",
+    "tip": "gercek",
+    "soru": "'masa' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kevlan",
+    "gorev": "hal_belirtme",
+    "cevap": "kevlanı",
+    "tip": "wug",
+    "soru": "'kevlan' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "güneş",
+    "gorev": "hal_belirtme",
+    "cevap": "güneşi",
+    "tip": "gercek",
+    "soru": "'güneş' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "möşkül",
+    "gorev": "hal_bulunma",
+    "cevap": "möşkülde",
+    "tip": "wug",
+    "soru": "'möşkül' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "gadros",
+    "gorev": "hal_belirtme",
+    "cevap": "gadrosu",
+    "tip": "wug",
+    "soru": "'gadros' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kedi",
+    "gorev": "iyelik_1sg",
+    "cevap": "kedim",
+    "tip": "gercek",
+    "soru": "'kedi' kelimesini 'benim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "kuş",
+    "gorev": "hal_ayrilma",
+    "cevap": "kuştan",
+    "tip": "gercek",
+    "soru": "'kuş' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "orman",
+    "gorev": "iyelik_3sg",
+    "cevap": "ormanı",
+    "tip": "gercek",
+    "soru": "'orman' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "torbuk",
+    "gorev": "iyelik_1pl",
+    "cevap": "torbuğumuz",
+    "tip": "wug",
+    "soru": "'torbuk' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "şimtül",
+    "gorev": "iyelik_3sg",
+    "cevap": "şimtülü",
+    "tip": "wug",
+    "soru": "'şimtül' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "şupa",
+    "gorev": "cogul",
+    "cevap": "şupalar",
+    "tip": "wug",
+    "soru": "'şupa' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "zelbik",
+    "gorev": "hal_yonelme",
+    "cevap": "zelbiğe",
+    "tip": "wug",
+    "soru": "'zelbik' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "kapı",
+    "gorev": "cogul",
+    "cevap": "kapılar",
+    "tip": "gercek",
+    "soru": "'kapı' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "fönük",
+    "gorev": "hal_belirtme",
+    "cevap": "fönüğü",
+    "tip": "wug",
+    "soru": "'fönük' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "güneş",
+    "gorev": "cogul",
+    "cevap": "güneşler",
+    "tip": "gercek",
+    "soru": "'güneş' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "ateş",
+    "gorev": "hal_yonelme",
+    "cevap": "ateşe",
+    "tip": "gercek",
+    "soru": "'ateş' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "torbuk",
+    "gorev": "hal_ayrilma",
+    "cevap": "torbuktan",
+    "tip": "wug",
+    "soru": "'torbuk' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "orman",
+    "gorev": "cogul",
+    "cevap": "ormanlar",
+    "tip": "gercek",
+    "soru": "'orman' kelimesinin çoğulunu yaz.",
+    "kural": "çoğul eki + ünlü uyumu"
+  },
+  {
+    "kok": "nyupra",
+    "gorev": "hal_belirtme",
+    "cevap": "nyuprayı",
+    "tip": "wug",
+    "soru": "'nyupra' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "blan",
+    "gorev": "hal_yonelme",
+    "cevap": "blana",
+    "tip": "wug",
+    "soru": "'blan' kelimesine -e/-a yönelme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "yıldız",
+    "gorev": "hal_belirtme",
+    "cevap": "yıldızı",
+    "tip": "gercek",
+    "soru": "'yıldız' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "defter",
+    "gorev": "iyelik_3sg",
+    "cevap": "defteri",
+    "tip": "gercek",
+    "soru": "'defter' kelimesini 'onun' iyelik ekiyle çek.",
+    "kural": "iyelik + ünlü uyumu"
+  },
+  {
+    "kok": "gadros",
+    "gorev": "hal_bulunma",
+    "cevap": "gadrosta",
+    "tip": "wug",
+    "soru": "'gadros' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "mırdel",
+    "gorev": "hal_belirtme",
+    "cevap": "mırdeli",
+    "tip": "wug",
+    "soru": "'mırdel' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "balık",
+    "gorev": "hal_belirtme",
+    "cevap": "balığı",
+    "tip": "gercek",
+    "soru": "'balık' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "zabrek",
+    "gorev": "hal_ayrilma",
+    "cevap": "zabrekten",
+    "tip": "wug",
+    "soru": "'zabrek' kelimesine -den/-dan ayrılma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  },
+  {
+    "kok": "sokak",
+    "gorev": "iyelik_1pl",
+    "cevap": "sokağımız",
+    "tip": "gercek",
+    "soru": "'sokak' kelimesini 'bizim' iyelik ekiyle çek.",
+    "kural": "iyelik + ünsüz yumuşaması"
+  },
+  {
+    "kok": "bardak",
+    "gorev": "hal_belirtme",
+    "cevap": "bardağı",
+    "tip": "gercek",
+    "soru": "'bardak' kelimesine -i/-ı belirtme eki ekle.",
+    "kural": "hal eki + ünlü uyumu"
+  },
+  {
+    "kok": "glodek",
+    "gorev": "hal_bulunma",
+    "cevap": "glodekte",
+    "tip": "wug",
+    "soru": "'glodek' kelimesine -de/-da bulunma eki ekle.",
+    "kural": "hal eki + sertleşme"
+  }
+]
