@@ -1,7 +1,7 @@
 # TurkMorfBench v3
 
-**449.647 madde · 14 kova · uydurma gövde kontrollü · teşhis raporlu**
-**449,647 items · 14 buckets · wug-controlled · diagnostic reporting**
+**465.535 madde · 14 kova · uydurma gövde kontrollü · teşhis raporlu**
+**465,535 items · 14 buckets · wug-controlled · diagnostic reporting**
 
 [eCloud Tech.](https://www.e-cloud.web.tr) · kod Apache-2.0 · veri CC BY 4.0
 
@@ -13,7 +13,7 @@ turkmorfbench olc --model YOUR/MODEL
 ```python
 from datasets import load_dataset
 d = load_dataset("ecloudtech/TurkMorfBench", "cekirdek")   # 1.856 madde
-d = load_dataset("ecloudtech/TurkMorfBench", "tam")        # 449.647 madde
+d = load_dataset("ecloudtech/TurkMorfBench", "tam")        # 465.535 madde
 ```
 
 ---
@@ -29,18 +29,18 @@ Bu kıyas hepsini **ayrı ayrı** ölçer ve hangisinde düşüldüğünü söyl
 
 | Kova | Madde | Ne sınıyor |
 |---|---|---|
-| `ad_yuva` | 274.180 | çokluk + iyelik + hâl yığını, **zamir n'si** |
-| `ad_cekimi` | 159.933 | 7 hâl, uyum, benzeşme, yumuşama, kaynaştırma |
-| `ek_zinciri` | 8.344 | 1'den 8'e derinlik, ek sırası |
-| `fiil_cekimi` | 1.799 | 7 zaman/kip, olumsuzluk, **geniş zaman istisnaları** |
-| `yapim_eki` | 1.463 | -lIk, -CI, -lI, -sIz, -sAl, -lAş, -lA |
+| `ad_yuva` | 283.550 | çokluk + iyelik + hâl yığını, **zamir n'si** |
+| `ad_cekimi` | 166.421 | 7 hâl, uyum, benzeşme, yumuşama, kaynaştırma |
+| `ek_zinciri` | 8.372 | 1'den 8'e derinlik, ek sırası |
+| `fiil_cekimi` | 1.797 | 7 zaman/kip, olumsuzluk, **geniş zaman istisnaları** |
+| `yapim_eki` | 1.421 | -lIk, -CI, -lI, -sIz, -sAl, -lAş, -lA |
 | `istisna_ozel_ad` | 1.200 | kesme işareti, **yumuşamama** (Sinop'a) |
 | `istisna_birlesik_isim` | 896 | buzdolabına |
-| `cati` | 680 | edilgen, dönüşlü, işteş, ettirgen |
+| `cati` | 725 | edilgen, dönüşlü, işteş, ettirgen |
 | `istisna_sayi` | 530 | **okunuşa göre** ek (2026'da) |
 | `istisna_kisaltma` | 304 | **okunuşa göre** ek (TCDD'yi) |
-| `istisna_unlu_dusmesi` | 178 | burnu, aklı, nakdi · **TDK doğrulamalı** |
-| `istisna_uyum_kirici` | 103 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
+| `istisna_unlu_dusmesi` | 177 | burnu, aklı, nakdi · **TDK doğrulamalı** |
+| `istisna_uyum_kirici` | 105 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
 | `istisna_ikizlesme` | 35 | reddi, tıbbı, zıddı · **TDK doğrulamalı** |
 | `istisna_kaynastirma` | 2 | suyu, neyi |
 
@@ -92,7 +92,7 @@ eşleştirildikten sonra bile **22-23 puan** daha kötü.
 | Katman | Madde | Kimin için |
 |---|---|---|
 | `cekirdek` | 1.856 | dakikalar içinde koşar, **kova dengeli**, teşhis için |
-| `tam` | 449.647 | tasarlanan kapsamın tamamı, manşet sayı için |
+| `tam` | 465.535 | tasarlanan kapsamın tamamı, manşet sayı için |
 
 Çekirdek kova dengelidir; tam kümenin yansız tahmini **değildir** ve öyle
 olması amaçlanmamıştır. En küçük kovada bile ölçülebilir bir sayı çıksın diye.
@@ -113,7 +113,7 @@ Kural motorunun **282 elle yazılmış altın iddiası** vardır ve hepsi geçer
 ### Üç istisna kovası TDK ile doğrulanmıştır
 
 `istisna_unlu_dusmesi`, `istisna_uyum_kirici` ve `istisna_ikizlesme` kovalarının
-**316 maddesinin tamamının** altını [TDK Güncel Türkçe
+**317 maddesinin tamamının** altını [TDK Güncel Türkçe
 Sözlük](https://sozluk.gov.tr) ile birebir karşılaştırılmıştır; sözlüğün madde
 başından sonra verdiği çekim ipucu (`kıraat, -ti`) altının kendisidir. TDK bir
 gövde için ek biçimi vermiyorsa ya da birden fazla biçim veriyorsa
@@ -172,6 +172,40 @@ taşımıyordur. İlk turda 6 katılımcının 3'ü elendi.
 `uyum_kirici` kovasında şans düzeyinin ALTINA düştü. Ana dili Türkçe olan
 insanlar bir kurala şanstan kötü uyuyorsa sorun insanda değil altındadır —
 TDK denetimi buradan çıktı. Düzeltmeden önce ölçülen insan doğruluğu %73,5'ti.
+
+
+## Bağımsız dış sınav: UD ağaç bankaları
+
+Kural motorunu kendi testleriyle sınamak döngüseldir — 282 altın iddiayı da biz
+yazdık. Motor ayrıca **Universal Dependencies Türkçe ağaç bankalarına** karşı
+koşuluyor (BOUN, IMST, Penn): başka ekiplerin elle etiketlediği, hakemli,
+bizim hiçbir şekilde etkilemediğimiz veri.
+
+UD her kelimenin yüzey biçimini, sözlük biçimini ve biçimbirim özniteliklerini
+verir (`kitabı / kitap / Case=Acc|Number=Sing`); bu, bizim çağrımızın tam
+karşılığıdır. Üç bankanın da aynı etiketlediği **25.681 (gövde, yuva)** çifti
+karşılaştırıldı:
+
+| ölçü | oran |
+|---|---|
+| ham uyum (UD metnini birebir tutturma) | **%91,5** |
+| çekim uyumu (kesme/düzeltme imi normalleşmiş) | **%93,9** |
+
+Aradaki fark yazımdandır: UD özel adlarda kesme işareti kullanıyor (`bey'in`),
+bazı bölümleri Türkçe harfsiz (`baliklarinin`), düzeltme imi bankadan bankaya
+değişiyor. İkisi ayrı raporlanır; tek bir sayıya indirmek farkı gizler.
+
+**Bu sınav dört gerçek motor hatası buldu ve hepsi düzeltildi:**
+
+| hata | UD'de | bizde |
+|---|---|---|
+| çokluk + 3. çoğul iyelik `-lAr`ı iki kez yazıyordu | gözlerini | ~~gözlerlerini~~ |
+| vasıta hâli iyelikten sonra zamir n'si alıyordu | hedefiyle | ~~hedefinle~~ |
+| `su`/`ne` kaynaştırmada y yerine s alıyordu | suyunu | ~~susunu~~ |
+| düzeltme imli ünlüler (â î û) envanterde yoktu | rüzgâra | ~~rüzgâre~~ |
+
+Sonuncusu en genişi: `â` görünmez olduğu için `rüzgâr`ın son ünlüsü `ü`
+sanılıyor ve ince ek geliyordu. Düzeltmeden sonra UD uyumu 3,5 puan yükseldi.
 
 
 ## Sınırlar — bunları biliyoruz ve yazıyoruz
@@ -235,7 +269,7 @@ worse in exactly those cells even after matching phonological composition.
 
 ### The exception buckets are verified against TDK
 
-All 316 items in `istisna_unlu_dusmesi`, `istisna_uyum_kirici` and
+All 317 items in `istisna_unlu_dusmesi`, `istisna_uyum_kirici` and
 `istisna_ikizlesme` carry a gold form checked character-for-character against the
 [TDK Güncel Türkçe Sözlük](https://sozluk.gov.tr), whose entries state the
 inflected stem directly (`kıraat, -ti`). We ran this audit because native
@@ -275,6 +309,25 @@ test carries no information. Three of the first six raters were screened out.
 speakers scored *below chance* on the inverse-harmony bucket, which is what
 prompted the TDK audit. Before the correction the measured human ceiling was
 73.5%.
+
+
+### Independent external check: UD treebanks
+
+Testing the rule engine against its own assertions is circular — we wrote those
+too. The engine is therefore also run against the **Universal Dependencies
+Turkish treebanks** (BOUN, IMST, Penn): hand-annotated, peer-reviewed data from
+other teams that we had no hand in. On the 25,681 (lemma, slot) pairs all three
+treebanks annotate identically, the engine reproduces the attested surface form
+for **91.5%** verbatim and **93.9%** once spelling is normalised (UD uses
+apostrophes on proper nouns, some sections are ASCII-folded, circumflex usage
+differs between treebanks).
+
+The check found four real engine bugs, all fixed: `-lAr` written twice in the
+plural + 3rd-person-plural possessive slot (*gözlerlerini* → **gözlerini**), the
+pronominal *n* wrongly inserted before the instrumental (*hedefinle* →
+**hedefiyle**), the irregular buffer on `su`/`ne` (*susunu* → **suyunu**), and
+circumflex vowels (â î û) missing from the vowel inventory, which made the
+engine read the wrong vowel as final (*rüzgâre* → **rüzgâra**).
 
 ### Known limits
 

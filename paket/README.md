@@ -1,8 +1,8 @@
 # TurkMorfBench
 
-**Turkish morphology benchmark for language models** — 449,647 items, diagnostic
+**Turkish morphology benchmark for language models** — 465,535 items, diagnostic
 reports, wug-test controls, tokenizer analysis.
-**Dil modellerinin Türkçe morfoloji yetkinliğini ölçen kıyas** — 449.647 madde,
+**Dil modellerinin Türkçe morfoloji yetkinliğini ölçen kıyas** — 465.535 madde,
 teşhis raporu, uydurma gövde kontrolü, tokenizer çözümlemesi.
 
 Built by [eCloud Tech.](https://www.e-cloud.web.tr) · code Apache-2.0 · data CC BY 4.0
@@ -108,7 +108,7 @@ bileşimi eşleştirildikten sonra bile, 22-23 puan daha kötü.
 | Katman | Madde | Kimin için |
 |---|---|---|
 | `cekirdek` | 1.856 | dakikalar içinde koşar, kova dengeli, **teşhis için** |
-| `tam` | 449.647 | tasarlanan kapsamın tamamı, **manşet sayı için** |
+| `tam` | 465.535 | tasarlanan kapsamın tamamı, **manşet sayı için** |
 
 Çekirdek kova dengelidir, yani tam kümenin yansız tahmini **değildir**; bilerek.
 En küçük kovada bile ölçülebilir bir sayı çıksın diye. İkisi karşılaştırılmaz.
@@ -129,7 +129,7 @@ Kural motorunun 282 elle yazılmış altın iddiası vardır ve hepsi geçer.
 ### Üç istisna kovası TDK ile doğrulanmıştır
 
 `ünlü düşmesi`, `uyum kırıcı alıntı` ve `ünsüz ikizleşmesi` kovalarının
-**316 maddesinin tamamının** altını [TDK Güncel Türkçe Sözlük](https://sozluk.gov.tr)
+**317 maddesinin tamamının** altını [TDK Güncel Türkçe Sözlük](https://sozluk.gov.tr)
 ile birebir karşılaştırılmıştır. Sözlüğün madde başından sonra verdiği çekim
 ipucu (`kıraat, -ti`) altının kendisidir; TDK bir gövde için biçim vermiyorsa ya
 da birden fazla veriyorsa (`hak` → *hakkı* / *hakki*) o gövde kıyasa alınmaz.
@@ -170,6 +170,40 @@ taşımıyordur. İlk turda 6 katılımcının 3'ü elendi.
 `uyum_kirici` kovasında şans düzeyinin ALTINA düştü. Ana dili Türkçe olan
 insanlar bir kurala şanstan kötü uyuyorsa sorun insanda değil altındadır —
 TDK denetimi buradan çıktı. Düzeltmeden önce ölçülen insan doğruluğu %73,5'ti.
+
+
+## Bağımsız dış sınav: UD ağaç bankaları
+
+Kural motorunu kendi testleriyle sınamak döngüseldir — 282 altın iddiayı da biz
+yazdık. Motor ayrıca **Universal Dependencies Türkçe ağaç bankalarına** karşı
+koşuluyor (BOUN, IMST, Penn): başka ekiplerin elle etiketlediği, hakemli,
+bizim hiçbir şekilde etkilemediğimiz veri.
+
+UD her kelimenin yüzey biçimini, sözlük biçimini ve biçimbirim özniteliklerini
+verir (`kitabı / kitap / Case=Acc|Number=Sing`); bu, bizim çağrımızın tam
+karşılığıdır. Üç bankanın da aynı etiketlediği **25.681 (gövde, yuva)** çifti
+karşılaştırıldı:
+
+| ölçü | oran |
+|---|---|
+| ham uyum (UD metnini birebir tutturma) | **%91,5** |
+| çekim uyumu (kesme/düzeltme imi normalleşmiş) | **%93,9** |
+
+Aradaki fark yazımdandır: UD özel adlarda kesme işareti kullanıyor (`bey'in`),
+bazı bölümleri Türkçe harfsiz (`baliklarinin`), düzeltme imi bankadan bankaya
+değişiyor. İkisi ayrı raporlanır; tek bir sayıya indirmek farkı gizler.
+
+**Bu sınav dört gerçek motor hatası buldu ve hepsi düzeltildi:**
+
+| hata | UD'de | bizde |
+|---|---|---|
+| çokluk + 3. çoğul iyelik `-lAr`ı iki kez yazıyordu | gözlerini | ~~gözlerlerini~~ |
+| vasıta hâli iyelikten sonra zamir n'si alıyordu | hedefiyle | ~~hedefinle~~ |
+| `su`/`ne` kaynaştırmada y yerine s alıyordu | suyunu | ~~susunu~~ |
+| düzeltme imli ünlüler (â î û) envanterde yoktu | rüzgâra | ~~rüzgâre~~ |
+
+Sonuncusu en genişi: `â` görünmez olduğu için `rüzgâr`ın son ünlüsü `ü`
+sanılıyor ve ince ek geliyordu. Düzeltmeden sonra UD uyumu 3,5 puan yükseldi.
 
 ### Kullanım
 
@@ -236,7 +270,7 @@ gold assertions, all passing.
 
 ### The exception buckets are verified against TDK
 
-All 316 items in the vowel-drop, inverse-harmony and consonant-doubling buckets
+All 317 items in the vowel-drop, inverse-harmony and consonant-doubling buckets
 carry a gold form checked character-for-character against the
 [TDK Güncel Türkçe Sözlük](https://sozluk.gov.tr). We ran this audit because
 native speakers scored **below chance** on the inverse-harmony bucket in the
@@ -266,10 +300,29 @@ speakers scored *below chance* on the inverse-harmony bucket, which is what
 prompted the TDK audit. Before the correction the measured human ceiling was
 73.5%.
 
+
+### Independent external check: UD treebanks
+
+Testing the rule engine against its own assertions is circular — we wrote those
+too. The engine is therefore also run against the **Universal Dependencies
+Turkish treebanks** (BOUN, IMST, Penn): hand-annotated, peer-reviewed data from
+other teams that we had no hand in. On the 25,681 (lemma, slot) pairs all three
+treebanks annotate identically, the engine reproduces the attested surface form
+for **91.5%** verbatim and **93.9%** once spelling is normalised (UD uses
+apostrophes on proper nouns, some sections are ASCII-folded, circumflex usage
+differs between treebanks).
+
+The check found four real engine bugs, all fixed: `-lAr` written twice in the
+plural + 3rd-person-plural possessive slot (*gözlerlerini* → **gözlerini**), the
+pronominal *n* wrongly inserted before the instrumental (*hedefinle* →
+**hedefiyle**), the irregular buffer on `su`/`ne` (*susunu* → **suyunu**), and
+circumflex vowels (â î û) missing from the vowel inventory, which made the
+engine read the wrong vowel as final (*rüzgâre* → **rüzgâra**).
+
 ### Two tiers
 
 `cekirdek` (1,856 items, bucket-balanced, runs in minutes, for diagnosis) and
-`tam` (449,647 items, for the headline number). The core tier is deliberately
+`tam` (465,535 items, for the headline number). The core tier is deliberately
 *not* an unbiased sample of the full set — it is balanced so that even the
 smallest bucket yields a measurable estimate. Do not compare the two.
 

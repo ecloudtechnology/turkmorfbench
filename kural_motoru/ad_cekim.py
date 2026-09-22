@@ -46,6 +46,17 @@ HAL = {
 # 3. kişi iyeliği — sonrasında hâl eki zamir n'si ile bağlanır
 UCUNCU = {"3t", "3c"}
 
+# ZAMİR n'Sİ VASITA HÂLİNDE İŞLEMEZ.
+#   kitab-ı-n-a, kitab-ı-n-da, kitab-ı-n-ın   ama   kitab-ı-y-la
+# Vasıta eki -(y)lA kendi kaynaştırma ünsüzünü getirir; üstüne zamir n'si
+# binmez. UD Türkçe ağaç bankalarında 58 ayrı kelimede yakalandı
+# (hedefiyle / nedeniyle / gelenekleriyle), biz 'hedefinle' üretiyorduk.
+ZAMIR_N_YOK = {"vasita"}
+
+# `su` ve `ne` kaynaştırmada s/n değil y alır: su-y-u, ne-y-i.
+# Kural düzeyinde açıklanamaz, sözlükte de bayrağı yok; açık liste.
+Y_KAYNASTIRAN = {"su", "ne"}
+
 # Kuralla türetilemeyen, sözlükte de bayrakla tam karşılanmayan birkaç gövde.
 # Sayıları az ve hepsi belgeli; gizli bir "düzeltme tablosu" değil, açık liste.
 OZEL_GOVDE = {
@@ -130,19 +141,33 @@ def cekim(madde, cokluk="tek", iyelik="yok", hal="yalin"):
         # hâl eki doğrudan zamir n'si ile bağlanır.
         iyelik = "yok"
 
-    ekler = [(COKLUK[cokluk], "cokluk"), (IYELIK[iyelik], "iyelik"), (HAL[hal], "hal")]
+    cokluk_sablon, iyelik_sablon = COKLUK[cokluk], IYELIK[iyelik]
+
+    # ÇOKLUK + 3. ÇOĞUL İYELİK TEK -lAr İLE YAZILIR.
+    #   göz + ler + i  -> gözleri   ('onların gözleri' de 'onun gözleri' de)
+    # İkisini ayrı ayrı eklemek 'gözlerleri' üretir; Türkçede böyle bir biçim
+    # yoktur. UD ağaç bankalarında 65 ayrı kelimede yakalandı. Biçim iki
+    # okumaya birden karşılık gelir ve dil bu belirsizliği çözmez.
+    if cokluk == "cog" and iyelik == "3c":
+        iyelik_sablon = "I"
+
+    ekler = [(cokluk_sablon, "cokluk"), (iyelik_sablon, "iyelik"), (HAL[hal], "hal")]
     ekler = [(s, t) for s, t in ekler if s]
 
     if not ekler:
         return madde.govde
 
     ilk_sablon = ekler[0][0]
+    # su/ne: ilk ekin kaynaştırma ünsüzü y olur (su-y-u, ne-y-i)
+    if madde.govde in Y_KAYNASTIRAN and ilk_sablon[:3] in ("(s)", "(n)"):
+        ilk_sablon = "(y)" + ilk_sablon[3:]
+        ekler[0] = (ilk_sablon, ekler[0][1])
     bicim, ters = _govde_hazirla(madde, ilk_sablon)
 
     ucuncu_gordu = birlesik
     ilk = True
     for sablon, tur in ekler:
-        if tur == "hal" and ucuncu_gordu:
+        if tur == "hal" and ucuncu_gordu and hal not in ZAMIR_N_YOK:
             # zamir n'si: kitab-ı-n-a, buzdolab-ı-n-a
             if sablon.startswith("("):
                 sablon = sablon[sablon.index(")") + 1:]

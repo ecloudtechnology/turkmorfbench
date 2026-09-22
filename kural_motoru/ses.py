@@ -26,11 +26,21 @@ GÖSTERİM
   Parantezli harf düşebilir: "(y)A" ünlüyle biten gövdede y alır.
 """
 
-UNLULER = "aeıioöuü"
-KALIN = set("aıou")
-INCE = set("eiöü")
-YUVARLAK = set("oöuü")
-DUZ = set("aeıi")
+# DÜZELTME İMLİ ÜNLÜLER ENVANTERE DAHİLDİR.
+#   â î û alıntı kelimelerde yazılır ve uyumu BELİRLER. Envanterde
+#   olmadıklarında görünmez oluyorlar ve bir önceki ünlü son ünlü sanılıyordu:
+#   `rüzgâr`ın son ünlüsü `ü` okunup `rüzgâre` üretiliyordu; doğrusu
+#   `rüzgâra`. UD Türkçe ağaç bankalarıyla karşılaştırmada yakalandı.
+#
+#   Sınıflandırma sesletime göre: â uzun /a/ (kalın, düz), î uzun /i/
+#   (ince, düz), û uzun /u/ (kalın, yuvarlak). `hâl -> hâli` gibi ince ek
+#   alan istisnalar bu kuralla değil, sözlüğün InverseHarmony bayrağıyla
+#   karşılanır — yeri orasıdır.
+UNLULER = "aeıioöuüâîû"
+KALIN = set("aıouâû")
+INCE = set("eiöüî")
+YUVARLAK = set("oöuüû")
+DUZ = set("aeıiâî")
 
 # Ötümsüz ünsüzler — ekin d/c ile değil t/ç ile başlamasına yol açar.
 # "Fıstıkçı Şahap" belleği: f s t k ç ş h p

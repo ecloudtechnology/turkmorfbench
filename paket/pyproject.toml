@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "turkmorfbench"
-version = "3.1.0"
+version = "3.2.0"
 description = "TurkMorfBench — Turkish morphology benchmark for language models / Türkçe morfoloji kıyası"
 readme = "README.md"
 requires-python = ">=3.9"
