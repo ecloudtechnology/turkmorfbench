@@ -1,0 +1,15 @@
+TurkMorfBench
+Copyright 2026 eCloud Yazılım Teknolojileri (eCloud Tech.)
+
+Bu ürün, sözlüksel düzensizlik bayrakları için Zemberek sözlüğünü kullanır:
+  https://github.com/ahmetaa/zemberek-nlp
+  Copyright Ahmet A. Akın, Apache License 2.0
+Zemberek'in morfolojik ÇÖZÜMLEYİCİSİ kullanılmamıştır; yalnız sözlük
+dosyalarındaki insan tarafından işaretlenmiş düzensizlik bayrakları alınmıştır.
+
+This product uses the Zemberek dictionary for lexical irregularity flags
+(Apache-2.0). Zemberek's morphological ANALYSER is not used — only the
+human-annotated irregularity flags in its dictionary files.
+
+Kod / Code: Apache-2.0
+Veri / Data: CC BY 4.0
