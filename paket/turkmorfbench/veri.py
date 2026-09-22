@@ -5,25 +5,31 @@ import os
 
 KOK = os.path.dirname(os.path.abspath(__file__))
 CEKIRDEK = os.path.join(KOK, "veri", "cekirdek.json")
+# Depodaki gerçek yol `json/` altında. 3.0.0'da kök dizin yazılmıştı ve
+# `--katman tam` indirmesi 404 dönüyordu.
 TAM_ADRES = ("https://huggingface.co/datasets/ecloudtech/TurkMorfBench/"
-             "resolve/main/turkmorfbench_v3_tam.json")
+             "resolve/main/json/turkmorfbench_v3_tam.json")
 
 
 def yukle(katman="cekirdek", onbellek=None):
     """`cekirdek` (pakette gömülü, ~2.000 madde) ya da `tam` (~449.000, indirilir).
 
-    Tam küme 145 MB; pakete konmaz, ilk kullanımda indirilip önbelleğe alınır.
+    Tam küme 152 MB; pakete konmaz, ilk kullanımda indirilip önbelleğe alınır.
     """
     if katman == "cekirdek":
         with open(CEKIRDEK, encoding="utf8") as f:
             return json.load(f)["maddeler"]
 
+    # Önbellek dosyası SÜRÜM TAŞIR. Sürümsüz adla, veri düzeltildikten sonra
+    # bir kez indirmiş kullanıcı sonsuza kadar eski (yanlış) altınla ölçerdi.
+    from . import __version__
     onbellek = onbellek or os.path.join(
-        os.path.expanduser("~"), ".cache", "turkmorfbench", "tam.json")
+        os.path.expanduser("~"), ".cache", "turkmorfbench",
+        "tam-%s.json" % __version__)
     if not os.path.exists(onbellek):
         os.makedirs(os.path.dirname(onbellek), exist_ok=True)
         import urllib.request
-        print("tam küme indiriliyor (~145 MB, bir kez)…")
+        print("tam küme indiriliyor (~152 MB, bir kez)…")
         urllib.request.urlretrieve(TAM_ADRES, onbellek)
     with open(onbellek, encoding="utf8") as f:
         return json.load(f)["maddeler"]

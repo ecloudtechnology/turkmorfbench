@@ -67,23 +67,43 @@ def _govde_hazirla(madde, ek_sablon):
     if not ses.unluyle_baslar(ek_sablon, gv):
         return gv, ters
 
-    # sıra önemli: önce ünlü düşmesi, sonra ikizleşme/yumuşama
+    # Üç değişim BİRLİKTE olabilir; eskiden if/elif zinciriyle birbirini
+    # dışlıyorlardı ve bütün bir sınıf yanlış çıkıyordu:
+    #     nakit -> naktı  (doğrusu nakdi: ünlü düşer VE t yumuşar)
+    #     ret   -> retti  (doğrusu reddi: t yumuşar VE ikizleşir)
+    # TDK ile karşılaştırma yapılınca 24 gövdenin hiçbir bayrak kümesiyle
+    # üretilemediği görüldü; hepsi bu iki birleşimdendi.
+    #
+    # Sıra: yumuşama -> ünlü düşmesi -> ikizleşme.
+    #   nakit -> nakid -> nakd           (önce yumuşar, sonra ünlü düşer)
+    #   ret   -> red   -> redd           (yumuşar, sonra ikizleşir)
+    #   hak   -> hak   -> hakk           (yumuşamaz: bayrağı yok, tek heceli)
+    #
+    # Yumuşamanın ÖNCE gelmesi şart. `ses.yumusat` ünsüzden sonra gelen
+    # p/ç/t/k'yi yumuşatmaz — `üst -> üstü`, `dost -> dostu` için doğru olan
+    # kural budur. Ama `nakit`teki küme ünlü DÜŞTÜĞÜ İÇİN oluşur; düşmeden
+    # sonra yumuşatmaya kalkarsak o kural yanlışlıkla devreye girer ve
+    # `naktı` çıkar. Sözlük biçiminde 't' ünlüler arasındadır, orada yumuşar.
+    if _yumusar_mi(madde, gv):
+        gv = ses.yumusat(gv)
     if "LastVowelDrop" in madde.bayrak:
         gv = ses.son_unlu_dusur(gv)
-    elif "Doubling" in madde.bayrak:
+    if "Doubling" in madde.bayrak:
         gv = ses.ikizlestir(gv)
-    elif _yumusar_mi(madde):
-        gv = ses.yumusat(gv)
     return gv, ters
 
 
-def _yumusar_mi(madde):
+def _yumusar_mi(madde, gv=None):
     """Zemberek sözleşmesi — asimetrik, bire bir uyulmalı.
 
     Çok heceli p/ç/t/k gövdeler VARSAYILAN yumuşar; yumuşamayanlar NoVoicing.
     Tek heceli gövdeler VARSAYILAN yumuşamaz; yumuşayanlar Voicing.
-    Ters çevrilirse 'devleti' -> 'devledi', 'kabı' -> 'kapı' olur."""
-    gv = madde.govde
+    Ters çevrilirse 'devleti' -> 'devledi', 'kabı' -> 'kapı' olur.
+
+    `gv` verilirse son sesi ONUN üzerinden bakılır (ünlü düşmesinden sonraki
+    biçim); hece sayısı ise her zaman SÖZLÜK biçiminden sayılır — düşmüş
+    biçim tek heceli görünüp varsayılanı ters çevirmesin diye."""
+    gv = madde.govde if gv is None else gv
     if not gv or gv[-1] not in ses.YUMUSAMA:
         return False
     if "NoVoicing" in madde.bayrak:
@@ -92,7 +112,7 @@ def _yumusar_mi(madde):
         return True
     if ses.nk_ile_biter(gv):
         return True            # renk->rengi: ses kuralı, bayraktan bağımsız
-    return ses.hece_sayisi(gv) > 1
+    return ses.hece_sayisi(madde.govde) > 1
 
 
 def cekim(madde, cokluk="tek", iyelik="yok", hal="yalin"):

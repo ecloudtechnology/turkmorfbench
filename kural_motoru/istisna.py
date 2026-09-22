@@ -32,14 +32,55 @@ SAYI
   Ek sayının okunuşuna uyar: 2026'da ("… yirmi altı"), 6'yı ("altı"),
   100'ü ("yüz"), 1'e ("bir").
 """
+import io
+import json
+import os
 import re
 
 import ses
+import sozluk
 import sayi as sayi_modul
 import ad_cekim
 
 # Kova 4: kuralla türetilemeyen iki gövde (ad_cekim.OZEL_GOVDE ile aynı liste)
 KAYNASTIRMA_ISTISNA = ["su", "ne"]
+
+# TDK Güncel Türkçe Sözlük'ün hakem olduğu kovalar.
+#
+# Bu üç kovanın altını Zemberek bayraklarından türetiliyordu ve YANLIŞTI.
+# sozluk.gov.tr'nin `taki` alanı çekimli biçimi doğrudan verir ("kıraat, -ti")
+# ve ölçtük: bayraktan türetilen altın TDK ile `uyum_kirici` kovasında yalnız
+# %11, `unlu_dusmesi`nde %74, `ikizlesme`de %78 örtüşüyordu. Üç ayrı sistematik
+# hata: olmayan yumuşamayı uygulamak (bidat->bidadi, doğrusu bidati), ince/kalın
+# uyumu kaçırmak (aciz->aczı, doğrusu aczi), ikizleşirken ötümlüleştirmemek
+# (ret->retti, doğrusu reddi).
+#
+# Hatayı insan tavanı ölçümü yakaladı: katılımcılar `uyum_kirici` kovasında
+# ŞANS DÜZEYİNİN ALTINA düştü. Ana dili Türkçe olan insanlar bir kurala
+# şanstan kötü uyuyorsa, sorun insanda değil altındadır.
+#
+# İlke: TDK tek bir `taki` veriyorsa altın odur ve madde kıyasa girer —
+# gövde eş yazılışlı olsa bile, çünkü TDK belirsizliği çözmüştür. TDK
+# susuyorsa ya da çelişiyorsa madde kıyasa GİRMEZ.
+TDK_HAKEM = frozenset(["unlu_dusmesi", "ikizlesme", "uyum_kirici"])
+
+_TDK = None
+
+
+def tdk_altin():
+    """(gövde -> TDK belirtme hâli, çok anlamlı gövdeler kümesi).
+
+    `cok_anlam`: TDK'de başka anlamı da olan ve o anlamın ek notasyonu
+    yazılmamış gövdeler. Altın birincil anlama göredir (sözlük geleneği);
+    işaret, kıyas kullanıcısının isterse bu maddeleri süzebilmesi için.
+    """
+    global _TDK
+    if _TDK is None:
+        y = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tdk_altin.json")
+        d = json.load(io.open(y, encoding="utf8")) if os.path.exists(y) else {}
+        _TDK = (d.get("altin", {}), set(d.get("cok_anlam", [])))
+    return _TDK
+
 
 BAYRAK_KOVA = {
     "unlu_dusmesi": "LastVowelDrop",
@@ -116,17 +157,50 @@ def kovalar(maddeler, kisaltmalar=None, yer_adlari=None, sayilar=None,
     hal_secimi = hal_secimi or {}
     cik = {}
 
+    # BİRİNCİL ANLAM + EŞ YAZILIŞLI ELEME.
+    #
+    # Bu iki süzgeç kıyasın geri kalanında uygulanıyordu ama istisna
+    # kovaları sözlüğün HAM satırlarını geziyordu. Sonucu: ikincil anlamlar
+    # ve eş yazılışlı gövdeler madde oluyordu, altın cevap ise tek değildi.
+    #   ziraat  master [NoVoicing] -> ziraatı   ·  non_tdk#1 [InverseHarmony] -> ziraadi
+    #   katil   birincil (fail)    -> katili    ·  #1 (katletme)             -> katlı
+    #   ad      birincil           -> adı       ·  #1 [Doubling,InverseHarmony] -> addi
+    # İkisi de gerçek kelime; hangisinin sorulduğu bağlamsız belli değil.
+    # Bu maddeler kıyastan ÇIKAR — insan tavanı ölçümünde `uyum_kirici`
+    # kovasında insanların şans düzeyinin ALTINA düşmesiyle yakalandı.
+    birincil = sozluk.indeksle(maddeler)
+    belirsiz = sozluk.belirsizler(maddeler)
+    T, T_COK = tdk_altin()
+    _dd = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tdk_disarida.json")
+    T_DIS = set(json.load(io.open(_dd, encoding="utf8"))) if os.path.exists(_dd) else set()
+
     # 1-3, 5: sözlük bayraklarından
     for kova, bayrak in BAYRAK_KOVA.items():
         h = hal_secimi.get(kova, "yonelme" if kova == "birlesik_isim" else "belirtme")
+        hakem = kova in TDK_HAKEM and bool(T)
+        govdeler = sorted({m.govde for m in maddeler if bayrak in m.bayrak})
         L = []
-        for m in maddeler:
-            if bayrak not in m.bayrak:
-                continue
-            g = m.govde
+        for g in govdeler:
             if " " in g or "-" in g or not g.isalpha():
                 continue
-            L.append((g, ad_cekim.cekim(m, hal=h), {"hal": h, "bayrak": bayrak}))
+            if hakem:
+                altin = T.get(g)
+                if altin is None or g in T_DIS:
+                    continue                     # TDK susuyor ya da kuralla
+                                                 # üretilemiyor: madde girmez
+                kaynak = "TDK-GTS"
+            else:
+                # Birleşik isimde TDK `taki` vermiyor (zamir n'si sözlüksel
+                # değil, dilbilgisel bir kural). Orada birincil anlam + eş
+                # yazılışlı eleme uygulanır.
+                if g in belirsiz or g not in birincil:
+                    continue
+                altin = ad_cekim.cekim(birincil[g], hal=h)
+                kaynak = "kural+sozluk"
+            bilgi = {"hal": h, "bayrak": bayrak, "kaynak": kaynak}
+            if kaynak == "TDK-GTS" and g in T_COK:
+                bilgi["cok_anlam"] = True
+            L.append((g, altin, bilgi))
         cik[kova] = L
 
     # 4: kaynaştırma istisnası

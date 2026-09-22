@@ -1,0 +1,1558 @@
+{
+"aciz": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"af": [
+"Doubling"
+],
+"ahit": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"akis": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"akit": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"akıl": [
+"LastVowelDrop"
+],
+"alın": [
+"LastVowelDrop"
+],
+"asır": [
+"LastVowelDrop"
+],
+"azil": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"azim": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"bahir": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"bahis": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"batın": [
+"LastVowelDrop"
+],
+"bağır": [
+"LastVowelDrop"
+],
+"başşehir": [
+"LastVowelDrop"
+],
+"bedir": [
+"LastVowelDrop"
+],
+"beniz": [
+"LastVowelDrop"
+],
+"beyin": [
+"LastVowelDrop"
+],
+"beyit": [
+"LastVowelDrop",
+"NoVoicing"
+],
+"bezir": [
+"LastVowelDrop"
+],
+"biat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"bidat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"bikir": [
+"LastVowelDrop"
+],
+"boyun": [
+"LastVowelDrop"
+],
+"burun": [
+"LastVowelDrop"
+],
+"böğür": [
+"LastVowelDrop"
+],
+"büyükşehir": [
+"LastVowelDrop"
+],
+"cebir": [
+"LastVowelDrop"
+],
+"cehil": [
+"LastVowelDrop"
+],
+"cemaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"cer": [
+"Doubling"
+],
+"cerahat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"cet": [
+"Doubling",
+"Voicing"
+],
+"cevir": [
+"LastVowelDrop"
+],
+"cezir": [
+"LastVowelDrop"
+],
+"cirim": [
+"LastVowelDrop"
+],
+"cisim": [
+"LastVowelDrop"
+],
+"cürüm": [
+"LastVowelDrop"
+],
+"dahil": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"defin": [
+"LastVowelDrop"
+],
+"devir": [
+"LastVowelDrop"
+],
+"divanıharp": [
+"InverseHarmony"
+],
+"ecir": [
+"LastVowelDrop"
+],
+"eflak": [
+"InverseHarmony",
+"NoVoicing"
+],
+"ehil": [
+"LastVowelDrop"
+],
+"ehlibeyit": [
+"LastVowelDrop",
+"NoVoicing"
+],
+"ehlikeyif": [
+"LastVowelDrop"
+],
+"emrihak": [
+"Doubling",
+"NoVoicing"
+],
+"eviç": [
+"LastVowelDrop"
+],
+"eğin": [
+"LastVowelDrop"
+],
+"fasıl": [
+"LastVowelDrop"
+],
+"fecaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"fecir": [
+"LastVowelDrop"
+],
+"fek": [
+"Doubling"
+],
+"fen": [
+"Doubling"
+],
+"feragat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"fesahat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"fesih": [
+"LastVowelDrop"
+],
+"fetih": [
+"LastVowelDrop"
+],
+"feyiz": [
+"LastVowelDrop"
+],
+"fikir": [
+"LastVowelDrop"
+],
+"firkat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"fıkıh": [
+"LastVowelDrop"
+],
+"gadir": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"galatıhis": [
+"Doubling"
+],
+"gasil": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"gaşiy": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"geniz": [
+"LastVowelDrop"
+],
+"gusül": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"gönül": [
+"LastVowelDrop"
+],
+"göğüs": [
+"LastVowelDrop"
+],
+"hac": [
+"Doubling"
+],
+"hacim": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"hacir": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"haciz": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"had": [
+"Doubling",
+"InverseHarmony"
+],
+"hamakat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"harp": [
+"InverseHarmony",
+"Voicing"
+],
+"hasım": [
+"LastVowelDrop"
+],
+"hat": [
+"Doubling"
+],
+"hatim": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"hayız": [
+"LastVowelDrop"
+],
+"haz": [
+"Doubling"
+],
+"hazakat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"hazım": [
+"LastVowelDrop"
+],
+"haşir": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"haşiv": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"hiciv": [
+"LastVowelDrop"
+],
+"hilat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"hilkat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"his": [
+"Doubling"
+],
+"hizip": [
+"LastVowelDrop"
+],
+"hüküm": [
+"LastVowelDrop"
+],
+"hüsnühat": [
+"Doubling",
+"NoVoicing"
+],
+"hüsnüzan": [
+"Doubling"
+],
+"hüsün": [
+"LastVowelDrop"
+],
+"hüzün": [
+"LastVowelDrop"
+],
+"hışım": [
+"LastVowelDrop"
+],
+"idrak": [
+"InverseHarmony",
+"NoVoicing"
+],
+"ilim": [
+"LastVowelDrop"
+],
+"imsak": [
+"InverseHarmony",
+"NoVoicing"
+],
+"inhimak": [
+"InverseHarmony",
+"NoVoicing"
+],
+"isim": [
+"LastVowelDrop"
+],
+"istihraç": [],
+"itaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"izin": [
+"LastVowelDrop"
+],
+"izzetinefis": [
+"LastVowelDrop"
+],
+"iştirak": [
+"InverseHarmony",
+"NoVoicing"
+],
+"kabahat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"kabir": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"kahır": [
+"LastVowelDrop"
+],
+"karın": [
+"LastVowelDrop"
+],
+"kasır": [
+"LastVowelDrop"
+],
+"kasıt": [
+"LastVowelDrop",
+"NoVoicing"
+],
+"kavil": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"kavim": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"kesir": [
+"LastVowelDrop"
+],
+"keyif": [
+"LastVowelDrop"
+],
+"keşif": [
+"LastVowelDrop"
+],
+"kibir": [
+"LastVowelDrop"
+],
+"kilovatsaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"kutup": [
+"LastVowelDrop"
+],
+"kutur": [
+"LastVowelDrop"
+],
+"kâtibiadil": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"küfür": [
+"LastVowelDrop"
+],
+"kıraat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"kısım": [
+"LastVowelDrop"
+],
+"kışır": [
+"LastVowelDrop"
+],
+"lafız": [
+"LastVowelDrop"
+],
+"lahit": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"lağıv": [
+"LastVowelDrop"
+],
+"ledün": [
+"Doubling"
+],
+"lef": [
+"Doubling"
+],
+"leffüneşir": [
+"LastVowelDrop"
+],
+"lemis": [
+"LastVowelDrop"
+],
+"liyakat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"lügat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"lümensaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"lütuf": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"mabeyin": [
+"LastVowelDrop"
+],
+"mahal": [
+"Doubling",
+"InverseHarmony"
+],
+"mahıv": [
+"LastVowelDrop"
+],
+"makabil": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"mas": [
+"Doubling"
+],
+"memluk": [
+"InverseHarmony",
+"NoVoicing"
+],
+"menfaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"merkat": [
+"InverseHarmony"
+],
+"met": [
+"Doubling",
+"Voicing"
+],
+"metin": [
+"LastVowelDrop"
+],
+"meyil": [
+"LastVowelDrop"
+],
+"meşakkat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"meşihat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"misil": [
+"LastVowelDrop"
+],
+"muvafakat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"nabız": [
+"LastVowelDrop"
+],
+"nahiv": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"nakil": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"nakit": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"nakız": [
+"LastVowelDrop"
+],
+"nakış": [
+"LastVowelDrop"
+],
+"nas": [
+"Doubling"
+],
+"nasihat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"nasıp": [
+"LastVowelDrop"
+],
+"nazım": [
+"LastVowelDrop"
+],
+"nefiy": [
+"LastVowelDrop"
+],
+"nehir": [
+"LastVowelDrop"
+],
+"nehiy": [
+"LastVowelDrop"
+],
+"nesil": [
+"LastVowelDrop"
+],
+"nesir": [
+"LastVowelDrop"
+],
+"nesiç": [
+"LastVowelDrop"
+],
+"nevir": [
+"LastVowelDrop"
+],
+"nezif": [
+"LastVowelDrop"
+],
+"nezir": [
+"LastVowelDrop"
+],
+"neşir": [
+"LastVowelDrop"
+],
+"nutuk": [
+"LastVowelDrop",
+"NoVoicing"
+],
+"nısıf": [
+"LastVowelDrop"
+],
+"panzehir": [
+"LastVowelDrop"
+],
+"rahim": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"recim": [
+"LastVowelDrop"
+],
+"refakat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"remil": [
+"LastVowelDrop"
+],
+"remiz": [
+"LastVowelDrop"
+],
+"resim": [
+"LastVowelDrop"
+],
+"ret": [
+"Doubling",
+"Voicing"
+],
+"rikkat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"rükün": [
+"LastVowelDrop"
+],
+"sabır": [
+"LastVowelDrop"
+],
+"sadakat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"sadır": [
+"LastVowelDrop"
+],
+"sah": [
+"Doubling"
+],
+"sarahat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"satıh": [
+"LastVowelDrop"
+],
+"sefahat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"sehim": [
+"LastVowelDrop"
+],
+"sehiv": [
+"LastVowelDrop"
+],
+"sem": [
+"Doubling"
+],
+"semahat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"serhat": [
+"Doubling",
+"InverseHarmony"
+],
+"setir": [
+"LastVowelDrop"
+],
+"seyir": [
+"LastVowelDrop"
+],
+"sihir": [
+"LastVowelDrop"
+],
+"sitteisevir": [
+"LastVowelDrop"
+],
+"siyakat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"suizan": [
+"Doubling"
+],
+"sütoğul": [
+"LastVowelDrop"
+],
+"sıhhat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"sınaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"tahtelbahir": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"takat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"tavır": [
+"LastVowelDrop"
+],
+"tıp": [
+"Doubling",
+"Voicing"
+],
+"ufuk": [
+"LastVowelDrop",
+"NoVoicing"
+],
+"uzuv": [
+"LastVowelDrop"
+],
+"vaat": [
+"InverseHarmony"
+],
+"vahiy": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"vakit": [
+"InverseHarmony",
+"LastVowelDrop",
+"NoVoicing"
+],
+"vakıf": [
+"LastVowelDrop"
+],
+"vasıf": [
+"LastVowelDrop"
+],
+"vehim": [
+"LastVowelDrop"
+],
+"vezin": [
+"LastVowelDrop"
+],
+"vitir": [
+"LastVowelDrop"
+],
+"vüsat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"zam": [
+"Doubling"
+],
+"zan": [
+"Doubling"
+],
+"zecir": [
+"LastVowelDrop"
+],
+"zem": [
+"Doubling"
+],
+"zeyil": [
+"LastVowelDrop"
+],
+"zihin": [
+"LastVowelDrop"
+],
+"zikir": [
+"LastVowelDrop"
+],
+"zulüm": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"zül": [
+"Doubling"
+],
+"zülüf": [
+"LastVowelDrop"
+],
+"zıt": [
+"Doubling",
+"Voicing"
+],
+"ömür": [
+"LastVowelDrop"
+],
+"özür": [
+"LastVowelDrop"
+],
+"öşür": [
+"LastVowelDrop"
+],
+"üs": [
+"Doubling"
+],
+"şahıs": [
+"LastVowelDrop"
+],
+"şecaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"şefaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"şefkat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"şehir": [
+"LastVowelDrop"
+],
+"şek": [
+"Doubling"
+],
+"şekil": [
+"LastVowelDrop"
+],
+"şenaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"şet": [
+"Doubling",
+"Voicing"
+],
+"şetim": [
+"LastVowelDrop"
+],
+"şükür": [
+"LastVowelDrop"
+],
+"ahval": [
+"InverseHarmony"
+],
+"akkefal": [
+"InverseHarmony"
+],
+"akropol": [
+"InverseHarmony"
+],
+"alkol": [
+"InverseHarmony"
+],
+"alveol": [
+"InverseHarmony"
+],
+"amal": [
+"InverseHarmony"
+],
+"ametal": [
+"InverseHarmony"
+],
+"amfibol": [
+"InverseHarmony"
+],
+"amiral": [
+"InverseHarmony"
+],
+"ampul": [
+"InverseHarmony"
+],
+"asıl": [
+"LastVowelDrop"
+],
+"atol": [
+"InverseHarmony"
+],
+"atıf": [
+"LastVowelDrop"
+],
+"aval": [
+"InverseHarmony"
+],
+"avuç": [],
+"ayal": [
+"InverseHarmony"
+],
+"ağız": [
+"LastVowelDrop"
+],
+"bandrol": [
+"InverseHarmony"
+],
+"barkarol": [
+"InverseHarmony"
+],
+"batyal": [
+"InverseHarmony"
+],
+"başrol": [
+"InverseHarmony"
+],
+"bemol": [
+"InverseHarmony"
+],
+"benzol": [
+"InverseHarmony"
+],
+"beraat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"beytülmal": [
+"InverseHarmony"
+],
+"biyomedikal": [
+"InverseHarmony"
+],
+"cemal": [
+"InverseHarmony"
+],
+"cidal": [
+"InverseHarmony"
+],
+"debagat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"dialkol": [
+"InverseHarmony"
+],
+"dijital": [
+"InverseHarmony"
+],
+"dikkat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"diyagonal": [
+"InverseHarmony"
+],
+"duhul": [
+"InverseHarmony"
+],
+"dömifinal": [
+"InverseHarmony"
+],
+"ekol": [
+"InverseHarmony"
+],
+"emir": [
+"LastVowelDrop"
+],
+"emlak": [
+"NoVoicing"
+],
+"emsal": [
+"InverseHarmony"
+],
+"emval": [
+"InverseHarmony"
+],
+"enternasyonal": [
+"InverseHarmony"
+],
+"etanol": [
+"InverseHarmony"
+],
+"etol": [
+"InverseHarmony"
+],
+"eşkâl": [],
+"faul": [
+"InverseHarmony"
+],
+"fenol": [
+"InverseHarmony"
+],
+"festival": [
+"InverseHarmony"
+],
+"final": [
+"InverseHarmony"
+],
+"fleol": [
+"InverseHarmony"
+],
+"formol": [
+"InverseHarmony"
+],
+"fuhuş": [
+"LastVowelDrop"
+],
+"ful": [
+"InverseHarmony"
+],
+"fümerol": [
+"InverseHarmony"
+],
+"gassal": [
+"InverseHarmony"
+],
+"gayrimenkul": [
+"InverseHarmony"
+],
+"gazal": [
+"InverseHarmony"
+],
+"general": [
+"InverseHarmony"
+],
+"glikol": [
+"InverseHarmony"
+],
+"gol": [
+"InverseHarmony"
+],
+"golf": [
+"InverseHarmony"
+],
+"hakikat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"hakkâk": [
+"InverseHarmony"
+],
+"hapis": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"harf": [
+"InverseHarmony"
+],
+"hayal": [
+"InverseHarmony"
+],
+"hayıf": [
+"LastVowelDrop"
+],
+"hidrozol": [
+"InverseHarmony"
+],
+"hiperbol": [
+"InverseHarmony"
+],
+"hol": [
+"InverseHarmony"
+],
+"husul": [
+"InverseHarmony"
+],
+"hâl": [
+"InverseHarmony"
+],
+"hüsnükabul": [
+"InverseHarmony"
+],
+"ibzal": [
+"InverseHarmony"
+],
+"icmal": [
+"InverseHarmony"
+],
+"ideal": [
+"InverseHarmony"
+],
+"idol": [
+"InverseHarmony"
+],
+"ihmal": [
+"InverseHarmony"
+],
+"ihtifal": [
+"InverseHarmony"
+],
+"ihtimal": [
+"InverseHarmony"
+],
+"ikbal": [
+"InverseHarmony"
+],
+"ikmal": [
+"InverseHarmony"
+],
+"ilmihâl": [],
+"imal": [
+"InverseHarmony"
+],
+"imtisal": [
+"InverseHarmony"
+],
+"infial": [
+"InverseHarmony"
+],
+"inkisarıhayal": [
+"InverseHarmony"
+],
+"integral": [
+"InverseHarmony"
+],
+"intihal": [
+"InverseHarmony"
+],
+"intikal": [
+"InverseHarmony"
+],
+"inzal": [
+"InverseHarmony"
+],
+"iptal": [
+"InverseHarmony"
+],
+"iptizal": [
+"InverseHarmony"
+],
+"irsal": [
+"InverseHarmony"
+],
+"irtical": [
+"InverseHarmony"
+],
+"irtihal": [
+"InverseHarmony"
+],
+"isal": [
+"InverseHarmony"
+],
+"ishal": [
+"InverseHarmony"
+],
+"istical": [
+"InverseHarmony"
+],
+"istihsal": [
+"InverseHarmony"
+],
+"istikbal": [
+"InverseHarmony"
+],
+"istimal": [
+"InverseHarmony"
+],
+"istirahat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"istiskal": [
+"InverseHarmony"
+],
+"ithal": [
+"InverseHarmony"
+],
+"itidal": [
+"InverseHarmony"
+],
+"itikâl": [],
+"ittisal": [
+"InverseHarmony"
+],
+"izzetüikbal": [
+"InverseHarmony"
+],
+"iğfal": [
+"InverseHarmony"
+],
+"işgal": [
+"InverseHarmony"
+],
+"iştial": [
+"InverseHarmony"
+],
+"iştigal": [
+"InverseHarmony"
+],
+"jeosenklinal": [
+"InverseHarmony"
+],
+"jul": [
+"InverseHarmony"
+],
+"jurnal": [
+"InverseHarmony"
+],
+"kabul": [
+"InverseHarmony"
+],
+"kabız": [
+"LastVowelDrop"
+],
+"kadir": [
+"InverseHarmony",
+"LastVowelDrop"
+],
+"kalp": [
+"InverseHarmony",
+"Voicing"
+],
+"kanaat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"kapital": [
+"InverseHarmony"
+],
+"karambol": [
+"InverseHarmony"
+],
+"kardinal": [
+"InverseHarmony"
+],
+"katedral": [
+"InverseHarmony"
+],
+"kayıp": [
+"LastVowelDrop"
+],
+"kayıt": [
+"LastVowelDrop"
+],
+"kefal": [
+"InverseHarmony"
+],
+"kemal": [
+"InverseHarmony"
+],
+"kental": [
+"InverseHarmony"
+],
+"ketal": [
+"InverseHarmony"
+],
+"kilojul": [
+"InverseHarmony"
+],
+"kolesterol": [
+"InverseHarmony"
+],
+"kontrol": [
+"InverseHarmony"
+],
+"koral": [
+"InverseHarmony"
+],
+"koramiral": [
+"InverseHarmony"
+],
+"korgeneral": [
+"InverseHarmony"
+],
+"krezol": [
+"InverseHarmony"
+],
+"kristal": [
+"InverseHarmony"
+],
+"kıtal": [
+"InverseHarmony"
+],
+"liberal": [
+"InverseHarmony"
+],
+"lokal": [
+"InverseHarmony"
+],
+"mahmul": [
+"InverseHarmony"
+],
+"mahsul": [
+"InverseHarmony"
+],
+"mareşal": [
+"InverseHarmony"
+],
+"materyal": [
+"InverseHarmony"
+],
+"meal": [
+"InverseHarmony"
+],
+"mecal": [
+"InverseHarmony"
+],
+"meful": [
+"InverseHarmony"
+],
+"megapol": [
+"InverseHarmony"
+],
+"melal": [
+"InverseHarmony"
+],
+"menkul": [
+"InverseHarmony"
+],
+"mentol": [
+"InverseHarmony"
+],
+"metal": [
+"InverseHarmony"
+],
+"methal": [
+"InverseHarmony"
+],
+"metropol": [
+"InverseHarmony"
+],
+"meçhul": [
+"InverseHarmony"
+],
+"mineral": [
+"InverseHarmony"
+],
+"minval": [
+"InverseHarmony"
+],
+"misal": [
+"InverseHarmony"
+],
+"miskal": [
+"InverseHarmony"
+],
+"monokl": [
+"InverseHarmony"
+],
+"monopol": [
+"InverseHarmony"
+],
+"moral": [
+"InverseHarmony"
+],
+"mühür": [
+"LastVowelDrop"
+],
+"müzikal": [
+"InverseHarmony"
+],
+"müzikhol": [
+"InverseHarmony"
+],
+"nazarıdikkat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"nefis": [
+"LastVowelDrop"
+],
+"normal": [
+"InverseHarmony"
+],
+"nüzul": [
+"InverseHarmony"
+],
+"opal": [
+"InverseHarmony"
+],
+"oramiral": [
+"InverseHarmony"
+],
+"orgeneral": [
+"InverseHarmony"
+],
+"oryantal": [
+"InverseHarmony"
+],
+"otokontrol": [
+"InverseHarmony"
+],
+"parabol": [
+"InverseHarmony"
+],
+"petrol": [
+"InverseHarmony"
+],
+"portal": [
+"InverseHarmony"
+],
+"profiterol": [
+"InverseHarmony"
+],
+"protokol": [
+"InverseHarmony"
+],
+"razmol": [
+"InverseHarmony"
+],
+"resital": [
+"InverseHarmony"
+],
+"resmikabul": [
+"InverseHarmony"
+],
+"resul": [
+"InverseHarmony"
+],
+"resülmal": [
+"InverseHarmony"
+],
+"rical": [
+"InverseHarmony"
+],
+"ricat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"riyal": [
+"InverseHarmony"
+],
+"rol": [
+"InverseHarmony"
+],
+"saat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"santral": [
+"InverseHarmony"
+],
+"sembol": [
+"InverseHarmony"
+],
+"seyahat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"sinyal": [
+"InverseHarmony"
+],
+"sirkat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"sistol": [
+"InverseHarmony"
+],
+"spiral": [
+"InverseHarmony"
+],
+"sterol": [
+"InverseHarmony"
+],
+"sual": [
+"InverseHarmony"
+],
+"suistimal": [
+"InverseHarmony"
+],
+"sukutuhayal": [
+"InverseHarmony"
+],
+"sulp": [
+"InverseHarmony",
+"Voicing"
+],
+"sürat": [
+"InverseHarmony",
+"NoVoicing"
+],
+"tercümeihâl": [],
+"tergal": [
+"InverseHarmony"
+],
+"termal": [
+"InverseHarmony"
+],
+"terminal": [
+"InverseHarmony"
+],
+"timbal": [
+"InverseHarmony"
+],
+"timsal": [
+"InverseHarmony"
+],
+"transandantal": [
+"InverseHarmony"
+],
+"trikosefal": [
+"InverseHarmony"
+],
+"trol": [
+"InverseHarmony"
+],
+"tul": [
+"InverseHarmony"
+],
+"turnusol": [
+"InverseHarmony"
+],
+"tuval": [
+"InverseHarmony"
+],
+"tuğamiral": [
+"InverseHarmony"
+],
+"tuğgeneral": [
+"InverseHarmony"
+],
+"tümamiral": [
+"InverseHarmony"
+],
+"tümgeneral": [
+"InverseHarmony"
+],
+"usul": [
+"InverseHarmony"
+],
+"valf": [
+"InverseHarmony"
+],
+"vebal": [
+"InverseHarmony"
+],
+"visal": [
+"InverseHarmony"
+],
+"visamiral": [
+"InverseHarmony"
+],
+"vokal": [
+"InverseHarmony"
+],
+"vusul": [
+"InverseHarmony"
+],
+"yâr": [
+"InverseHarmony"
+],
+"zehir": [
+"LastVowelDrop"
+],
+"zeval": [
+"InverseHarmony"
+],
+"zühul": [
+"InverseHarmony"
+],
+"âlemşümul": [
+"InverseHarmony"
+],
+"şakul": [
+"InverseHarmony"
+],
+"şarampol": [
+"InverseHarmony"
+],
+"şer": [
+"Doubling"
+],
+"şevval": [
+"InverseHarmony"
+],
+"şimal": [
+"InverseHarmony"
+],
+"şümul": [
+"InverseHarmony"
+]
+}

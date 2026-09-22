@@ -1,8 +1,8 @@
 # TurkMorfBench
 
-**Turkish morphology benchmark for language models** — 449,233 items, diagnostic
+**Turkish morphology benchmark for language models** — 449,647 items, diagnostic
 reports, wug-test controls, tokenizer analysis.
-**Dil modellerinin Türkçe morfoloji yetkinliğini ölçen kıyas** — 449.233 madde,
+**Dil modellerinin Türkçe morfoloji yetkinliğini ölçen kıyas** — 449.647 madde,
 teşhis raporu, uydurma gövde kontrolü, tokenizer çözümlemesi.
 
 Built by [eCloud Tech.](https://www.e-cloud.web.tr) · code Apache-2.0 · data CC BY 4.0
@@ -63,7 +63,7 @@ and no other Turkish benchmark reports accuracy conditioned on tokenization.
 
 Türkçe sondan eklemeli bir dildir ve ek seçimi katı kurallara bağlıdır: büyük ve
 küçük ünlü uyumu, ünsüz benzeşmesi, ünsüz yumuşaması, kaynaştırma. Üstüne
-sözlüksel istisnalar biner: `burun → burnu`, `hak → hakkı`, `kalp → kalbi`,
+sözlüksel istisnalar biner: `burun → burnu`, `ret → reddi`, `kalp → kalbi`,
 `buzdolabı → buzdolabına`. Bir de okunuşa bağlı ekler: `TCDD'yi`, `2026'da`.
 
 TurkMorfBench bunların hepsini ayrı ayrı ölçer ve **hangisinde düştüğünü söyler.**
@@ -73,16 +73,16 @@ TurkMorfBench bunların hepsini ayrı ayrı ölçer ve **hangisinde düştüğü
 | ad çekimi | 159.839 | 7 hâl, ünlü uyumu, benzeşme, yumuşama, kaynaştırma |
 | ad paradigma yuvaları | 273.840 | çokluk + iyelik + hâl yığını, **zamir n'si** |
 | ek zinciri | 8.344 | 1'den 8'e derinlik, ek sırası |
-| fiil çekimi | 1.788 | 7 zaman/kip, olumsuzluk, iki kişi takımı, **geniş zaman istisnaları** |
+| fiil çekimi | 1.799 | 7 zaman/kip, olumsuzluk, iki kişi takımı, **geniş zaman istisnaları** |
 | yapım eki | 1.442 | -lIk, -CI, -lI, -sIz, -sAl, -lAş, -lA |
 | çatı | 669 | edilgen, dönüşlü, işteş, ettirgen |
 | özel ad | 1.200 | kesme işareti, **yumuşamama** (Sinop'a, Sinob'a değil) |
-| birleşik isim | 922 | buzdolabına |
+| birleşik isim | 897 | buzdolabına |
 | sayı | 533 | **okunuşa göre** ek (2026'da) |
 | kısaltma | 304 | **okunuşa göre** ek (TCDD'yi) |
-| ünlü düşmesi | 219 | burnu, ağzı, aklı |
-| uyum kırıcı alıntı | 78 | kalbi, saati, rolü |
-| ünsüz ikizleşmesi | 55 | hakkı, sırrı, affı |
+| ünlü düşmesi | 181 | burnu, aklı, aczi · **TDK doğrulamalı** |
+| uyum kırıcı alıntı | 70 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
+| ünsüz ikizleşmesi | 36 | reddi, tıbbı, zıddı · **TDK doğrulamalı** |
 
 ### Neden uydurma (wug) gövde
 
@@ -107,8 +107,8 @@ bileşimi eşleştirildikten sonra bile, 22-23 puan daha kötü.
 
 | Katman | Madde | Kimin için |
 |---|---|---|
-| `cekirdek` | 1.952 | dakikalar içinde koşar, kova dengeli, **teşhis için** |
-| `tam` | 449.233 | tasarlanan kapsamın tamamı, **manşet sayı için** |
+| `cekirdek` | 1.856 | dakikalar içinde koşar, kova dengeli, **teşhis için** |
+| `tam` | 449.647 | tasarlanan kapsamın tamamı, **manşet sayı için** |
 
 Çekirdek kova dengelidir, yani tam kümenin yansız tahmini **değildir**; bilerek.
 En küçük kovada bile ölçülebilir bir sayı çıksın diye. İkisi karşılaştırılmaz.
@@ -125,6 +125,51 @@ Sözlüksel düzensizlikler (hangi gövde yumuşar, hangisinde ünlü düşer)
 çözümleyicisi kullanılmaz.
 
 Kural motorunun 282 elle yazılmış altın iddiası vardır ve hepsi geçer.
+
+### Üç istisna kovası TDK ile doğrulanmıştır
+
+`ünlü düşmesi`, `uyum kırıcı alıntı` ve `ünsüz ikizleşmesi` kovalarının
+**316 maddesinin tamamının** altını [TDK Güncel Türkçe Sözlük](https://sozluk.gov.tr)
+ile birebir karşılaştırılmıştır. Sözlüğün madde başından sonra verdiği çekim
+ipucu (`kıraat, -ti`) altının kendisidir; TDK bir gövde için biçim vermiyorsa ya
+da birden fazla veriyorsa (`hak` → *hakkı* / *hakki*) o gövde kıyasa alınmaz.
+
+Bu denetimi yapma sebebimiz, insan tavanı ölçümünde katılımcıların `uyum kırıcı`
+kovasında **şans düzeyinin altına** düşmesiydi. Ana dili Türkçe olan insanlar bir
+kurala şanstan kötü uyuyorsa, sorun insanda değil altındadır. Üç sistematik hata
+çıktı — olmayan yumuşamanın uygulanması (*bidadi*, doğrusu **bidati**),
+ince/kalın uyumun kaçırılması (*aczı*, doğrusu **aczi**), ikizleşirken
+ötümlüleşmenin atlanması (*retti*, doğrusu **reddi**) — hepsi sözlük
+bayraklarının eksikliğinden. Düzeltmeden sonra ölçülen insan doğruluğu
+5,6 puan yükseldi.
+
+### İnsan tavanı — ilk ölçüm
+
+**%88,2 [%83,1 – %91,8]** · 3 değerlendirici, 211 yargı · *toplama sürüyor*
+
+Aynı maddeler ana dili Türkçe olan kişilere soruluyor
+([morf.e-cloud.web.tr](https://morf.e-cloud.web.tr)). Bu bir **ön okumadır**:
+örneklem küçük, aralık geniş ve sayı katılımcı geldikçe güncellenecek.
+
+| kesit | doğruluk |
+|---|---|
+| gerçek gövde | %90,2 [%84,9 – %93,8] |
+| **uydurma gövde** | **%78,4 [%62,8 – %88,6]** |
+| ek zinciri (en zor) | %50,0 [%25,4 – %74,6] |
+
+İnsanlar da uydurma gövdede düşüyor — yani kıyasın ölçtüğü zorluk yapaydan
+ibaret değil. Ama düşüş 12 puan; modellerde ölçtüğümüz 22-32 puan.
+
+**Katılımcı taraması.** Doğruluk sayısı elenmeden hesaplanmaz. İki ölçüt önceden
+yazılır ve sonuca bakılarak değiştirilmez: soru başına medyan süre 3 saniyenin
+altındaysa kişi soruyu okumuyordur; doğruluğu kendi şans düzeyini (gördüğü
+maddelerin şık sayılarına göre hesaplanır) binom testiyle geçemeyen kişi bilgi
+taşımıyordur. İlk turda 6 katılımcının 3'ü elendi.
+
+**Bu ölçüm kıyasın kendi hatasını buldu.** İlk turda katılımcılar
+`uyum_kirici` kovasında şans düzeyinin ALTINA düştü. Ana dili Türkçe olan
+insanlar bir kurala şanstan kötü uyuyorsa sorun insanda değil altındadır —
+TDK denetimi buradan çıktı. Düzeltmeden önce ölçülen insan doğruluğu %73,5'ti.
 
 ### Kullanım
 
@@ -158,7 +203,7 @@ bir ölçümümüz elli puan yanılmıştı.
 Turkish is agglutinative and suffix selection follows strict rules: two-way and
 four-way vowel harmony, consonant assimilation, consonant lenition, buffer
 consonants. On top of these sit lexical exceptions (`burun → burnu`,
-`hak → hakkı`, `kalp → kalbi`) and pronunciation-driven suffixes
+`kalp → kalbi`, `ret → reddi`) and pronunciation-driven suffixes
 (`TCDD'yi`, `2026'da` — the suffix follows how the number is *read*).
 
 TurkMorfBench measures each of these separately and tells you **which one fails**.
@@ -189,10 +234,42 @@ flags come from the [Zemberek](https://github.com/ahmetaa/zemberek-nlp) dictiona
 (Apache-2.0); its analyser is not used. The rule engine carries 282 hand-written
 gold assertions, all passing.
 
+### The exception buckets are verified against TDK
+
+All 316 items in the vowel-drop, inverse-harmony and consonant-doubling buckets
+carry a gold form checked character-for-character against the
+[TDK Güncel Türkçe Sözlük](https://sozluk.gov.tr). We ran this audit because
+native speakers scored **below chance** on the inverse-harmony bucket in the
+human-ceiling study — when native speakers do worse than guessing, the gold is
+what needs checking, not the speakers. It found three systematic errors inherited
+from incomplete lexicon flags (*bidadi* → **bidati**, *aczı* → **aczi**,
+*retti* → **reddi**). Measured human accuracy rose 5.6 points after the fix.
+
+### Human ceiling — first measurement
+
+**88.2% [83.1 – 91.8]** · 3 raters, 211 judgments · *collection ongoing*
+
+The same items are put to native speakers at
+[morf.e-cloud.web.tr](https://morf.e-cloud.web.tr). This is a **preliminary
+reading**: the sample is small, the interval wide, and the figure will be updated
+as more raters finish. Humans score 90.2% on real stems and 78.4% on nonce stems
+— a 12-point gap, against the 22-32 points we measure on models, so the
+real/nonce difficulty is not an artefact.
+
+Raters are screened before the number is computed, on two criteria fixed in
+advance: a median of under 3 seconds per question means the question was not
+read, and accuracy that fails to beat the rater's own chance level on a binomial
+test carries no information. Three of the first six raters were screened out.
+
+**This measurement found the benchmark's own error.** In the first round native
+speakers scored *below chance* on the inverse-harmony bucket, which is what
+prompted the TDK audit. Before the correction the measured human ceiling was
+73.5%.
+
 ### Two tiers
 
-`cekirdek` (1,952 items, bucket-balanced, runs in minutes, for diagnosis) and
-`tam` (449,233 items, for the headline number). The core tier is deliberately
+`cekirdek` (1,856 items, bucket-balanced, runs in minutes, for diagnosis) and
+`tam` (449,647 items, for the headline number). The core tier is deliberately
 *not* an unbiased sample of the full set — it is balanced so that even the
 smallest bucket yields a measurable estimate. Do not compare the two.
 

@@ -31,6 +31,7 @@ HER MADDE NE TAŞIR
 import collections
 import hashlib
 import json
+import os
 import random
 
 import ses
@@ -293,6 +294,48 @@ def turetme_maddeleri(birincil, fiiller, rng, n=900):
     return cik, elenen
 
 
+# ters uyum eşleri: ek ünlüsünü ince<->kalın çevirmek
+_UNLU_ESI = {"i": "ı", "ı": "i", "ü": "u", "u": "ü", "e": "a", "a": "e",
+             "ö": "o", "o": "ö"}
+# yumuşama eşleri: gövde son ünsüzünü ötümlü<->ötümsüz çevirmek
+_UNSUZ_ESI = {"b": "p", "p": "b", "c": "ç", "ç": "c", "d": "t", "t": "d",
+              "ğ": "k", "k": "ğ", "g": "k"}
+
+
+def celdirici_altindan(govde, altin, hal):
+    """Altın biçimi TEK BİR kuralla bozan çeldiriciler.
+
+    Her biri adını bozduğu kuraldan alır; model hangisini seçtiyse hangi
+    kuralı bilmediği doğrudan okunur.
+        uyum        ek ünlüsü ince<->kalın çevrilir   kıraati -> kıraatı
+        yumusama    gövde son ünsüzü çevrilir          kıraati -> kıraadi
+        kural_yok   gövde hiç değişmeden düz çekilir   aczi    -> acizi
+    """
+    cik = []
+
+    # uyum: son ünlüyü çevir
+    for i in range(len(altin) - 1, -1, -1):
+        if altin[i] in _UNLU_ESI:
+            cik.append(("uyum", altin[:i] + _UNLU_ESI[altin[i]] + altin[i + 1:]))
+            break
+
+    # yumuşama: YALNIZ ek sınırındaki ünsüz — ekten hemen önceki harf.
+    # Serbest arama gövdenin içine dalıyordu (burnu -> purnu, baştaki b'yi
+    # çevirmişti). İkizleşmede iki harf birden çevrilir, yoksa `redti` gibi
+    # yarım bir biçim çıkar; doğru çeldirici `retti`dir.
+    if len(altin) >= 2 and altin[-2] in _UNSUZ_ESI:
+        e = _UNSUZ_ESI[altin[-2]]
+        if len(altin) >= 3 and altin[-3] == altin[-2]:
+            cik.append(("yumusama", altin[:-3] + e + e + altin[-1]))
+        else:
+            cik.append(("yumusama", altin[:-2] + e + altin[-1]))
+
+    # kural yok: gövde olduğu gibi kalır, ek uyumla eklenir
+    duz = govde + ses.coz(ad_cekim.HAL[hal], govde)
+    cik.append(("kural_yok", duz))
+    return cik
+
+
 def istisna_maddeleri(maddeler, kisaltmalar, yer_adlari, rng, n_yer=1200, n_sayi=400):
     """Sekiz istisna kovası. Çeldirici: o kovanın kuralını UYGULAMAMAK."""
     cik, elenen = [], collections.Counter()
@@ -310,14 +353,17 @@ def istisna_maddeleri(maddeler, kisaltmalar, yer_adlari, rng, n_yer=1200, n_sayi
             cel = {}
             if kova in ("unlu_dusmesi", "ikizlesme", "uyum_kirici", "birlesik_isim",
                         "kaynastirma_istisna"):
-                # kuralı uygulamayan biçim: bayraksız sahte gövde gibi çek
-                y = ad_cekim.cekim(Sahte(gosterim), hal=hal)
-                if y != altin:
-                    cel["kural_uygulanmadi"] = y
-                y2 = ad_cekim.cekim(Sahte(gosterim), hal=hal)
-                y2 = gosterim + ses.coz(ad_cekim.HAL[hal], gosterim, ters=True)
-                if y2 != altin and y2 not in cel.values():
-                    cel["uyum"] = y2
+                # Çeldiriciler ALTINDAN türetilir, gövdeden değil.
+                #
+                # Eskiden "ham gövdeye ters uyum uygula" biçimi çeldirici
+                # sayılıyordu. Altın TDK'ye geçince o biçim maddelerin
+                # çoğunda altının KENDİSİ oldu (kıraat -> kıraati), çeldirici
+                # sayısı bire düştü ve kova neredeyse tümüyle elendi.
+                # Altını tek bir kuralla bozmak hem sağlam hem teşhis edici:
+                # hangi çeldirici seçildiyse hangi kural bilinmiyor bellidir.
+                for ad, y in celdirici_altindan(gosterim, altin, hal):
+                    if y != altin and y not in cel.values():
+                        cel[ad] = y
             elif kova == "ozel_ad":
                 y = gosterim + ses.coz(ad_cekim.HAL[hal], gosterim)      # kesmesiz
                 if y != altin:
@@ -348,17 +394,58 @@ def istisna_maddeleri(maddeler, kisaltmalar, yer_adlari, rng, n_yer=1200, n_sayi
     return cik, elenen
 
 
+def tdk_bayrak_uygula(maddeler):
+    """TDK ile doğrulanmış bayrakları sözlük maddelerinin üzerine yazar.
+
+    NEDEN BÜTÜN KOVALARA
+      TDK düzeltmesi önce yalnız istisna kovalarına uygulanmıştı ve aynı
+      gövde iki farklı altın veriyordu: `kıraat` istisna kovasında
+      `kıraati`, ad çekimi kovasında `kıraadi`. Bir kıyasta aynı gövdenin
+      iki altını olması onu kullanılamaz yapar.
+
+      Bayrak sözlüksel ilkeldir; kaynakta düzeltilince motor her kovada,
+      her hâlde, her ek yığınında doğru biçimi üretir. Ölçtük: düzeltme
+      öncesi 105 gövde genel kovalarda TDK ile çelişiyordu ve bu 1.451
+      maddeyi etkiliyordu.
+
+      Yalnız TDK'nin AÇIKÇA biçim verdiği gövdeler düzeltilir. TDK'nin
+      sustuğu gövdede Zemberek bayrağı korunur — sözlüğün ek notasyonu
+      yazmaması "düzenli" demek değil, "öngörülebilir" demektir ve
+      öngörülen şey zaten varsayılan kuraldır.
+    """
+    y = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tdk_bayrak.json")
+    if not os.path.exists(y):
+        return 0
+    with open(y, encoding="utf8") as f:
+        tablo = json.load(f)
+    n = 0
+    for m in maddeler:
+        b = tablo.get(m.govde)
+        if b is not None and m.tur in ("Noun", "Adj"):
+            yeni = set(b) | (m.bayrak - sozluk.SES_BAYRAK)
+            if yeni != m.bayrak:
+                m.bayrak = yeni
+                n += 1
+    return n
+
+
 # ------------------------------------------------------------------- kurma ---
 
 def kur():
     rng = random.Random(TOHUM)
     ham = sozluk.yukle(("master", "non_tdk"))
+    tdk_bayrak_uygula(ham)
     adlar = sozluk.indeksle([m for m in ham if m.tur in ("Noun", "Adj")])
     fiiller = sozluk.indeksle([m for m in ham if m.tur == "Verb"])
     tum_govde = {m.govde for m in ham}
     belirsiz = sozluk.belirsizler([m for m in ham if m.tur in ("Noun", "Adj")])
     # çekimi ayrışan eş yazılışlılar kıyasa GİRMEZ: altın cevap tek olmaz
-    birincil = {g: m for g, m in adlar.items() if g not in belirsiz}
+    # TDK'nin verdiği biçim hiçbir bayrak kümesiyle üretilemiyorsa gövde
+    # kuralla açıklanamıyor demektir; kural motoruna zorla söyletmek
+    # ölçtüğümüz şeyi bozar. ÇIKAR. (raptı, veçhi, hüsnühâli…)
+    _d = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tdk_disarida.json")
+    tdk_dis = set(json.load(open(_d, encoding="utf8"))) if os.path.exists(_d) else set()
+    birincil = {g: m for g, m in adlar.items() if g not in belirsiz and g not in tdk_dis}
 
     kisaltma_m = sozluk.yukle(("kisaltma",))
     kisaltmalar = [(m.govde, m.okunus) for m in kisaltma_m if m.okunus]
