@@ -222,6 +222,43 @@ sözlük dosyasına bakıyordu, eskimiş ve gayriresmî sözlüklerdeki yirmi g�
 "uydurma" sayılıp kıyasa girmişti. Wug testinin tek işi gövdenin hiçbir
 külliyatta geçmemesini garanti etmek; denetim artık bütün sözlüklere bakıyor.
 
+
+### Puanlama kuralı (3.3.0'da değişti)
+
+Aday, `log P(aday | istem)` toplamının **adayın karakter sayısına** bölünmesiyle
+puanlanır. Ortak istem öneki puana girmez.
+
+Önceki sürümler istem ve adayın birlikte oluşturduğu dizginin ortalama
+log-olasılığını alıyordu. Önek her adayda aynı ama jeton sayıları farklı;
+ortalama alınınca o sabit önek adaylar arasında farklı ağırlıklarla dağılıyor
+ve gerçek fark eziliyordu. Bir maddede aday toplamları −17,2 ile −25,6 arasında
+ayrışırken eski kural hepsini −5,1 ile −5,4 arasına sıkıştırıp yanlış adayı
+0,08 farkla seçiyordu.
+
+Kural beş aday arasından **doğruluğa göre değil yanlılığa göre** seçildi:
+ölçeği ölçülen şeye göre ayarlamamak için. Çeldiricilerin bir kısmı altından
+kısadır (eksik ek). Adayların uzunluğu farklı olan maddelerde altın %29,9
+oranında en kısadır; yansız bir kural da o civarda en kısayı seçmeli:
+
+| kural | en kısayı seçme (hedef %29,9) |
+|---|---|
+| tüm dizgi ortalaması *(eski)* | %47,2 · %47,7 |
+| aday toplamı | %51,0 · %57,0 |
+| jetona bölünmüş | %47,5 · %48,7 |
+| **karaktere bölünmüş** | **%39,4 · %43,2** |
+| koşulsuzla normalleştirilmiş | %39,2 · %45,0 |
+
+İkinci ve bağımsız gerekçe: karakter sayısı **jetonlayıcıdan bağımsızdır.**
+Farklı sözlüklü modeller karşılaştırılırken jeton sayısına bölen bir ölçü,
+kelimeyi kaç parçaya böldüklerine göre modelleri farklı cezalandırır.
+
+Kalan yanlılık gizlenmiyor: %39-43, hedef %29,9. Uzunluk etkisi azaldı ama
+sıfırlanmadı.
+
+**Uzak uç kullananlar için:** `/v1/completions` yanıtında `text_offset`
+zorunludur; onsuz aday jetonları ayrılamaz. Uç bu alanı döndürmüyorsa ölçüm
+sessizce farklı bir şey hesaplamak yerine durur.
+
 ### Kullanım
 
 ```bash

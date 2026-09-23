@@ -14,10 +14,37 @@
   yerel   transformers ile ağırlıklar (tam logit erişimi)
   uzak    OpenAI uyumlu /v1/completions ucu (echo + logprobs)
 
-  İkisi de aynı kararı verir: seçenekler tek tek istemin sonuna konur ve
-  son jetonların ortalama log-olasılığı karşılaştırılır. Uzunluğa bölmek
-  şart — çeldiriciler farklı uzunlukta olabiliyor ve ham toplam kısa olanı
-  kayırır.
+PUANLAMA KURALI — 3.3.0'da DEĞİŞTİ
+  Aday, log P(aday | istem) toplamının ADAYIN KARAKTER SAYISINA bölünmesiyle
+  puanlanır. Ortak istem öneki puana GİRMEZ.
+
+  Önceki sürümler tüm dizginin (istem + aday) ortalama log-olasılığını
+  alıyordu. Önek her adayda aynı ama jeton sayıları farklı; ortalama
+  alınınca o sabit önek adaylar arasında farklı ağırlıklarla dağılıyor ve
+  adaylar arasındaki gerçek fark eziliyordu. Ölçtük: bir maddede aday
+  toplamları −17,2 ile −25,6 arasında ayrışırken eski kural hepsini −5,1
+  ile −5,4 arasına sıkıştırıp yanlış adayı 0,08 farkla seçiyordu.
+
+  Beş kural dört modelde karşılaştırıldı. Ölçüt "en yüksek doğruluk" DEĞİL
+  — kuralı doğruluğa göre seçmek, ölçeği ölçülen şeye göre ayarlamaktır.
+  Ölçüt uzunluk yanlılığıydı: çeldiricilerin bir kısmı altından kısa (eksik
+  ek), bir kısmı uzun. Adayların uzunluğu farklı olan maddelerde altın
+  %29,9 oranında en kısadır; yansız bir kural da o civarda en kısayı
+  seçmeli. Ölçülen (cosmos-llama8b-it / kumru-2b):
+
+      tam_ort      %47,2 / %47,7      (eski kural)
+      aday_top     %51,0 / %57,0      ham toplam: kısayı kayırıyor
+      aday_jeton   %47,5 / %48,7      jetona bölme
+      aday_harf    %39,4 / %43,2      KARAKTERE bölme  <- seçilen
+      pmi          %39,2 / %45,0      koşulsuzla normalleştirme
+
+  Karaktere bölmenin ikinci ve bağımsız gerekçesi: JETONLAYICIDAN BAĞIMSIZ
+  olması. Farklı sözlüklü modeller karşılaştırılırken jeton sayısına bölen
+  bir ölçü, kelimeyi kaç parçaya böldüklerine göre modelleri farklı
+  cezalandırır; karakter sayısı böyle bir yanlılık taşımaz.
+
+  Kalan yanlılık gizlenmiyor: %39-43, hedef %29,9. Uzunluk etkisi azaldı
+  ama sıfırlanmadı.
 """
 import json
 import math
@@ -45,15 +72,19 @@ class Yerel:
     def jetonla(self, s):
         return self.tok.tokenize(s)
 
-    def olasilik(self, metin):
+    def olasilik(self, istem, aday):
+        """log P(aday | istem) — yalnız aday jetonları, karaktere bölünmüş."""
         t = self.torch
         with t.no_grad():
-            ids = self.tok(metin, return_tensors="pt").input_ids.to(self.model.device)
+            n_onek = len(self.tok(istem, add_special_tokens=True).input_ids)
+            ids = self.tok(istem + aday, return_tensors="pt").input_ids.to(self.model.device)
             if ids.shape[1] < 2:
                 return -1e9
             lp = self.model(ids).logits[0, :-1].log_softmax(-1)
-            hedef = ids[0, 1:]
-            return float(lp.gather(-1, hedef.unsqueeze(-1)).mean())
+            tek = lp.gather(-1, ids[0, 1:].unsqueeze(-1)).squeeze(-1)
+            bas = max(0, n_onek - 1)
+            aday_jeton = tek[bas:] if tek[bas:].numel() else tek[-1:]
+            return float(aday_jeton.sum()) / max(1, len(aday))
 
     def uret(self, istem, en_fazla=20):
         t = self.torch
@@ -110,18 +141,39 @@ class Uzak:
                 c = self._cagir({"model": self.model, "prompt": "deneme",
                                  "max_tokens": 0, "echo": True, "logprobs": 0,
                                  "temperature": 0})
-                lp = (c.get("logprobs") or {}).get("token_logprobs")
+                g = c.get("logprobs") or {}
+                lp = g.get("token_logprobs")
+                if lp and not g.get("text_offset"):
+                    # text_offset yoksa aday jetonları ayrılamaz; sessizce
+                    # farklı bir şey ölçmektense ölçmemek doğrusu.
+                    raise RuntimeError("uç `text_offset` döndürmüyor; "
+                                       "zorunlu seçim bu uçla ölçülemez")
                 self._echo_var = bool(lp)
             except Exception:
                 self._echo_var = False
         return self._echo_var
 
-    def olasilik(self, metin):
-        c = self._cagir({"model": self.model, "prompt": metin, "max_tokens": 0,
+    def olasilik(self, istem, aday):
+        """log P(aday | istem), karaktere bölünmüş.
+
+        `text_offset` her jetonun istem metnindeki başlangıcını verir; aday
+        jetonları, uzunluğu istemin uzunluğuna eşit ya da ondan büyük olan
+        ilk jetondan itibaren başlar. Bu alan olmadan aday jetonları
+        ayrılamaz ve ölçüm yerel arka uçla aynı şeyi ölçmez."""
+        c = self._cagir({"model": self.model, "prompt": istem + aday, "max_tokens": 0,
                          "echo": True, "logprobs": 0, "temperature": 0})
-        lp = [x for x in ((c.get("logprobs") or {}).get("token_logprobs") or [])
-              if x is not None]
-        return sum(lp) / len(lp) if lp else -1e9
+        g = c.get("logprobs") or {}
+        lp = g.get("token_logprobs") or []
+        off = g.get("text_offset") or []
+        if not lp:
+            return -1e9
+        if off and len(off) == len(lp):
+            secili = [x for x, o in zip(lp, off) if x is not None and o >= len(istem)]
+        else:
+            secili = [x for x in lp if x is not None]
+        if not secili:
+            secili = [x for x in lp if x is not None][-1:]
+        return sum(secili) / max(1, len(aday))
 
     def uret(self, istem, en_fazla=20):
         c = self._cagir({"model": self.model, "prompt": istem,
@@ -133,7 +185,8 @@ class Uzak:
 
 def _tek_madde(arka, m):
     adaylar = [("altin", m["altin"])] + list(m["celdirici"].items())
-    puan = [(ad, arka.olasilik(ISTEM % (m["govde"], b))) for ad, b in adaylar]
+    onek = ISTEM % (m["govde"], "")
+    puan = [(ad, arka.olasilik(onek, b)) for ad, b in adaylar]
     sec = max(puan, key=lambda x: x[1])[0]
     return m["kimlik"], (sec == "altin", None if sec == "altin" else sec)
 
