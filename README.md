@@ -1,7 +1,7 @@
 # TurkMorfBench v3
 
-**465.535 madde · 14 kova · uydurma gövde kontrollü · teşhis raporlu**
-**465,535 items · 14 buckets · wug-controlled · diagnostic reporting**
+**465.241 madde · 14 kova · uydurma gövde kontrollü · teşhis raporlu**
+**465,241 items · 14 buckets · wug-controlled · diagnostic reporting**
 
 [eCloud Tech.](https://www.e-cloud.web.tr) · kod Apache-2.0 · veri CC BY 4.0
 
@@ -13,7 +13,7 @@ turkmorfbench olc --model YOUR/MODEL
 ```python
 from datasets import load_dataset
 d = load_dataset("ecloudtech/TurkMorfBench", "cekirdek")   # 1.856 madde
-d = load_dataset("ecloudtech/TurkMorfBench", "tam")        # 465.535 madde
+d = load_dataset("ecloudtech/TurkMorfBench", "tam")        # 465.241 madde
 ```
 
 ---
@@ -29,15 +29,15 @@ Bu kıyas hepsini **ayrı ayrı** ölçer ve hangisinde düşüldüğünü söyl
 
 | Kova | Madde | Ne sınıyor |
 |---|---|---|
-| `ad_yuva` | 283.550 | çokluk + iyelik + hâl yığını, **zamir n'si** |
-| `ad_cekimi` | 166.421 | 7 hâl, uyum, benzeşme, yumuşama, kaynaştırma |
-| `ek_zinciri` | 8.372 | 1'den 8'e derinlik, ek sırası |
-| `fiil_cekimi` | 1.797 | 7 zaman/kip, olumsuzluk, **geniş zaman istisnaları** |
-| `yapim_eki` | 1.421 | -lIk, -CI, -lI, -sIz, -sAl, -lAş, -lA |
+| `ad_yuva` | 283.360 | çokluk + iyelik + hâl yığını, **zamir n'si** |
+| `ad_cekimi` | 166.307 | 7 hâl, uyum, benzeşme, yumuşama, kaynaştırma |
+| `ek_zinciri` | 8.351 | 1'den 8'e derinlik, ek sırası |
+| `fiil_cekimi` | 1.792 | 7 zaman/kip, olumsuzluk, **geniş zaman istisnaları** |
+| `yapim_eki` | 1.477 | -lIk, -CI, -lI, -sIz, -sAl, -lAş, -lA |
 | `istisna_ozel_ad` | 1.200 | kesme işareti, **yumuşamama** (Sinop'a) |
 | `istisna_birlesik_isim` | 896 | buzdolabına |
-| `cati` | 725 | edilgen, dönüşlü, işteş, ettirgen |
-| `istisna_sayi` | 530 | **okunuşa göre** ek (2026'da) |
+| `cati` | 728 | edilgen, dönüşlü, işteş, ettirgen |
+| `istisna_sayi` | 507 | **okunuşa göre** ek (2026'da) |
 | `istisna_kisaltma` | 304 | **okunuşa göre** ek (TCDD'yi) |
 | `istisna_unlu_dusmesi` | 177 | burnu, aklı, nakdi · **TDK doğrulamalı** |
 | `istisna_uyum_kirici` | 105 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
@@ -55,7 +55,8 @@ Bu kıyas hepsini **ayrı ayrı** ölçer ve hangisinde düşüldüğünü söyl
   "altin": "içtimaiyatlarında",
   "celdirici_tur":   ["zamir_n", "uyum"],
   "celdirici_bicim": ["içtimaiyatlarıda", "içtimaiyatlarınde"],
-  "secenek": ["içtimaiyatlarında", "içtimaiyatlarıda", "içtimaiyatlarınde"],
+  "secenek": ["içtimaiyatlarıda", "içtimaiyatlarında", "içtimaiyatlarınde"],
+  "altin_sira": 1,
   "gercek": true,
   "hucre": ["a", "t", 3, "kirik"],
   "bayrak": []
@@ -92,7 +93,7 @@ eşleştirildikten sonra bile **22-23 puan** daha kötü.
 | Katman | Madde | Kimin için |
 |---|---|---|
 | `cekirdek` | 1.856 | dakikalar içinde koşar, **kova dengeli**, teşhis için |
-| `tam` | 465.535 | tasarlanan kapsamın tamamı, manşet sayı için |
+| `tam` | 465.241 | tasarlanan kapsamın tamamı, manşet sayı için |
 
 Çekirdek kova dengelidir; tam kümenin yansız tahmini **değildir** ve öyle
 olması amaçlanmamıştır. En küçük kovada bile ölçülebilir bir sayı çıksın diye.
@@ -206,6 +207,23 @@ değişiyor. İkisi ayrı raporlanır; tek bir sayıya indirmek farkı gizler.
 
 Sonuncusu en genişi: `â` görünmez olduğu için `rüzgâr`ın son ünlüsü `ü`
 sanılıyor ve ince ek geliyordu. Düzeltmeden sonra UD uyumu 3,5 puan yükseldi.
+
+
+### Şıklar karıştırılmıştır
+
+`secenek` listesinde altın rastgele bir konumda durur ve `altin_sira` kaçıncı
+olduğunu söyler. Karıştırma madde kimliğinden türetilir: aynı madde her
+üretimde aynı sırayı alır, sürümler arası karşılaştırma bozulmaz.
+
+Bu 3.2.1'den önce böyle değildi — altın her maddede birinci şıktı. Zorunlu
+seçim kipinde şıklar tek tek puanlandığı için sıra sonucu etkilemiyordu ve
+gözden kaçmıştı; ama şıkları A/B/C diye harflendiren bir protokolde hep "A"
+demek %100 verirdi. İç tutarlılık denetimiyle yakalandı.
+
+Aynı denetim ikinci bir kusur daha buldu: uydurma gövde üretici yalnız iki
+sözlük dosyasına bakıyordu, eskimiş ve gayriresmî sözlüklerdeki yirmi gövde
+"uydurma" sayılıp kıyasa girmişti. Wug testinin tek işi gövdenin hiçbir
+külliyatta geçmemesini garanti etmek; denetim artık bütün sözlüklere bakıyor.
 
 
 ## Sınırlar — bunları biliyoruz ve yazıyoruz
@@ -328,6 +346,19 @@ pronominal *n* wrongly inserted before the instrumental (*hedefinle* →
 **hedefiyle**), the irregular buffer on `su`/`ne` (*susunu* → **suyunu**), and
 circumflex vowels (â î û) missing from the vowel inventory, which made the
 engine read the wrong vowel as final (*rüzgâre* → **rüzgâra**).
+
+
+### Options are shuffled
+
+The gold form sits at a random position in `secenek`, and `altin_sira` gives
+its index. The shuffle is derived from the item id, so an item keeps its
+ordering across regenerations.
+
+Before 3.2.1 the gold was always the first option. Forced-choice scoring makes
+the order irrelevant, which is why it went unnoticed — but any protocol that
+letters the options A/B/C would have scored 100% by always answering A. An
+internal consistency audit caught it, along with twenty stems marked as nonce
+that were in fact present in the obsolete and informal dictionaries.
 
 ### Known limits
 

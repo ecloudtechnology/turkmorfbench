@@ -1,8 +1,8 @@
 # TurkMorfBench
 
-**Turkish morphology benchmark for language models** — 465,535 items, diagnostic
+**Turkish morphology benchmark for language models** — 465,241 items, diagnostic
 reports, wug-test controls, tokenizer analysis.
-**Dil modellerinin Türkçe morfoloji yetkinliğini ölçen kıyas** — 465.535 madde,
+**Dil modellerinin Türkçe morfoloji yetkinliğini ölçen kıyas** — 465.241 madde,
 teşhis raporu, uydurma gövde kontrolü, tokenizer çözümlemesi.
 
 Built by [eCloud Tech.](https://www.e-cloud.web.tr) · code Apache-2.0 · data CC BY 4.0
@@ -108,7 +108,7 @@ bileşimi eşleştirildikten sonra bile, 22-23 puan daha kötü.
 | Katman | Madde | Kimin için |
 |---|---|---|
 | `cekirdek` | 1.856 | dakikalar içinde koşar, kova dengeli, **teşhis için** |
-| `tam` | 465.535 | tasarlanan kapsamın tamamı, **manşet sayı için** |
+| `tam` | 465.241 | tasarlanan kapsamın tamamı, **manşet sayı için** |
 
 Çekirdek kova dengelidir, yani tam kümenin yansız tahmini **değildir**; bilerek.
 En küçük kovada bile ölçülebilir bir sayı çıksın diye. İkisi karşılaştırılmaz.
@@ -204,6 +204,23 @@ değişiyor. İkisi ayrı raporlanır; tek bir sayıya indirmek farkı gizler.
 
 Sonuncusu en genişi: `â` görünmez olduğu için `rüzgâr`ın son ünlüsü `ü`
 sanılıyor ve ince ek geliyordu. Düzeltmeden sonra UD uyumu 3,5 puan yükseldi.
+
+
+### Şıklar karıştırılmıştır
+
+`secenek` listesinde altın rastgele bir konumda durur ve `altin_sira` kaçıncı
+olduğunu söyler. Karıştırma madde kimliğinden türetilir: aynı madde her
+üretimde aynı sırayı alır, sürümler arası karşılaştırma bozulmaz.
+
+Bu 3.2.1'den önce böyle değildi — altın her maddede birinci şıktı. Zorunlu
+seçim kipinde şıklar tek tek puanlandığı için sıra sonucu etkilemiyordu ve
+gözden kaçmıştı; ama şıkları A/B/C diye harflendiren bir protokolde hep "A"
+demek %100 verirdi. İç tutarlılık denetimiyle yakalandı.
+
+Aynı denetim ikinci bir kusur daha buldu: uydurma gövde üretici yalnız iki
+sözlük dosyasına bakıyordu, eskimiş ve gayriresmî sözlüklerdeki yirmi gövde
+"uydurma" sayılıp kıyasa girmişti. Wug testinin tek işi gövdenin hiçbir
+külliyatta geçmemesini garanti etmek; denetim artık bütün sözlüklere bakıyor.
 
 ### Kullanım
 
@@ -322,7 +339,7 @@ engine read the wrong vowel as final (*rüzgâre* → **rüzgâra**).
 ### Two tiers
 
 `cekirdek` (1,856 items, bucket-balanced, runs in minutes, for diagnosis) and
-`tam` (465,535 items, for the headline number). The core tier is deliberately
+`tam` (465,241 items, for the headline number). The core tier is deliberately
 *not* an unbiased sample of the full set — it is balanced so that even the
 smallest bucket yields a measurable estimate. Do not compare the two.
 

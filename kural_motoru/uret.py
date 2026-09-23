@@ -65,9 +65,25 @@ def _kimlik(*parcalar):
 
 
 def _madde(kova, gorev, govde, altin, celdirici, **ek):
-    return dict(kimlik=_kimlik(kova, gorev, govde, altin), kova=kova, gorev=gorev,
+    """Tek madde. ŞIKLAR KARIŞTIRILIR.
+
+    Şık listesi `[altın] + çeldiriciler` olarak kuruluyordu; yani altın her
+    maddede birinci şıktı. Zorunlu seçim kipinde şıklar tek tek puanlandığı
+    için sıra önemsizdir ve bu gözden kaçmıştı — ama şık listesini A/B/C diye
+    harflendiren herkes, hep A diyerek %100 alırdı. Kıyası kullanan
+    kişinin protokolüne güvenmek yerine sırayı biz bozuyoruz.
+
+    Karıştırma KİMLİĞE BAĞLI: aynı madde her üretimde aynı sırayı alır,
+    sürümler arası karşılaştırma bozulmaz. `altin_sira` altının kaçıncı
+    şık olduğunu söyler; altın dizgesi `altin` alanında zaten duruyor.
+    """
+    kimlik = _kimlik(kova, gorev, govde, altin)
+    secenek = [altin] + list(celdirici.values())
+    karistir = random.Random(int(kimlik, 16))
+    karistir.shuffle(secenek)
+    return dict(kimlik=kimlik, kova=kova, gorev=gorev,
                 govde=govde, altin=altin, celdirici=celdirici,
-                secenek=[altin] + list(celdirici.values()), **ek)
+                secenek=secenek, altin_sira=secenek.index(altin), **ek)
 
 
 # --------------------------------------------------------------- üreteçler ---
@@ -437,7 +453,19 @@ def kur():
     tdk_bayrak_uygula(ham)
     adlar = sozluk.indeksle([m for m in ham if m.tur in ("Noun", "Adj")])
     fiiller = sozluk.indeksle([m for m in ham if m.tur == "Verb"])
+    # UYDURMA DENETİMİ BÜTÜN SÖZLÜKLERE BAKAR.
+    # Eskiden yalnız master+non_tdk'ya bakılıyordu; eskimiş, gayriresmî, özel
+    # ad, yer adı ve kişi adı dosyalarındaki gövdeler "uydurma" sayılıp
+    # kıyasa giriyordu. Yirmi gövde bu yolla kaçmıştı (ba, civ, kop, liç…) ve
+    # o maddelerde ezber kontrolü hiç çalışmıyordu — wug testinin tek işi
+    # gövdenin külliyatta GEÇMEMESİNİ garanti etmek.
     tum_govde = {m.govde for m in ham}
+    for ad in ("eskimis", "gayriresmi", "ozel", "ozel_kulliyat", "yer", "kisi", "kisaltma"):
+        try:
+            tum_govde |= {m.govde.lower() for m in sozluk.yukle((ad,))}
+        except Exception:
+            pass
+    tum_govde |= {g.lower() for g in tum_govde}
     belirsiz = sozluk.belirsizler([m for m in ham if m.tur in ("Noun", "Adj")])
     # çekimi ayrışan eş yazılışlılar kıyasa GİRMEZ: altın cevap tek olmaz
     # TDK'nin verdiği biçim hiçbir bayrak kümesiyle üretilemiyorsa gövde
