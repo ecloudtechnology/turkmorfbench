@@ -12,7 +12,7 @@ TAM_ADRES = ("https://huggingface.co/datasets/ecloudtech/TurkMorfBench/"
 
 
 def yukle(katman="cekirdek", onbellek=None):
-    """`cekirdek` (pakette gömülü, ~2.000 madde) ya da `tam` (~449.000, indirilir).
+    """`cekirdek` (pakette gömülü, 1.856 madde) ya da `tam` (465.241, indirilir).
 
     Tam küme 152 MB; pakete konmaz, ilk kullanımda indirilip önbelleğe alınır.
     """

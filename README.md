@@ -42,7 +42,8 @@ Bu kıyas hepsini **ayrı ayrı** ölçer ve hangisinde düşüldüğünü söyl
 | `istisna_unlu_dusmesi` | 177 | burnu, aklı, nakdi · **TDK doğrulamalı** |
 | `istisna_uyum_kirici` | 105 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
 | `istisna_ikizlesme` | 35 | reddi, tıbbı, zıddı · **TDK doğrulamalı** |
-| `istisna_kaynastirma` | 2 | suyu, neyi |
+| `istisna_kaynastirma_istisna` | 2 | suyu, neyi |
+| **toplam** | **465.241** | 14 kova |
 
 ## Madde biçimi
 

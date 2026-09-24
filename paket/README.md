@@ -68,21 +68,23 @@ sözlüksel istisnalar biner: `burun → burnu`, `ret → reddi`, `kalp → kalb
 
 TurkMorfBench bunların hepsini ayrı ayrı ölçer ve **hangisinde düştüğünü söyler.**
 
-| Kova | Madde | Ne sınıyor |
-|---|---|---|
-| ad çekimi | 159.839 | 7 hâl, ünlü uyumu, benzeşme, yumuşama, kaynaştırma |
-| ad paradigma yuvaları | 273.840 | çokluk + iyelik + hâl yığını, **zamir n'si** |
-| ek zinciri | 8.344 | 1'den 8'e derinlik, ek sırası |
-| fiil çekimi | 1.799 | 7 zaman/kip, olumsuzluk, iki kişi takımı, **geniş zaman istisnaları** |
-| yapım eki | 1.442 | -lIk, -CI, -lI, -sIz, -sAl, -lAş, -lA |
-| çatı | 669 | edilgen, dönüşlü, işteş, ettirgen |
-| özel ad | 1.200 | kesme işareti, **yumuşamama** (Sinop'a, Sinob'a değil) |
-| birleşik isim | 897 | buzdolabına |
-| sayı | 533 | **okunuşa göre** ek (2026'da) |
-| kısaltma | 304 | **okunuşa göre** ek (TCDD'yi) |
-| ünlü düşmesi | 181 | burnu, aklı, aczi · **TDK doğrulamalı** |
-| uyum kırıcı alıntı | 70 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
-| ünsüz ikizleşmesi | 36 | reddi, tıbbı, zıddı · **TDK doğrulamalı** |
+| Kova | Anahtar | Madde | Ne sınıyor |
+|---|---|---|---|
+| ad paradigma yuvaları | `ad_yuva` | 283.360 | çokluk + iyelik + hâl yığını, **zamir n'si** |
+| ad çekimi | `ad_cekimi` | 166.307 | 7 hâl, ünlü uyumu, benzeşme, yumuşama, kaynaştırma |
+| ek zinciri | `ek_zinciri` | 8.351 | 1'den 8'e derinlik, ek sırası |
+| fiil çekimi | `fiil_cekimi` | 1.792 | 7 zaman/kip, olumsuzluk, **geniş zaman istisnaları** |
+| yapım eki | `yapim_eki` | 1.477 | -lIk, -CI, -lI, -sIz, -sAl, -lAş, -lA |
+| özel ad | `istisna_ozel_ad` | 1.200 | kesme işareti, **yumuşamama** (Sinop'a, Sinob'a değil) |
+| birleşik isim | `istisna_birlesik_isim` | 896 | buzdolabına |
+| çatı | `cati` | 728 | edilgen, dönüşlü, işteş, ettirgen |
+| sayı | `istisna_sayi` | 507 | **okunuşa göre** ek (2026'da) |
+| kısaltma | `istisna_kisaltma` | 304 | **okunuşa göre** ek (TCDD'yi) |
+| ünlü düşmesi | `istisna_unlu_dusmesi` | 177 | burnu, aklı, nakdi · **TDK doğrulamalı** |
+| uyum kırıcı alıntı | `istisna_uyum_kirici` | 105 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
+| ünsüz ikizleşmesi | `istisna_ikizlesme` | 35 | reddi, tıbbı, zıddı · **TDK doğrulamalı** |
+| kaynaştırma istisnası | `istisna_kaynastirma_istisna` | 2 | suyu, neyi |
+| **toplam** | | **465.241** | 14 kova |
 
 ### Neden uydurma (wug) gövde
 
