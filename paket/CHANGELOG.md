@@ -1,5 +1,23 @@
 # Değişiklik kaydı · Changelog
 
+## 3.6.3 — 2026-09-25
+
+Yalnızca belge, veri ve kod 3.6.0 ile aynı. (1) TDK-doğrulamalı üç kovanın toplamı
+317 → **283** (3.6.0'da `istisna_uyum_kirici` 105 → 71 olunca metin güncellenmemişti).
+(2) Morfoloji ≠ yetenek tablosu 3.6 çekirdeğinde (1.836 madde) yeniden ölçüldü;
+3.5 çekirdeği sayıları kaldırıldı, boyut sütunu eklendi. (3) Bulgu: yeniden
+tasarlanan `ek_zinciri` kovası 3.6 çekirdeğinde 15 modelin 14'ünde ≥%96 — tabandan
+tavana geçti, 3.7'de yeniden tasarlanacak. `tutarlilik.py` iki yeni denetim: TDK
+toplamı ve karşılaştırma tablosu başlığındaki sürüm.
+Documentation only; data and code identical to 3.6.0. (1) The TDK-verified total
+317 → **283** (text was not updated when `istisna_uyum_kirici` went 105 → 71 in 3.6.0).
+(2) The morphology ≠ capability table re-measured on the 3.6 core (1,836 items);
+3.5-core numbers removed, size column added. (3) Finding: the redesigned `ek_zinciri`
+bucket sits at ≥96% for 14 of 15 models on the 3.6 core — floor became ceiling; it
+will be redesigned in 3.7. `tutarlilik.py` gains two checks: TDK total and the
+version in the comparison-table header.
+
+
 ## 3.6.2 — 2026-09-25
 
 Yalnızca belge: insan tavanı bölümünde model oturumlarının anlatımı düzeltildi. Veri ve kod 3.6.0 ile aynı.

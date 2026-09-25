@@ -151,7 +151,7 @@ def karsilastir(kayit_a, kayit_b, maddeler, ad_a="A", ad_b="B", anahtar="hucre")
         f = esli_fark(maddeler, ca[kural]["dogru"], cb[kural]["dogru"],
                       anahtar=anahtar, b=2000)
         satir.append({
-            "kural": kural,
+            "_kural": kural,   # "_" ile: model adı "kural" olursa çakışmasın
             ad_a: ca[kural]["dogruluk"],
             ad_b: cb[kural]["dogruluk"],
             "fark": f["fark"],
@@ -175,7 +175,7 @@ def rapor(sonuc, ad_a="A", ad_b="B"):
                                             "%95 GA", "en kısa (hedef %29,9)"))
     for s in sonuc["satir"]:
         y.append("%-9s %8.2f%% %8.2f%% %+8.2f%% [%+.2f%%, %+.2f%%]%s  %.1f%% / %.1f%%"
-                 % (s["kural"], 100 * s[ad_a], 100 * s[ad_b], 100 * s["fark"],
+                 % (s["_kural"], 100 * s[ad_a], 100 * s[ad_b], 100 * s["fark"],
                     100 * s["ci"][0], 100 * s["ci"][1],
                     " *" if s["anlamli"] else "  ",
                     100 * s["en_kisa_%s" % ad_a], 100 * s["en_kisa_%s" % ad_b]))

@@ -131,7 +131,7 @@ Kural motorunun 282 elle yazılmış altın iddiası vardır ve hepsi geçer.
 ### Üç istisna kovası TDK ile doğrulanmıştır
 
 `ünlü düşmesi`, `uyum kırıcı alıntı` ve `ünsüz ikizleşmesi` kovalarının
-**317 maddesinin tamamının** altını [TDK Güncel Türkçe Sözlük](https://sozluk.gov.tr)
+**283 maddesinin tamamının** altını [TDK Güncel Türkçe Sözlük](https://sozluk.gov.tr)
 ile birebir karşılaştırılmıştır. Sözlüğün madde başından sonra verdiği çekim
 ipucu (`kıraat, -ti`) altının kendisidir; TDK bir gövde için biçim vermiyorsa ya
 da birden fazla veriyorsa (`hak` → *hakkı* / *hakki*) o gövde kıyasa alınmaz.
@@ -174,6 +174,11 @@ ve bu yanlış sayılıyordu. Çeldiriciler artık diğer kovalardaki gibi kural
 (*temerrütleryimiz*), sıra bozuk. Derinlik-1 maddeleri de bu sayede kovaya
 girdi (8.351 → 9.544). Bu düzeltme bütün modelleri eşit etkiler; 3.4.x ile
 alınan `ek_zinciri` sayıları karşılaştırılamaz, diğer 13 kova değişmedi.
+3.6 çekirdeğinde 15 modelin 14'ü bu kovada ≥%96 (tek istisna Qwen3.8-27B tabanı,
+%84,8): kova tabandan **tavana** geçti ve hâlâ ayırt etmiyor. Kural ihlali içeren
+çeldiriciler dil modeline fazla kolay geliyor; 3.7'de çeldiriciler dilbilgisel ama
+bağlamla uyuşmayan zincirler (kişi/sayı/durum uyuşmazlığı) olacak. 105 madde
+1.836'lık çekirdeğin %5,7'sidir; kova hariç sıralama aynı kalır (kartta verilir).
 
 ### Morfoloji ≠ yetenek: aynı modeller iki ölçekte
 
@@ -181,13 +186,13 @@ Bu kıyasta bir 2B model 32B'yi yakalayabilir. Bunun ne anlama geldiğini
 söylemek için aynı modelleri **aynı sabit betikle** TurkishMMLU'nun 652 temiz
 sorusunda da ölçtük (şık sırası dondurulmuş, kirli 113 soru dışarıda):
 
-| model | TurkMorfBench 3.5 çekirdek | TurkishMMLU (652) |
-|---|---|---|
-| kanarya-2b | 77,3 | **22,9** |
-| turkish-gpt2-large (0,8B) | 76,9 | **18,4** |
-| Kumru-2B | 76,8 | **19,6** |
-| Erk-32B | 75,2 | **71,0** |
-| Qwen3-32B (taban) | 73,3 | 67,6 |
+| model | boyut | TurkMorfBench 3.6 çekirdek | TurkishMMLU (652) |
+|---|---|---|---|
+| kanarya-2b | 2B | 77,6 | **22,9** |
+| turkish-gpt2-large | 0,8B | 77,5 | **18,4** |
+| Kumru-2B | 2B | 77,1 | **19,6** |
+| Erk-32B | 32B | 75,7 | **71,0** |
+| Qwen3-32B (taban) | 32B | 74,0 | 67,6 |
 
 TurkishMMLU beş şıklıdır; şans %20. Sıfırdan Türkçe külliyatla eğitilen küçük
 modeller morfolojide 32B ile **istatistiksel olarak beraber**, genel yetenekte
@@ -423,7 +428,7 @@ gold assertions, all passing.
 
 ### The exception buckets are verified against TDK
 
-All 317 items in the vowel-drop, inverse-harmony and consonant-doubling buckets
+All 283 items in the vowel-drop, inverse-harmony and consonant-doubling buckets
 carry a gold form checked character-for-character against the
 [TDK Güncel Türkçe Sözlük](https://sozluk.gov.tr). We ran this audit because
 native speakers scored **below chance** on the inverse-harmony bucket in the
@@ -444,6 +449,12 @@ probable *valid* form and is marked wrong. Distractors are now rule
 order. Depth-1 items now enter the bucket as well (8,351 → 9,544). The fix
 affects every model equally; `ek_zinciri` figures from 3.4.x are not comparable,
 the other 13 buckets are unchanged.
+On the 3.6 core, 14 of 15 models score ≥96% on this bucket (the exception is the
+Qwen3.8-27B base at 84.8%): the bucket moved from floor to **ceiling** and still does
+not discriminate. Rule-violating distractors are too easy for a language model; in
+3.7 the distractors will be grammatical chains that disagree with the context
+(person/number/case mismatch). The 105 items are 5.7% of the 1,836-item core; the
+ranking without the bucket is identical (reported on the card).
 
 ### Morphology ≠ capability: the same models on two scales
 
@@ -451,13 +462,13 @@ On this benchmark a 2B model can match a 32B one. To say what that means, we
 measured the same models with the **same pinned script** on the 652 clean
 TurkishMMLU questions (option order frozen, 113 contaminated items removed):
 
-| model | TurkMorfBench 3.5 core | TurkishMMLU (652) |
-|---|---|---|
-| kanarya-2b | 77.3 | **22.9** |
-| turkish-gpt2-large (0.8B) | 76.9 | **18.4** |
-| Kumru-2B | 76.8 | **19.6** |
-| Erk-32B | 75.2 | **71.0** |
-| Qwen3-32B (base) | 73.3 | 67.6 |
+| model | size | TurkMorfBench 3.6 core | TurkishMMLU (652) |
+|---|---|---|---|
+| kanarya-2b | 2B | 77.6 | **22.9** |
+| turkish-gpt2-large | 0.8B | 77.5 | **18.4** |
+| Kumru-2B | 2B | 77.1 | **19.6** |
+| Erk-32B | 32B | 75.7 | **71.0** |
+| Qwen3-32B (base) | 32B | 74.0 | 67.6 |
 
 TurkishMMLU is five-way; chance is 20%. Small models trained from scratch on
 Turkish are **statistically tied** with a 32B model on morphology and **at

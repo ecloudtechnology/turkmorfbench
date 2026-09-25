@@ -75,6 +75,21 @@ print("KAYNAK (%s): %s madde · %d kova · çekirdek %s"
       % (kaynak, tr(toplam), len(say), tr(cekirdek_n)))
 assert sum(say.values()) == toplam, "kova toplamı madde sayısını tutmuyor"
 
+# --- TDK-doğrulamalı üç kovanın toplamı (kova_sayilari.json'dan) metindeki sayıyla eşleşmeli
+def tdk_toplam_kontrol(kova, metinler):
+    TDK_DOGRULAMALI = ("istisna_unlu_dusmesi", "istisna_uyum_kirici", "istisna_ikizlesme")
+    toplam = sum(kova[k] for k in TDK_DOGRULAMALI)
+    hata = []
+    for ad, s in metinler.items():
+        for kalip in ("**%d maddesinin tamamının**", "All %d items"):
+            if (kalip % toplam) not in s:
+                hata.append("%s: '%s' bulunamadı" % (ad, kalip % toplam))
+        for eski in ("317",):
+            if re.search(r"\b%s maddesinin|All %s items" % (eski, eski), s):
+                hata.append("%s: eski TDK toplamı %s hâlâ metinde" % (ad, eski))
+    return toplam, hata
+
+SURUM_KISA = ".".join((json.load(open(KUNYE))["surum"] if KUNYE else "0.0").split(".")[:2])
 hata = []
 
 # 1) manset sayi her kaynakta gecmeli ve ESKI sayilar hic gecmemeli
@@ -113,6 +128,14 @@ for yol in [y for y in (bul("HF-KART.md", "README.md"), bul("paket/README.md")) 
     if tr(cekirdek_n) not in s and format(cekirdek_n, ",d") not in s:
         hata.append("%s: çekirdek sayısı %s geçmiyor" % (yol.split("/")[-1], tr(cekirdek_n)))
 
+# 4) TDK-dogrulamali uc kovanin toplami metindeki sayiyla ayni olmali (3.6.2'de 317 kalmisti; dogrusu 283)
+_metin = {}
+for yol in [y for y in (bul("HF-KART.md", "README.md"), bul("paket/README.md")) if y]:
+    _metin[yol.split("/")[-1]] = open(yol).read()
+_t, _h = tdk_toplam_kontrol(say, _metin)
+hata.extend(_h)
+print("TDK-doğrulamalı toplam: %d (unlu_dusmesi+uyum_kirici+ikizlesme)" % _t)
+
 # jsonl disa aktarimlari json ile BIREBIR ayni mi (HF veri dosyasi jsonl'dir;
 # uret.py yalniz json yazar — jsonl yenilenmezse kart ile veri ayrisir)
 for _ad in ("tam", "cekirdek"):
@@ -122,6 +145,12 @@ for _ad in ("tam", "cekirdek"):
         _m = json.load(open(_j)); _m = _m["maddeler"] if isinstance(_m, dict) else _m
         if _n != len(_m):
             hata.append("%s.jsonl %d satir, %s.json %d madde — jsonl ESKI" % (_ad, _n, _ad, len(_m)))
+
+# 5) model karsilastirma tablosu basligi guncel surumun cekirdegini gostermeli
+for _ad, _s in _metin.items():
+    for _eski in re.findall(r"TurkMorfBench (3\.\d) (?:çekirdek|core)", _s):
+        if _eski != SURUM_KISA:
+            hata.append("%s: karşılaştırma tablosu başlığı %s çekirdeğinde, veri %s" % (_ad, _eski, SURUM_KISA))
 
 if hata:
     print("\nTUTARSIZLIK (%d):" % len(hata))
@@ -193,3 +222,4 @@ if __name__ == "__main__" and "--paket" in sys.argv:
             print("  X", x)
         sys.exit(1)
     print("  yayimlanan aciklama veriyle TUTARLI ✓")
+
