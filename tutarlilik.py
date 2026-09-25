@@ -113,6 +113,16 @@ for yol in [y for y in (bul("HF-KART.md", "README.md"), bul("paket/README.md")) 
     if tr(cekirdek_n) not in s and format(cekirdek_n, ",d") not in s:
         hata.append("%s: çekirdek sayısı %s geçmiyor" % (yol.split("/")[-1], tr(cekirdek_n)))
 
+# jsonl disa aktarimlari json ile BIREBIR ayni mi (HF veri dosyasi jsonl'dir;
+# uret.py yalniz json yazar — jsonl yenilenmezse kart ile veri ayrisir)
+for _ad in ("tam", "cekirdek"):
+    _j = bul("turkmorfbench_v3_%s.json" % _ad); _l = bul("turkmorfbench_v3_%s.jsonl" % _ad, "veri/turkmorfbench_v3_%s.jsonl" % _ad)
+    if _j and _l:
+        _n = sum(1 for _ in open(_l, encoding="utf8"))
+        _m = json.load(open(_j)); _m = _m["maddeler"] if isinstance(_m, dict) else _m
+        if _n != len(_m):
+            hata.append("%s.jsonl %d satir, %s.json %d madde — jsonl ESKI" % (_ad, _n, _ad, len(_m)))
+
 if hata:
     print("\nTUTARSIZLIK (%d):" % len(hata))
     for h in hata:
