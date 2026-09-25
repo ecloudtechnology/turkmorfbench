@@ -1,6 +1,22 @@
 # Değişiklik kaydı · Changelog
 
-## 3.5.0 — 2026-09-25 (hazırlanıyor)
+## 3.6.0 — 2026-09-25
+
+**Veri değişti**: ünlü düşmesi motoru düzeltildi; 34 gövde, `ad_yuva`'da 136 yanlış
+altın (*acizlarında* → *acizlerinde*), `istisna_uyum_kirici`'ye yanlış sınıflanan
+34 gövde çıkarıldı. `ad_cekimi` 166.307 → 166.424, `istisna_uyum_kirici` 105 → 71,
+toplam 466.434 → 466.517, çekirdek 1.856 → 1.836. Diğer 12 kova birebir aynı.
+Motor: `ad_cekim._govde_hazirla` — uyum düşen ünlüyü izler; TDK bayrak araması
+yeniden koşuldu (501/501). `istisna_verisi_uret.py`: istisna kovaları için
+kıyas DIŞI TDK gövdeleriyle sentetik veri.
+
+**Data changed**: vowel-drop harmony fixed in the engine; 34 stems, 136 wrong
+`ad_yuva` golds, 34 stems removed from `istisna_uyum_kirici` where the leaked flag
+had misfiled them. `ad_cekimi` 166,307 → 166,424, `istisna_uyum_kirici` 105 → 71,
+total 466,434 → 466,517, core 1,856 → 1,836. The other 12 buckets are identical.
+
+
+## 3.5.0 — 2026-09-25
 
 **Veri değişti**: `ek_zinciri` kovası yeniden üretildi, toplam 465.241 → 466.434.
 Diğer 13 kova birebir aynı; onların 3.4.x sayıları geçerli. `ek_zinciri` ve

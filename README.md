@@ -1,7 +1,7 @@
 # TurkMorfBench v3
 
-**466.434 madde · 14 kova · uydurma gövde kontrollü · teşhis raporlu**
-**466,434 items · 14 buckets · wug-controlled · diagnostic reporting**
+**466.517 madde · 14 kova · uydurma gövde kontrollü · teşhis raporlu**
+**466,517 items · 14 buckets · wug-controlled · diagnostic reporting**
 
 [eCloud Tech.](https://www.e-cloud.web.tr) · kod Apache-2.0 · veri CC BY 4.0
 
@@ -12,8 +12,8 @@ turkmorfbench olc --model YOUR/MODEL
 
 ```python
 from datasets import load_dataset
-d = load_dataset("ecloudtech/TurkMorfBench", "cekirdek")   # 1.856 madde
-d = load_dataset("ecloudtech/TurkMorfBench", "tam")        # 466.434 madde
+d = load_dataset("ecloudtech/TurkMorfBench", "cekirdek")   # 1.836 madde
+d = load_dataset("ecloudtech/TurkMorfBench", "tam")        # 466.517 madde
 ```
 
 ---
@@ -30,7 +30,7 @@ Bu kıyas hepsini **ayrı ayrı** ölçer ve hangisinde düşüldüğünü söyl
 | Kova | Madde | Ne sınıyor |
 |---|---|---|
 | `ad_yuva` | 283.360 | çokluk + iyelik + hâl yığını, **zamir n'si** |
-| `ad_cekimi` | 166.307 | 7 hâl, uyum, benzeşme, yumuşama, kaynaştırma |
+| `ad_cekimi` | 166.424 | 7 hâl, uyum, benzeşme, yumuşama, kaynaştırma |
 | `ek_zinciri` | 9.544 | 1'den 8'e derinlik, ek sırası |
 | `fiil_cekimi` | 1.792 | 7 zaman/kip, olumsuzluk, **geniş zaman istisnaları** |
 | `yapim_eki` | 1.477 | -lIk, -CI, -lI, -sIz, -sAl, -lAş, -lA |
@@ -40,10 +40,10 @@ Bu kıyas hepsini **ayrı ayrı** ölçer ve hangisinde düşüldüğünü söyl
 | `istisna_sayi` | 507 | **okunuşa göre** ek (2026'da) |
 | `istisna_kisaltma` | 304 | **okunuşa göre** ek (TCDD'yi) |
 | `istisna_unlu_dusmesi` | 177 | burnu, aklı, nakdi · **TDK doğrulamalı** |
-| `istisna_uyum_kirici` | 105 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
+| `istisna_uyum_kirici` | 71 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
 | `istisna_ikizlesme` | 35 | reddi, tıbbı, zıddı · **TDK doğrulamalı** |
 | `istisna_kaynastirma_istisna` | 2 | suyu, neyi |
-| **toplam** | **466.434** | 14 kova |
+| **toplam** | **466.517** | 14 kova |
 
 ## Madde biçimi
 
@@ -93,8 +93,8 @@ eşleştirildikten sonra bile **22-23 puan** daha kötü.
 
 | Katman | Madde | Kimin için |
 |---|---|---|
-| `cekirdek` | 1.856 | dakikalar içinde koşar, **kova dengeli**, teşhis için |
-| `tam` | 466.434 | tasarlanan kapsamın tamamı, manşet sayı için |
+| `cekirdek` | 1.836 | dakikalar içinde koşar, **kova dengeli**, teşhis için |
+| `tam` | 466.517 | tasarlanan kapsamın tamamı, manşet sayı için |
 
 Çekirdek kova dengelidir; tam kümenin yansız tahmini **değildir** ve öyle
 olması amaçlanmamıştır. En küçük kovada bile ölçülebilir bir sayı çıksın diye.
@@ -146,6 +146,24 @@ birleşimdendi.
 
 TDK'nin verdiği biçim hiçbir bayrak kümesiyle üretilemiyorsa gövde kuralla
 açıklanamıyor demektir ve kıyasa alınmaz (*raptı*, *veçhi* dahil altı gövde).
+
+### 3.6.0: ünlü düşmesinde uyum — kıyasın bir hatası daha
+
+Kural kovaları için eğitim verisi üreteci yazılırken motorun bir hatası
+ortaya çıktı: ünlü düşmesinde (*aciz → aczi*) ünlüyle başlayan ekin uyumu
+**düşen ünlüden** değil, kalan tabanın son ünlüsünden alınıyordu (*acz* → *a* →
+*aczı*). TDK denetimi bunu belirtme hâli için `InverseHarmony` bayrağı ekleyerek
+"çözmüştü"; bayrak ise ünsüzle başlayan `-lAr`'a sızıyordu: *acizlarında*,
+*ahitlarında* — yanlış Türkçe, doğrusu *acizlerinde*. Etkilenen: **34 gövde,
+`ad_yuva`'da 136 yanlış altın**. Aynı 34 gövde bu sızan bayrak yüzünden
+`istisna_uyum_kirici` kovasına da yanlış sınıflanmıştı; onlar ünlü-düşmesi
+kelimeleridir.
+
+Motor düzeltildi (uyum düşen ünlüyü izler; bayrağa gerek kalmadı), bayrak
+araması yeniden koşuldu (501 TDK altınının 501'i yeniden üretildi, hiçbiri
+kaybolmadı), kıyas yeniden üretildi: `ad_cekimi` +117, `istisna_uyum_kirici`
+105 → 71, toplam 466.517, çekirdek 1.836. Diğer 12 kova değişmedi. 3.5.x ile
+`ad_yuva`, `ad_cekimi` ve `istisna_uyum_kirici` sayıları karşılaştırılamaz.
 
 ### 3.5.0: `ek_zinciri` kovası düzeltildi — kıyasın kendi hatası
 
@@ -504,7 +522,7 @@ is the screening rule, .
 Every published figure is produced by `insan_ozet.py`; the thresholds are written
 into the script.
 
-### Confidence intervals: 466,434 items are NOT 466,434 independent observations
+### Confidence intervals: 466,517 items are NOT 466,517 independent observations
 
 Items are not generated independently. One stem (*kitap*) yields dozens of items
 across the plural × possessive × case cross; one phonological cell (final vowel,
@@ -530,7 +548,7 @@ design effect we measured is:
 
 | clustering | interval width | effective n |
 |---|---|---|
-| item | ±0.12 pt | 466,434 |
+| item | ±0.12 pt | 466,517 |
 | stem | 2.0× | 118,274 |
 | **phonological cell** | **30.8×** | **491** |
 
@@ -604,7 +622,7 @@ excluded as lexically unreliable. Exception buckets are real-stem only by nature
 **Code:** [github.com/ecloudtechnology/turkmorfbench](https://github.com/ecloudtechnology/turkmorfbench) ·
 **Package:** [pypi.org/project/turkmorfbench](https://pypi.org/project/turkmorfbench/)
 
-### Güven aralığı: 466.434 madde, 466.434 bağımsız gözlem DEĞİLDİR
+### Güven aralığı: 466.517 madde, 466.517 bağımsız gözlem DEĞİLDİR
 
 Kıyastaki maddeler birbirinden bağımsız üretilmez. Tek bir gövde (*kitap*)
 çokluk × iyelik × hâl çaprazından onlarca madde doğurur; tek bir fonolojik hücre
@@ -629,7 +647,7 @@ ki kıyasın ölçmeye çalıştığı tam olarak budur — ölçtüğümüz tas
 
 | kümeleme | aralık genişliği | etkin n |
 |---|---|---|
-| madde | ±0,12 puan | 466.434 |
+| madde | ±0,12 puan | 466.517 |
 | gövde | 2,0 kat | 118.274 |
 | **fonolojik hücre** | **30,8 kat** | **491** |
 

@@ -1,8 +1,8 @@
 # TurkMorfBench
 
-**Turkish morphology benchmark for language models** — 466,434 items, diagnostic
+**Turkish morphology benchmark for language models** — 466,517 items, diagnostic
 reports, wug-test controls, tokenizer analysis.
-**Dil modellerinin Türkçe morfoloji yetkinliğini ölçen kıyas** — 466.434 madde,
+**Dil modellerinin Türkçe morfoloji yetkinliğini ölçen kıyas** — 466.517 madde,
 teşhis raporu, uydurma gövde kontrolü, tokenizer çözümlemesi.
 
 Built by [eCloud Tech.](https://www.e-cloud.web.tr) · code Apache-2.0 · data CC BY 4.0
@@ -71,7 +71,7 @@ TurkMorfBench bunların hepsini ayrı ayrı ölçer ve **hangisinde düştüğü
 | Kova | Anahtar | Madde | Ne sınıyor |
 |---|---|---|---|
 | ad paradigma yuvaları | `ad_yuva` | 283.360 | çokluk + iyelik + hâl yığını, **zamir n'si** |
-| ad çekimi | `ad_cekimi` | 166.307 | 7 hâl, ünlü uyumu, benzeşme, yumuşama, kaynaştırma |
+| ad çekimi | `ad_cekimi` | 166.424 | 7 hâl, ünlü uyumu, benzeşme, yumuşama, kaynaştırma |
 | ek zinciri | `ek_zinciri` | 9.544 | 1'den 8'e derinlik, ek sırası |
 | fiil çekimi | `fiil_cekimi` | 1.792 | 7 zaman/kip, olumsuzluk, **geniş zaman istisnaları** |
 | yapım eki | `yapim_eki` | 1.477 | -lIk, -CI, -lI, -sIz, -sAl, -lAş, -lA |
@@ -81,10 +81,10 @@ TurkMorfBench bunların hepsini ayrı ayrı ölçer ve **hangisinde düştüğü
 | sayı | `istisna_sayi` | 507 | **okunuşa göre** ek (2026'da) |
 | kısaltma | `istisna_kisaltma` | 304 | **okunuşa göre** ek (TCDD'yi) |
 | ünlü düşmesi | `istisna_unlu_dusmesi` | 177 | burnu, aklı, nakdi · **TDK doğrulamalı** |
-| uyum kırıcı alıntı | `istisna_uyum_kirici` | 105 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
+| uyum kırıcı alıntı | `istisna_uyum_kirici` | 71 | kalbi, rolü, kıraati · **TDK doğrulamalı** |
 | ünsüz ikizleşmesi | `istisna_ikizlesme` | 35 | reddi, tıbbı, zıddı · **TDK doğrulamalı** |
 | kaynaştırma istisnası | `istisna_kaynastirma_istisna` | 2 | suyu, neyi |
-| **toplam** | | **466.434** | 14 kova |
+| **toplam** | | **466.517** | 14 kova |
 
 ### Neden uydurma (wug) gövde
 
@@ -109,8 +109,8 @@ bileşimi eşleştirildikten sonra bile, 22-23 puan daha kötü.
 
 | Katman | Madde | Kimin için |
 |---|---|---|
-| `cekirdek` | 1.856 | dakikalar içinde koşar, kova dengeli, **teşhis için** |
-| `tam` | 466.434 | tasarlanan kapsamın tamamı, **manşet sayı için** |
+| `cekirdek` | 1.836 | dakikalar içinde koşar, kova dengeli, **teşhis için** |
+| `tam` | 466.517 | tasarlanan kapsamın tamamı, **manşet sayı için** |
 
 Çekirdek kova dengelidir, yani tam kümenin yansız tahmini **değildir**; bilerek.
 En küçük kovada bile ölçülebilir bir sayı çıksın diye. İkisi karşılaştırılmaz.
@@ -144,6 +144,24 @@ ince/kalın uyumun kaçırılması (*aczı*, doğrusu **aczi**), ikizleşirken
 ötümlüleşmenin atlanması (*retti*, doğrusu **reddi**) — hepsi sözlük
 bayraklarının eksikliğinden. Düzeltmeden sonra ölçülen insan doğruluğu
 5,6 puan yükseldi.
+
+### 3.6.0: ünlü düşmesinde uyum — kıyasın bir hatası daha
+
+Kural kovaları için eğitim verisi üreteci yazılırken motorun bir hatası
+ortaya çıktı: ünlü düşmesinde (*aciz → aczi*) ünlüyle başlayan ekin uyumu
+**düşen ünlüden** değil, kalan tabanın son ünlüsünden alınıyordu (*acz* → *a* →
+*aczı*). TDK denetimi bunu belirtme hâli için `InverseHarmony` bayrağı ekleyerek
+"çözmüştü"; bayrak ise ünsüzle başlayan `-lAr`'a sızıyordu: *acizlarında*,
+*ahitlarında* — yanlış Türkçe, doğrusu *acizlerinde*. Etkilenen: **34 gövde,
+`ad_yuva`'da 136 yanlış altın**. Aynı 34 gövde bu sızan bayrak yüzünden
+`istisna_uyum_kirici` kovasına da yanlış sınıflanmıştı; onlar ünlü-düşmesi
+kelimeleridir.
+
+Motor düzeltildi (uyum düşen ünlüyü izler; bayrağa gerek kalmadı), bayrak
+araması yeniden koşuldu (501 TDK altınının 501'i yeniden üretildi, hiçbiri
+kaybolmadı), kıyas yeniden üretildi: `ad_cekimi` +117, `istisna_uyum_kirici`
+105 → 71, toplam 466.517, çekirdek 1.836. Diğer 12 kova değişmedi. 3.5.x ile
+`ad_yuva`, `ad_cekimi` ve `istisna_uyum_kirici` sayıları karşılaştırılamaz.
 
 ### 3.5.0: `ek_zinciri` kovası düzeltildi — kıyasın kendi hatası
 
@@ -531,7 +549,7 @@ is the screening rule, .
 Every published figure is produced by `insan_ozet.py`; the thresholds are written
 into the script.
 
-### Confidence intervals: 466,434 items are NOT 466,434 independent observations
+### Confidence intervals: 466,517 items are NOT 466,517 independent observations
 
 Items are not generated independently. One stem (*kitap*) yields dozens of items
 across the plural × possessive × case cross; one phonological cell (final vowel,
@@ -557,7 +575,7 @@ design effect we measured is:
 
 | clustering | interval width | effective n |
 |---|---|---|
-| item | ±0.12 pt | 466,434 |
+| item | ±0.12 pt | 466,517 |
 | stem | 2.0× | 118,274 |
 | **phonological cell** | **30.8×** | **491** |
 
@@ -608,8 +626,8 @@ engine read the wrong vowel as final (*rüzgâre* → **rüzgâra**).
 
 ### Two tiers
 
-`cekirdek` (1,856 items, bucket-balanced, runs in minutes, for diagnosis) and
-`tam` (466,434 items, for the headline number). The core tier is deliberately
+`cekirdek` (1,836 items, bucket-balanced, runs in minutes, for diagnosis) and
+`tam` (466,517 items, for the headline number). The core tier is deliberately
 *not* an unbiased sample of the full set — it is balanced so that even the
 smallest bucket yields a measurable estimate. Do not compare the two.
 
@@ -640,7 +658,7 @@ Keywords: Turkish NLP, Türkçe doğal dil işleme, morphology benchmark, morfol
 kıyası, vowel harmony, ünlü uyumu, wug test, agglutinative languages, LLM
 evaluation, dil modeli değerlendirme, tokenizer analysis, subword segmentation.
 
-### Güven aralığı: 466.434 madde, 466.434 bağımsız gözlem DEĞİLDİR
+### Güven aralığı: 466.517 madde, 466.517 bağımsız gözlem DEĞİLDİR
 
 Kıyastaki maddeler birbirinden bağımsız üretilmez. Tek bir gövde (*kitap*)
 çokluk × iyelik × hâl çaprazından onlarca madde doğurur; tek bir fonolojik hücre
@@ -665,7 +683,7 @@ ki kıyasın ölçmeye çalıştığı tam olarak budur — ölçtüğümüz tas
 
 | kümeleme | aralık genişliği | etkin n |
 |---|---|---|
-| madde | ±0,12 puan | 466.434 |
+| madde | ±0,12 puan | 466.517 |
 | gövde | 2,0 kat | 118.274 |
 | **fonolojik hücre** | **30,8 kat** | **491** |
 
