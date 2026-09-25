@@ -224,14 +224,32 @@ def zincir_maddeleri(birincil, rng, hucre_ix, tum_govde, n_gercek=600, n_wug=600
         if w:
             adaylar.append((w, False))
 
+    # NEDEN DEĞİŞTİ (3.5.0)
+    #   Önceki çeldiriciler "bir basamak eksik" ve "bir basamak fazla" idi —
+    #   ikisi de DİLBİLGİSEL biçimler. İstem hedef derinliği söylemediği için
+    #   model en olası GEÇERLİ biçimi seçiyor ve bu yanlış sayılıyordu. Beş
+    #   farklı model derinlik 2/3/5/7'de tam %0, 6/8'de ~%100 aldı: model
+    #   özelliği değil, kova tasarımının artefaktı. Çeldirici kural İHLALİ
+    #   olmalı — diğer kovalardaki gibi. Son ekin uyumu bozulur, kaynaştırma
+    #   yanlış seçilir, sıra bozulur. Hepsi aynı derinlikte, hepsi geçersiz.
     for g, gercek in adaylar:
         basamak = zincir.basamaklar(g)
         for d, ad, altin in basamak:
             cel = {}
-            if d > 1:
-                cel["basamak_eksik"] = basamak[d - 2][2]
-            if d < zincir.EN_DERIN:
-                cel["basamak_fazla"] = basamak[d][2]
+            onceki_bicim = basamak[d - 2][2] if d >= 2 else g
+            son_ek = altin[len(onceki_bicim):]
+            if son_ek:
+                # uyum ihlali: son ekteki ünlüleri karşı sınıfa çevir
+                bozuk = "".join(_UNLU_ESI.get(c, c) for c in son_ek)
+                if bozuk != son_ek:
+                    cel["uyum"] = onceki_bicim + bozuk
+                # kaynaştırma ihlali: sınırda y/s/n varsa düşür, yoksa 'y' sok
+                if son_ek[0] in "ysn" and len(son_ek) > 1:
+                    kay = onceki_bicim + son_ek[1:]
+                else:
+                    kay = onceki_bicim + "y" + son_ek
+                if kay != altin and kay not in cel.values():
+                    cel["kaynastirma"] = kay
             # sıra bozuk: son iki eki yer değiştir
             if d >= 2:
                 b = basamak[d - 2][2]
@@ -538,8 +556,15 @@ def cekirdek_sec(maddeler, hedef=2000, taban=90, tohum=TOHUM):
         pay = min(pay, n)
         yari = pay // 2
         for bayrak, istek in ((True, pay - yari), (False, yari)):
-            L = list(ikili[bayrak])
-            rng.shuffle(L)
+            # KARARLI SEÇİM (3.5.0): rng.shuffle eklemeye duyarlıydı — tam
+            # kümeye 1.193 madde girince çekirdek BÜTÜN kovalarda kaydı
+            # (1.856'nın yalnız 1.214'ü ortak kaldı). Sıra artık her maddenin
+            # kendi kimliğinden türeyen özetle belirlenir: madde başına sabit,
+            # başka ne eklenirse eklensin. Yeni madde ancak özeti üst bölgeye
+            # düşerse eskisini iter; kayma eklemeyle orantılı, toptan değil.
+            L = sorted(ikili[bayrak],
+                       key=lambda m: hashlib.sha256(
+                           ("%s|%s" % (tohum, m["kimlik"])).encode()).hexdigest())
             alinan = L[:istek]
             cik += alinan
             eksik = istek - len(alinan)

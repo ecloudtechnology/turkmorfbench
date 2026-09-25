@@ -1,5 +1,45 @@
 # Değişiklik kaydı · Changelog
 
+## 3.5.0 — 2026-09-25 (hazırlanıyor)
+
+**Veri değişti**: `ek_zinciri` kovası yeniden üretildi, toplam 465.241 → 466.434.
+Diğer 13 kova birebir aynı; onların 3.4.x sayıları geçerli. `ek_zinciri` ve
+genel doğruluk sayıları 3.4.x ile karşılaştırılamaz.
+
+- **`ek_zinciri` çeldiricileri kural ihlaline çevrildi — kıyasın kendi hatası.**
+  Beş farklı model derinlik 2/3/5/7'de tam %0, 6/8'de ~%100 alıyordu; bu model
+  özelliği olamaz. Eski çeldiriciler "bir basamak eksik/fazla" idi — ikisi de
+  DİLBİLGİSEL biçimler. İstem hedef derinliği söylemediği için model en olası
+  geçerli biçimi seçiyor ve yanlış sayılıyordu. Artık aynı derinlikte uyum
+  ihlali, sahte kaynaştırma ve sıra bozukluğu. Derinlik-1 maddeleri de kovaya
+  girdi (8.351 → 9.544).
+- **Çekirdek seçimi özet-kararlı yapıldı.** `rng.shuffle` eklemeye duyarlıydı:
+  tam kümeye 1.193 madde girince çekirdek bütün kovalarda kaydı (1.856'nın
+  yalnız 1.214'ü ortak kaldı). Sıra artık her maddenin kimliğinden türeyen
+  özetle belirlenir; yeni madde ancak özeti üst bölgeye düşerse eskisini iter.
+  Bu geçişte 3.4 çekirdeğiyle ortak madde 255'e düştü — **bir kerelik** kopuş;
+  bundan sonra kayma eklemeyle orantılı.
+- `tutarlilik.py --paket <dosya>`: yayımlanan paketin uzun açıklamasını da
+  veriye karşı denetler.
+- `kural_verisi_uret.py`: kural kovaları (kısaltma, sayı, çatı) için kıyas
+  DIŞI sentetik eğitim verisi; kova bazlı kontaminasyon denetimi.
+
+**Data changed**: the `ek_zinciri` bucket was regenerated, total 465,241 →
+466,434. The other 13 buckets are identical; their 3.4.x figures stand.
+`ek_zinciri` and overall accuracy are not comparable with 3.4.x.
+
+- **`ek_zinciri` distractors are now rule violations — the benchmark's own
+  error.** Five different models scored exactly 0% at depths 2/3/5/7 and ~100%
+  at 6/8. The old distractors ("one step fewer/more") were grammatical forms;
+  with no target depth in the prompt, a model picks the most probable valid
+  form and is marked wrong. Depth-1 items now enter the bucket (8,351 → 9,544).
+- **Core selection is now hash-stable.** `rng.shuffle` was insertion-sensitive.
+  Membership is now decided per item by a digest of its ID. One-time break with
+  the 3.4 core (255 shared); proportional drift from here on.
+- `tutarlilik.py --paket`: verifies the published package's long description.
+- `kural_verisi_uret.py`: contamination-free synthetic data for the rule
+  buckets (abbreviation, number, voice).
+
 ## 3.4.0 — 2026-09-25
 
 İki yeni modül; **veri ve puanlama kuralı değişmedi**, 3.3.x ile alınan

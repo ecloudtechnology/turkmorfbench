@@ -1,13 +1,13 @@
 {
-  "surum": "3.0.0",
+  "surum": "3.5.0",
   "tohum": 20260922,
-  "tam": 465241,
+  "tam": 466434,
   "cekirdek": 1856,
   "kova_sayisi": 14,
   "kova": {
     "ad_yuva": 283360,
     "ad_cekimi": 166307,
-    "ek_zinciri": 8351,
+    "ek_zinciri": 9544,
     "fiil_cekimi": 1792,
     "yapim_eki": 1477,
     "istisna_ozel_ad": 1200,
@@ -20,7 +20,7 @@
     "istisna_ikizlesme": 35,
     "istisna_kaynastirma_istisna": 2
   },
-  "gercek_govde": 406674,
-  "uydurma_govde": 58567,
+  "gercek_govde": 407274,
+  "uydurma_govde": 59160,
   "not": "Yayimlanan her sayinin tek dogru kaynagi budur; uret.py ciktisindan turetilir."
 }
