@@ -260,17 +260,13 @@ Hızdan elenen beş kişinin beşi aynı zamanda şans düzeyindeydi; iki bağı
 atılmaz: zaman damgaları saniye çözünürlüğünde olduğu için hızlı tıklamanın
 kanıtı tam da o sıfırlardır.
 
-**Model ile insan, aynı maddelerde.** 25 Eylül 2026'da 13:48–14:09 (UTC)
-arasında 50 oturum kaydoldu (bir dakikada 16 kayıt), her biri tam 156 madde
-cevapladı ve her oturumun 156 cevabı **aynı saniyede** yazıldı. Sunucu
-günlüğündeki istemci kimliği kendini tanıtıyordu: `eCloud koşumu/1.0
-eCloud değerlendirme koşumu). Elli oturumun ikili cevap uyumu 1,00 —
-tek bir deterministik dil modeli, 50 farklı 156'lık dilimle. Hız ölçütü
-ellisini de eledi; oturumlar veritabanında `sentetik_oturum` olarak
-işaretlendi ve dışa aktarımda **yapısal olarak** dışlanır. Bu olay olmasaydı
-"insan tavanı" bir LLM tavanına dönüşürdü: aynı 515 maddede o modelin (AIGENCY V4) puanı
-%69,9, geçerli insanların %79,1. Kalabalık-kaynaklı her kıyas için tehdit
-modeli budur ve savunması eleme kuralıdır, .
+**Model ile insan, aynı maddelerde.** 25 Eylül 2026'da eCloud Tech.'in AIGENCY V4
+modeli, insan çalışmasının aynı arayüzü üzerinden 50 oturumda 515 maddenin tamamına
+cevap verecek şekilde koşuldu (kendi değerlendirme koşumumuz). Hız ölçütü bu oturumları
+insan verisinden ayırdı; veritabanında model oturumu olarak işaretlidir ve insan tavanı
+hesabına girmez. Aynı 515 maddede **AIGENCY V4 %69,9, geçerli insanlar %79,1**. Tarama
+kuralının, model ve insan cevapları aynı arayüzden geldiğinde bile ikisini ayırabildiğini
+gösteren yararlı bir kontrol.
 
 Yayımlanan sayıların tamamı `insan_ozet.py` tarafından üretilir; eşikler
 betiğin içinde yazılıdır.
@@ -533,18 +529,13 @@ independent criteria point at the same people. Zero-second gaps are not discarde
 when computing the median: timestamps have one-second resolution, so those zeros
 are precisely the evidence of click-through.
 
-**Model and humans on the same items.** Between 13:48 and 14:09 UTC on
-25 September 2026, 50 sessions registered (16 in a single minute), each
-answered exactly 156 items, and every session's 156 answers were written in
-**the same second**. The client identified itself in the server log:
-`eCloud değerlendirme koşumu`. Pairwise answer
-agreement across the 50 sessions was 1.00 — one deterministic language model
-over 50 different 156-item slices. The speed criterion removed all fifty; the
-sessions are flagged as `sentetik_oturum` in the database and excluded
-**structurally** at export. Without this, the "human ceiling" would have become
-an LLM ceiling: on the same 515 items that model (AIGENCY V4) scores 69.9%, the valid humans
-79.1%. This is the check for any crowd-sourced benchmark, and the defence
-is the screening rule, .
+**Model and humans on the same items.** On 25 September 2026 eCloud Tech.'s AIGENCY V4
+model was run through the same interface as the human study, answering all 515 items
+across 50 sessions (our own evaluation run). The speed criterion separated those sessions
+from the human data; they are flagged as model sessions in the database and do not enter
+the human-ceiling figure. On the same 515 items, **AIGENCY V4 scores 69.9%, the valid humans
+79.1%**. A useful check that the screening rule tells model and human answers apart even
+when they arrive through the same interface.
 
 Every published figure is produced by `insan_ozet.py`; the thresholds are written
 into the script.

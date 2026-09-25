@@ -1,5 +1,11 @@
 # Değişiklik kaydı · Changelog
 
+## 3.6.2 — 2026-09-25
+
+Yalnızca belge: insan tavanı bölümünde model oturumlarının anlatımı düzeltildi. Veri ve kod 3.6.0 ile aynı.
+Documentation only: the account of the model sessions in the human-ceiling section was corrected. Data and code identical to 3.6.0.
+
+
 ## 3.6.0 — 2026-09-25
 
 **Veri değişti**: ünlü düşmesi motoru düzeltildi; 34 gövde, `ad_yuva`'da 136 yanlış
