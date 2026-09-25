@@ -147,34 +147,56 @@ birleşimdendi.
 TDK'nin verdiği biçim hiçbir bayrak kümesiyle üretilemiyorsa gövde kuralla
 açıklanamıyor demektir ve kıyasa alınmaz (*raptı*, *veçhi* dahil altı gövde).
 
-### İnsan tavanı — ilk ölçüm
+### İnsan tavanı — ikinci ölçüm
 
-**%88,2 [%83,1 – %91,8]** · 3 değerlendirici, 211 yargı · *toplama sürüyor*
+**%73,0 [%64,7 – %80,6]** · 5 geçerli değerlendirici, 437 yargı · *toplama sürüyor*
 
 Aynı maddeler ana dili Türkçe olan kişilere soruluyor
-([morf.e-cloud.web.tr](https://morf.e-cloud.web.tr)). Bu bir **ön okumadır**:
-örneklem küçük, aralık geniş ve sayı katılımcı geldikçe güncellenecek.
+([morf.e-cloud.web.tr](https://morf.e-cloud.web.tr)). Bu hâlâ bir **ön
+okumadır**: örneklem küçük, aralık geniş ve sayı katılımcı geldikçe
+güncellenecek. Aralık **fonolojik hücre** kümeli önyüklemeyle verilmiştir;
+madde düzeyinde hesaplansa %68,5–%77,3 çıkardı, çünkü aynı hücreye bağlı
+maddeler bağımsız gözlem değildir.
 
-| kesit | doğruluk |
-|---|---|
-| gerçek gövde | %90,2 [%84,9 – %93,8] |
-| **uydurma gövde** | **%78,4 [%62,8 – %88,6]** |
-| ek zinciri (en zor) | %50,0 [%25,4 – %74,6] |
+**Önceki sürümde bildirdiğimiz %88,2 [83,1–91,8] geri çekilmiştir.** İki sebebi
+var ve ikisi de bizim tarafımızda: (1) o sayı 3 değerlendiriciye dayanıyordu;
+beşe çıkınca ortalama düştü — geçerli kişilerin tek tek doğrulukları %85,1,
+%84,5, %75,0, %68,6 ve %53,2'dir, yani "tavan" tek bir sayıdan çok bir yelpaze.
+(2) o ölçümün yapıldığı madde havuzunun 520 maddesinden 257'si güncel kıyas
+verisinde yoktu — havuz bir önceki üretimden alınmıştı. Havuz 24 Eylül 2026'da
+güncel veriden yeniden kuruldu; artık her madde kıyasta karşılığı olan bir
+maddedir ve gövde/hücre kümelemesi yapılabilmektedir.
 
-İnsanlar da uydurma gövdede düşüyor — yani kıyasın ölçtüğü zorluk yapaydan
-ibaret değil. Ama düşüş 12 puan; modellerde ölçtüğümüz 22-32 puan.
+| kesit | doğruluk | n |
+|---|---|---|
+| gerçek gövde | %74,6 [%70,0 – %78,8] | 417 |
+| uydurma gövde | %40,0 [%16,7 – %61,1] | 20 |
 
-**Katılımcı taraması.** Doğruluk sayısı elenmeden hesaplanmaz. İki ölçüt önceden
-yazılır ve sonuca bakılarak değiştirilmez: soru başına medyan süre 3 saniyenin
-altındaysa kişi soruyu okumuyordur; doğruluğu kendi şans düzeyini (gördüğü
-maddelerin şık sayılarına göre hesaplanır) binom testiyle geçemeyen kişi bilgi
-taşımıyordur. İlk turda 6 katılımcının 3'ü elendi.
+**Uydurma gövdedeki insan performansı hakkında henüz bir şey söylemiyoruz.**
+Önceki sürümde bildirdiğimiz "insan düşüşü 12 puan" iddiası da geri
+çekilmiştir: o sayı da, buradaki 34,6 puanlık nokta tahmini de onlarca yargıya
+dayanıyor ve aralık her iki yönde de sonuca izin vermiyor. Uydurma gövde
+karşılaştırması ancak ikisinin de bulunduğu kovalarda (`ad_cekimi`, `ad_yuva`,
+`ek_zinciri`) eşleştirilmiş olarak anlamlıdır; havuz bu amaçla her birinde 20
+gerçek + 20 uydurma olacak şekilde dengelendi, ama yeterli yargı henüz
+birikmedi.
 
-**Bu ölçüm kıyasın kendi hatasını buldu.** İlk turda katılımcılar
-`uyum_kirici` kovasında şans düzeyinin ALTINA düştü. Ana dili Türkçe olan
-insanlar bir kurala şanstan kötü uyuyorsa sorun insanda değil altındadır —
-TDK denetimi buradan çıktı. Düzeltmeden önce ölçülen insan doğruluğu %73,5'ti.
+**Katılımcı taraması — ölçümü koruyan asıl savunma.** Doğruluk sayısı elenmeden
+hesaplanmaz. Üç ölçüt önceden yazılır ve sonuca bakılarak değiştirilmez: en az
+10 cevap; soru başına medyan süre 3 saniyenin altındaysa kişi soruyu
+okumuyordur; doğruluğu kendi şans düzeyini (gördüğü maddelerin şık sayılarına
+göre hesaplanır) tek yönlü binom testiyle α = 0,001'de geçemeyen kişi bilgi
+taşımıyordur.
 
+Bu tarama boşuna değil: **11 katılımcının 6'sı elendi**, beşi hız ölçütünden.
+Bir katılımcı 111 soruyu **36 saniyede** cevaplamıştı — soru başına 0,3 saniye.
+Hızdan elenen beş kişinin beşi aynı zamanda şans düzeyindeydi; iki bağımsız
+ölçüt aynı kişileri gösteriyor. Süre hesabında sıfır saniyelik aralıklar
+atılmaz: zaman damgaları saniye çözünürlüğünde olduğu için hızlı tıklamanın
+kanıtı tam da o sıfırlardır.
+
+Yayımlanan sayıların tamamı `insan_ozet.py` tarafından üretilir; eşikler
+betiğin içinde yazılıdır.
 
 ## Bağımsız dış sınav: UD ağaç bankaları
 
@@ -308,27 +330,113 @@ form follows by construction. Lexical irregularity flags come from the Zemberek
 dictionary (Apache-2.0); its analyser is not used. The rule engine carries 282
 hand-written gold assertions, all passing.
 
-### Human ceiling — first measurement
+### Human ceiling — second measurement
 
-**88.2% [83.1 – 91.8]** · 3 raters, 211 judgments · *collection ongoing*
+**73.0% [64.7 – 80.6]** · 5 valid raters, 437 judgments · *collection ongoing*
 
 The same items are put to native speakers at
-[morf.e-cloud.web.tr](https://morf.e-cloud.web.tr). This is a **preliminary
-reading**: the sample is small, the interval wide, and the figure will be updated
-as more raters finish. Humans score 90.2% on real stems and 78.4% on nonce stems
-— a 12-point gap, against the 22-32 points we measure on models, so the
-real/nonce difficulty is not an artefact.
+[morf.e-cloud.web.tr](https://morf.e-cloud.web.tr). This is still a
+**preliminary reading**: the sample is small, the interval wide, and the figure
+will be updated as more raters finish. The interval comes from a
+**phonological-cell cluster bootstrap**; computed per item it would read
+68.5–77.3%, because items sharing a cell are not independent observations.
 
-Raters are screened before the number is computed, on two criteria fixed in
-advance: a median of under 3 seconds per question means the question was not
-read, and accuracy that fails to beat the rater's own chance level on a binomial
-test carries no information. Three of the first six raters were screened out.
+**The 88.2% [83.1–91.8] reported in an earlier release is withdrawn.** Two
+reasons, both on our side: (1) that figure rested on 3 raters; with 5 the mean
+fell — the individual accuracies of the valid raters are 85.1%, 84.5%, 75.0%,
+68.6% and 53.2%, so the "ceiling" is a spread rather than a point. (2) 257 of
+the 520 items in the pool used for that measurement did not exist in the current
+benchmark data; the pool had been drawn from an earlier generation. It was
+rebuilt from current data on 24 September 2026, so every item now corresponds to
+a benchmark item and stem/cell clustering is possible.
 
-**This measurement found the benchmark's own error.** In the first round native
-speakers scored *below chance* on the inverse-harmony bucket, which is what
-prompted the TDK audit. Before the correction the measured human ceiling was
-73.5%.
+| slice | accuracy | n |
+|---|---|---|
+| real stems | 74.6% [70.0 – 78.8] | 417 |
+| nonce stems | 40.0% [16.7 – 61.1] | 20 |
 
+**We make no claim about human performance on nonce stems yet.** The earlier
+"12-point human drop" claim is also withdrawn: that figure, and the 34.6-point
+point estimate here, both rest on a few dozen judgments and the interval permits
+no conclusion in either direction. The real/nonce contrast is only meaningful as
+a matched comparison inside the buckets that contain both (`ad_cekimi`,
+`ad_yuva`, `ek_zinciri`); the pool was rebalanced to 20 real + 20 nonce in each,
+but enough judgments have not yet accumulated.
+
+**Rater screening — the defence that protects the measurement.** The accuracy
+figure is not computed before screening. Three criteria are fixed in advance and
+never adjusted after seeing the result: at least 10 answers; a median of under
+3 seconds per question means the question was not read; and accuracy that fails
+to beat the rater's own chance level (computed from the option counts of the
+items they saw) on a one-sided binomial test at α = 0.001 carries no
+information.
+
+The screening is not decorative: **6 of 11 raters were removed**, five of them on
+the speed criterion. One had answered 111 questions in **36 seconds** — 0.3 s per
+question. All five speed-removed raters were also at chance level; two
+independent criteria point at the same people. Zero-second gaps are not discarded
+when computing the median: timestamps have one-second resolution, so those zeros
+are precisely the evidence of click-through.
+
+Every published figure is produced by `insan_ozet.py`; the thresholds are written
+into the script.
+
+### Confidence intervals: 465,241 items are NOT 465,241 independent observations
+
+Items are not generated independently. One stem (*kitap*) yields dozens of items
+across the plural × possessive × case cross; one phonological cell (final vowel,
+final-consonant class, depth, harmony) binds hundreds of stems to the same rule.
+A model that misses lenition on *kitap* misses it across most items derived from
+that stem.
+
+Item-level bootstrap ignores this: it treats each item as a separate observation,
+overstates the sample, and returns intervals that are too narrow. That is false
+precision, and it is the easiest place to challenge a published figure.
+
+`turkmorfbench.istatistik` moves the resampling unit from the item to the
+**cluster**. In the full set:
+
+| unit | clusters | items per cluster |
+|---|---|---|
+| stem | 32,140 | median 16 |
+| **phonological cell** | **441** | median 247, largest 18,594 |
+
+The difference is not cosmetic. Under a pattern where model competence varies at
+the rule level — which is exactly what the benchmark sets out to measure — the
+design effect we measured is:
+
+| clustering | interval width | effective n |
+|---|---|---|
+| item | ±0.12 pt | 465,241 |
+| stem | 2.0× | 118,274 |
+| **phonological cell** | **30.8×** | **491** |
+
+Those figures come from a simulation; the real design effect depends on how
+correlated a real model's errors are within a cell. `tasarim_etkisi()` measures
+and reports it for every run.
+
+Comparing two models by checking whether two separate intervals overlap is wrong:
+it throws away the paired design and can hide a real difference. `esli_fark()`
+resamples the difference directly.
+
+### Is the result an artefact of the scoring rule?
+
+The scoring rule changed in 3.3.0 (see `olcum.py`) and the residual length bias
+was not hidden: the gold is shortest in 29.9% of items with unequal candidate
+lengths, while the chosen rule picks the shortest 39–43% of the time. That is not
+the real question. The real question is whether the **result** changes when the
+rule changes.
+
+`turkmorfbench.duyarlilik` runs the model **once**, stores the raw sum, token
+count, character count and unconditional probability per candidate, and derives
+six rules from those three quantities: `ham` (raw), `jeton` (per token), `harf`
+(per character — the 3.3.0 choice), `pmi`, `pmi_harf` and `esli` (pairwise
+contrastive, Copeland). The model is not run six times.
+
+The output states whether the **sign of the difference between two systems is the
+same under all six rules**. If it is, the residual length bias does not carry the
+finding; if it is not, we learn which finding depends on the rule before the
+reader does.
 
 ### Independent external check: UD treebanks
 
@@ -372,3 +480,69 @@ excluded as lexically unreliable. Exception buckets are real-stem only by nature
 
 **Code:** [github.com/ecloudtechnology/turkmorfbench](https://github.com/ecloudtechnology/turkmorfbench) ·
 **Package:** [pypi.org/project/turkmorfbench](https://pypi.org/project/turkmorfbench/)
+
+### Güven aralığı: 465.241 madde, 465.241 bağımsız gözlem DEĞİLDİR
+
+Kıyastaki maddeler birbirinden bağımsız üretilmez. Tek bir gövde (*kitap*)
+çokluk × iyelik × hâl çaprazından onlarca madde doğurur; tek bir fonolojik hücre
+(son ünlü, son ünsüz sınıfı, derinlik, uyum) yüzlerce gövdeyi aynı kurala bağlar.
+Bir model *kitap* gövdesinde yumuşamayı kaçırıyorsa, o gövdeden türeyen
+maddelerin çoğunda birlikte kaçırır.
+
+Madde düzeyinde klasik önyükleme bunu görmezden gelir: her maddeyi ayrı bir gözlem
+sayar, örneklemi olduğundan büyük gösterir ve aralığı gereğinden daraltır. Bu,
+sahte kesinliktir ve yayımlanan bir sayının en kolay çürütülen yeridir.
+
+`turkmorfbench.istatistik` yeniden örnekleme birimini maddeden **kümeye** taşır.
+Kümeler tam veri kümesinde şöyle dağılır:
+
+| birim | küme sayısı | küme başına madde |
+|---|---|---|
+| gövde | 32.140 | medyan 16 |
+| **fonolojik hücre** | **441** | medyan 247, en büyüğü 18.594 |
+
+Fark önemsiz değil. Model yetkinliğinin kural düzeyinde değiştiği bir örüntüde —
+ki kıyasın ölçmeye çalıştığı tam olarak budur — ölçtüğümüz tasarım etkisi şudur:
+
+| kümeleme | aralık genişliği | etkin n |
+|---|---|---|
+| madde | ±0,12 puan | 465.241 |
+| gövde | 2,0 kat | 118.274 |
+| **fonolojik hücre** | **30,8 kat** | **491** |
+
+Bu rakamlar bir benzetimden gelir; gerçek tasarım etkisi, gerçek bir modelin
+hatalarının hücre içinde ne kadar ilintili olduğuna bağlıdır. `tasarim_etkisi()`
+bunu her koşumda ölçer ve bildirir.
+
+```python
+from turkmorfbench.istatistik import kume_bootstrap, esli_fark, tasarim_etkisi
+s = kume_bootstrap(maddeler, dogru, anahtar="hucre")     # gövde / hücre / gövde_görev
+f = esli_fark(maddeler, a_dogru, b_dogru, anahtar="govde")   # iki sistemin FARKI
+```
+
+İki modeli karşılaştırırken iki ayrı aralığa bakıp "çakışıyor mu" demek yanlıştır:
+eşli tasarımın gücünü atar ve gerçek farkı gizleyebilir. `esli_fark()` farkı
+doğrudan örnekler.
+
+### Sonuç puanlama kuralına bağlı mı
+
+3.3.0'da puanlama kuralı değişti (bkz. `olcum.py`) ve kalan uzunluk yanlılığı
+gizlenmedi: altın, uzunlukları farklı maddelerde %29,9 oranında en kısadır,
+seçilen kural %39–43 oranında en kısayı seçer. Asıl soru bu değil — asıl soru,
+kural değişince **sonucun** değişip değişmediğidir.
+
+`turkmorfbench.duyarlilik` modeli **bir kez** koşturur, her aday için ham toplam,
+jeton sayısı, karakter sayısı ve koşulsuz olasılığı saklar, ve altı kuralı bu üç
+büyüklükten türetir: `ham`, `jeton`, `harf` (3.3.0'da seçilen), `pmi`,
+`pmi_harf` ve `esli` (ikili karşılaştırma, Copeland). Model altı kez koşmaz.
+
+```python
+from turkmorfbench.duyarlilik import bilesen_topla, karsilastir, rapor
+ka = bilesen_topla(arka_a, maddeler)
+kb = bilesen_topla(arka_b, maddeler)
+print(rapor(karsilastir(ka, kb, maddeler, "A", "B", anahtar="hucre"), "A", "B"))
+```
+
+Çıktı, iki sistemin farkının **yönünün altı kuralın hepsinde aynı olup olmadığını**
+söyler. Aynıysa kalan uzunluk yanlılığı bulguyu taşımıyor demektir; değilse hangi
+bulgunun kurala bağlı olduğunu okuyucudan önce biz bilmiş oluruz.
