@@ -157,6 +157,44 @@ ve bu yanlış sayılıyordu. Çeldiriciler artık diğer kovalardaki gibi kural
 girdi (8.351 → 9.544). Bu düzeltme bütün modelleri eşit etkiler; 3.4.x ile
 alınan `ek_zinciri` sayıları karşılaştırılamaz, diğer 13 kova değişmedi.
 
+### Morfoloji ≠ yetenek: aynı modeller iki ölçekte
+
+Bu kıyasta bir 2B model 32B'yi yakalayabilir. Bunun ne anlama geldiğini
+söylemek için aynı modelleri **aynı sabit betikle** TurkishMMLU'nun 652 temiz
+sorusunda da ölçtük (şık sırası dondurulmuş, kirli 113 soru dışarıda):
+
+| model | TurkMorfBench 3.5 çekirdek | TurkishMMLU (652) |
+|---|---|---|
+| kanarya-2b | 77,3 | **22,9** |
+| turkish-gpt2-large (0,8B) | 76,9 | **18,4** |
+| Kumru-2B | 76,8 | **19,6** |
+| Erk-32B | 75,2 | **71,0** |
+| Qwen3-32B (taban) | 73,3 | 67,6 |
+
+TurkishMMLU beş şıklıdır; şans %20. Sıfırdan Türkçe külliyatla eğitilen küçük
+modeller morfolojide 32B ile **istatistiksel olarak beraber**, genel yetenekte
+ise **şans düzeyinde**. Bu, kıyasın ölçtüğü şeyin tanımıdır: TurkMorfBench
+akıl yürütmeyi değil, **Türkçe biçim bilgisini** ölçer — ve biçim bilgisi
+parametre sayısıyla değil, görülen Türkçe jeton sayısıyla ölçeklenir. Bu
+yüzden kıyas tek başına "hangi model iyi" sorusuna cevap vermez; genel yetenek
+ölçüsüyle **birlikte** okunmalıdır. Sıralamayı yayımlarken bu sütunu yanına
+koyuyoruz.
+
+### Altı kural, aynı sıralama — ve iki kuralın çöktüğü yer
+
+3.4.0'daki duyarlılık altyapısı 16 modelde koşuldu. `harf` ile `esli` (ikili
+karşılaştırma) her modelde birebir aynı doğruluğu veriyor; `ham` ve `jeton`
+aynı sıralamayı 1–3 puan düşük düzeyde koruyor. Yani bulgular puanlama kuralına
+bağlı değil. `pmi` ve `pmi_harf` ise 21–51 aralığına çöküyor: koşulsuz olasılıkla
+normalleştirmek, ortak gövdeyi paylaşan adaylar arasında ayrımı yok ediyor. Bu
+iki kural bu görev için uygun değildir; pakette kalıyorlar ki okuyucu bunu
+kendisi görebilsin.
+
+Tasarım etkisi (hücre kümeli / madde düzeyi aralık genişliği) modelden modele
+1,2× ile 4,7× arasında değişiyor. En yükseği Erk modellerinde: hücreler arası
+varyansı yüksek, yani bazı kural hücrelerinde çok güçlü bazılarında zayıf.
+Kumru-2B'de 1,2× — düz bir profil. Aynı ortalama, farklı biçim.
+
 ### İnsan tavanı — ikinci ölçüm
 
 **%78.2 [%70.4 – %83.2]** · 6 geçerli değerlendirici, 560 yargı · *toplama sürüyor*
@@ -392,6 +430,43 @@ probable *valid* form and is marked wrong. Distractors are now rule
 order. Depth-1 items now enter the bucket as well (8,351 → 9,544). The fix
 affects every model equally; `ek_zinciri` figures from 3.4.x are not comparable,
 the other 13 buckets are unchanged.
+
+### Morphology ≠ capability: the same models on two scales
+
+On this benchmark a 2B model can match a 32B one. To say what that means, we
+measured the same models with the **same pinned script** on the 652 clean
+TurkishMMLU questions (option order frozen, 113 contaminated items removed):
+
+| model | TurkMorfBench 3.5 core | TurkishMMLU (652) |
+|---|---|---|
+| kanarya-2b | 77.3 | **22.9** |
+| turkish-gpt2-large (0.8B) | 76.9 | **18.4** |
+| Kumru-2B | 76.8 | **19.6** |
+| Erk-32B | 75.2 | **71.0** |
+| Qwen3-32B (base) | 73.3 | 67.6 |
+
+TurkishMMLU is five-way; chance is 20%. Small models trained from scratch on
+Turkish are **statistically tied** with a 32B model on morphology and **at
+chance** on general capability. That is the definition of what this benchmark
+measures: not reasoning but **Turkish form knowledge**, which scales with the
+number of Turkish tokens seen, not with parameter count. The benchmark alone
+therefore does not answer "which model is better"; it must be read **alongside**
+a capability measure, and we publish that column next to the ranking.
+
+### Six rules, one ranking — and where two rules collapse
+
+The 3.4.0 sensitivity machinery was run on 16 models. `harf` and `esli`
+(pairwise) give identical accuracy for every model; `ham` and `jeton` preserve
+the same order 1–3 points lower. The findings do not depend on the scoring rule.
+`pmi` and `pmi_harf` collapse to 21–51: normalising by the unconditional
+probability erases the distinction between candidates that share a stem. Those
+two rules are unsuitable for this task; they stay in the package so readers can
+see it for themselves.
+
+The design effect (cell-clustered vs item-level interval width) ranges from 1.2×
+to 4.7× across models. It is highest for the Erk models — high between-cell
+variance, strong in some rule cells and weak in others. Kumru-2B sits at 1.2×, a
+flat profile. Same mean, different shape.
 
 ### Human ceiling — second measurement
 
