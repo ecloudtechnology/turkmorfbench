@@ -252,7 +252,7 @@ eCloud değerlendirme koşumu). Elli oturumun ikili cevap uyumu 1,00 —
 tek bir deterministik dil modeli, 50 farklı 156'lık dilimle. Hız ölçütü
 ellisini de eledi; oturumlar veritabanında `sentetik_oturum` olarak
 işaretlendi ve dışa aktarımda **yapısal olarak** dışlanır. Bu olay olmasaydı
-"insan tavanı" bir LLM tavanına dönüşürdü: aynı 515 maddede o modelin puanı
+"insan tavanı" bir LLM tavanına dönüşürdü: aynı 515 maddede o modelin (AIGENCY V4) puanı
 %69,9, geçerli insanların %79,1. Kalabalık-kaynaklı her kıyas için tehdit
 modeli budur ve savunması eleme kuralıdır, .
 
@@ -497,7 +497,7 @@ agreement across the 50 sessions was 1.00 — one deterministic language model
 over 50 different 156-item slices. The speed criterion removed all fifty; the
 sessions are flagged as `sentetik_oturum` in the database and excluded
 **structurally** at export. Without this, the "human ceiling" would have become
-an LLM ceiling: on the same 515 items that model scores 69.9%, the valid humans
+an LLM ceiling: on the same 515 items that model (AIGENCY V4) scores 69.9%, the valid humans
 79.1%. This is the check for any crowd-sourced benchmark, and the defence
 is the screening rule, .
 
