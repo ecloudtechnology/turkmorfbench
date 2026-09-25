@@ -161,19 +161,18 @@ alınan `ek_zinciri` sayıları karşılaştırılamaz, diğer 13 kova değişme
 
 ### İnsan tavanı — ikinci ölçüm
 
-**%73,0 [%64,7 – %80,6]** · 5 geçerli değerlendirici, 437 yargı · *toplama sürüyor*
+**%78.2 [%70.4 – %83.2]** · 6 geçerli değerlendirici, 560 yargı · *toplama sürüyor*
 
 Aynı maddeler ana dili Türkçe olan kişilere soruluyor
 ([morf.e-cloud.web.tr](https://morf.e-cloud.web.tr)). Bu hâlâ bir **ön
 okumadır**: örneklem küçük, aralık geniş ve sayı katılımcı geldikçe
 güncellenecek. Aralık **fonolojik hücre** kümeli önyüklemeyle verilmiştir;
-madde düzeyinde hesaplansa %68,5–%77,3 çıkardı, çünkü aynı hücreye bağlı
+madde düzeyinde hesaplansa %74.6–%81.8 çıkardı, çünkü aynı hücreye bağlı
 maddeler bağımsız gözlem değildir.
 
 **Önceki sürümde bildirdiğimiz %88,2 [83,1–91,8] geri çekilmiştir.** İki sebebi
 var ve ikisi de bizim tarafımızda: (1) o sayı 3 değerlendiriciye dayanıyordu;
-beşe çıkınca ortalama düştü — geçerli kişilerin tek tek doğrulukları %85,1,
-%84,5, %75,0, %68,6 ve %53,2'dir, yani "tavan" tek bir sayıdan çok bir yelpaze.
+altıya çıkınca dağılım genişledi — geçerli kişilerin tek tek doğrulukları %96.7, %85.1, %84.5, %75.0, %68.6, %53.2'dir, yani "tavan" tek bir sayıdan çok bir yelpaze.
 (2) o ölçümün yapıldığı madde havuzunun 520 maddesinden 257'si güncel kıyas
 verisinde yoktu — havuz bir önceki üretimden alınmıştı. Havuz 24 Eylül 2026'da
 güncel veriden yeniden kuruldu; artık her madde kıyasta karşılığı olan bir
@@ -181,12 +180,12 @@ maddedir ve gövde/hücre kümelemesi yapılabilmektedir.
 
 | kesit | doğruluk | n |
 |---|---|---|
-| gerçek gövde | %74,6 [%70,0 – %78,8] | 417 |
-| uydurma gövde | %40,0 [%16,7 – %61,1] | 20 |
+| gerçek gövde | %79.5 [%75.8 – %82.9] | 531 |
+| uydurma gövde | %55.2 [%34.5 – %74.1] | 29 |
 
 **Uydurma gövdedeki insan performansı hakkında henüz bir şey söylemiyoruz.**
 Önceki sürümde bildirdiğimiz "insan düşüşü 12 puan" iddiası da geri
-çekilmiştir: o sayı da, buradaki 34,6 puanlık nokta tahmini de onlarca yargıya
+çekilmiştir: o sayı da, buradaki 24.3 puanlık nokta tahmini de onlarca yargıya
 dayanıyor ve aralık her iki yönde de sonuca izin vermiyor. Uydurma gövde
 karşılaştırması ancak ikisinin de bulunduğu kovalarda (`ad_cekimi`, `ad_yuva`,
 `ek_zinciri`) eşleştirilmiş olarak anlamlıdır; havuz bu amaçla her birinde 20
@@ -200,12 +199,24 @@ okumuyordur; doğruluğu kendi şans düzeyini (gördüğü maddelerin şık say
 göre hesaplanır) tek yönlü binom testiyle α = 0,001'de geçemeyen kişi bilgi
 taşımıyordur.
 
-Bu tarama boşuna değil: **11 katılımcının 6'sı elendi**, beşi hız ölçütünden.
+Bu tarama boşuna değil: **12 katılımcının 6'sı elendi**, beşi hız ölçütünden.
 Bir katılımcı 111 soruyu **36 saniyede** cevaplamıştı — soru başına 0,3 saniye.
 Hızdan elenen beş kişinin beşi aynı zamanda şans düzeyindeydi; iki bağımsız
 ölçüt aynı kişileri gösteriyor. Süre hesabında sıfır saniyelik aralıklar
 atılmaz: zaman damgaları saniye çözünürlüğünde olduğu için hızlı tıklamanın
 kanıtı tam da o sıfırlardır.
+
+**Model ile insan, aynı maddelerde.** 25 Eylül 2026'da 13:48–14:09 (UTC)
+arasında 50 oturum kaydoldu (bir dakikada 16 kayıt), her biri tam 156 madde
+cevapladı ve her oturumun 156 cevabı **aynı saniyede** yazıldı. Sunucu
+günlüğündeki istemci kimliği kendini tanıtıyordu: `eCloud koşumu/1.0
+eCloud değerlendirme koşumu). Elli oturumun ikili cevap uyumu 1,00 —
+tek bir deterministik dil modeli, 50 farklı 156'lık dilimle. Hız ölçütü
+ellisini de eledi; oturumlar veritabanında `sentetik_oturum` olarak
+işaretlendi ve dışa aktarımda **yapısal olarak** dışlanır. Bu olay olmasaydı
+"insan tavanı" bir LLM tavanına dönüşürdü: aynı 515 maddede o modelin puanı
+%69,9, geçerli insanların %79,1. Kalabalık-kaynaklı her kıyas için tehdit
+modeli budur ve savunması eleme kuralıdır, .
 
 Yayımlanan sayıların tamamı `insan_ozet.py` tarafından üretilir; eşikler
 betiğin içinde yazılıdır.
@@ -357,19 +368,18 @@ the other 13 buckets are unchanged.
 
 ### Human ceiling — second measurement
 
-**73.0% [64.7 – 80.6]** · 5 valid raters, 437 judgments · *collection ongoing*
+**78.2% [70.4 – 83.2]** · 6 valid raters, 560 judgments · *collection ongoing*
 
 The same items are put to native speakers at
 [morf.e-cloud.web.tr](https://morf.e-cloud.web.tr). This is still a
 **preliminary reading**: the sample is small, the interval wide, and the figure
 will be updated as more raters finish. The interval comes from a
 **phonological-cell cluster bootstrap**; computed per item it would read
-68.5–77.3%, because items sharing a cell are not independent observations.
+74.6–81.8%, because items sharing a cell are not independent observations.
 
 **The 88.2% [83.1–91.8] reported in an earlier release is withdrawn.** Two
-reasons, both on our side: (1) that figure rested on 3 raters; with 5 the mean
-fell — the individual accuracies of the valid raters are 85.1%, 84.5%, 75.0%,
-68.6% and 53.2%, so the "ceiling" is a spread rather than a point. (2) 257 of
+reasons, both on our side: (1) that figure rested on 3 raters; with 6 the spread
+widened — the individual accuracies of the valid raters are 96.7%, 85.1%, 84.5%, 75.0%, 68.6%, 53.2%, so the "ceiling" is a spread rather than a point. (2) 257 of
 the 520 items in the pool used for that measurement did not exist in the current
 benchmark data; the pool had been drawn from an earlier generation. It was
 rebuilt from current data on 24 September 2026, so every item now corresponds to
@@ -377,11 +387,11 @@ a benchmark item and stem/cell clustering is possible.
 
 | slice | accuracy | n |
 |---|---|---|
-| real stems | 74.6% [70.0 – 78.8] | 417 |
-| nonce stems | 40.0% [16.7 – 61.1] | 20 |
+| real stems | 79.5% [75.8 – 82.9] | 531 |
+| nonce stems | 55.2% [34.5 – 74.1] | 29 |
 
 **We make no claim about human performance on nonce stems yet.** The earlier
-"12-point human drop" claim is also withdrawn: that figure, and the 34.6-point
+"12-point human drop" claim is also withdrawn: that figure, and the 24.3-point
 point estimate here, both rest on a few dozen judgments and the interval permits
 no conclusion in either direction. The real/nonce contrast is only meaningful as
 a matched comparison inside the buckets that contain both (`ad_cekimi`,
@@ -396,12 +406,25 @@ to beat the rater's own chance level (computed from the option counts of the
 items they saw) on a one-sided binomial test at α = 0.001 carries no
 information.
 
-The screening is not decorative: **6 of 11 raters were removed**, five of them on
+The screening is not decorative: **6 of 12 raters were removed**, five of them on
 the speed criterion. One had answered 111 questions in **36 seconds** — 0.3 s per
 question. All five speed-removed raters were also at chance level; two
 independent criteria point at the same people. Zero-second gaps are not discarded
 when computing the median: timestamps have one-second resolution, so those zeros
 are precisely the evidence of click-through.
+
+**Model and humans on the same items.** Between 13:48 and 14:09 UTC on
+25 September 2026, 50 sessions registered (16 in a single minute), each
+answered exactly 156 items, and every session's 156 answers were written in
+**the same second**. The client identified itself in the server log:
+`eCloud değerlendirme koşumu`. Pairwise answer
+agreement across the 50 sessions was 1.00 — one deterministic language model
+over 50 different 156-item slices. The speed criterion removed all fifty; the
+sessions are flagged as `sentetik_oturum` in the database and excluded
+**structurally** at export. Without this, the "human ceiling" would have become
+an LLM ceiling: on the same 515 items that model scores 69.9%, the valid humans
+79.1%. This is the check for any crowd-sourced benchmark, and the defence
+is the screening rule, .
 
 Every published figure is produced by `insan_ozet.py`; the thresholds are written
 into the script.
