@@ -120,3 +120,66 @@ if hata:
     sys.exit(1)
 
 print("\nTÜM KAYNAKLAR VERİYLE TUTARLI ✓")
+
+# --------------------------------------------------------------- paket ----
+def paket_denetle(hedef=None):
+    """YAYIMLANAN paketin uzun aciklamasini da veriye karsi denetler.
+
+    NEDEN AYRI
+      Yerel dosyalar dogru olsa bile yayimlanan pakete ESKI bir README
+      girebilir: surum kurulurken derleme baska bir dosyadan okuyabilir,
+      onbellekli bir egg-info kalabilir, ya da yanlis dizinden derlenebilir.
+      Okuyucunun gordugu sey PyPI'deki uzun aciklamadir; denetim oraya da
+      bakmazsa bu sinif gerileme sessizce gecer.
+
+    hedef: .tar.gz / .whl yolu, ya da None ise kurulu paketin ustverisi.
+    """
+    import io
+    import tarfile
+    import zipfile
+
+    if hedef is None:
+        from importlib import metadata
+        acik = metadata.metadata("turkmorfbench").get_payload() or ""
+        if not acik:
+            acik = metadata.metadata("turkmorfbench").get("Description", "") or ""
+        kaynak = "kurulu paket"
+    elif hedef.endswith(".whl"):
+        z = zipfile.ZipFile(hedef)
+        ad = [n for n in z.namelist() if n.endswith(".dist-info/METADATA")][0]
+        acik = z.read(ad).decode("utf8")
+        kaynak = hedef
+    else:
+        t = tarfile.open(hedef)
+        ad = [n for n in t.getnames() if n.endswith("PKG-INFO")][0]
+        acik = t.extractfile(ad).read().decode("utf8")
+        kaynak = hedef
+
+    hata = []
+    for kova, n in say.items():
+        if "`%s`" % kova not in acik:
+            hata.append("tabloda eksik kova: %s" % kova)
+            continue
+        for satir in acik.split("\n"):
+            if "`%s`" % kova in satir and satir.strip().startswith("|"):
+                if tr(n) not in satir:
+                    hata.append("%s: %s beklenirdi, satir: %s" % (kova, tr(n), satir.strip()[:70]))
+                break
+    if tr(toplam) not in acik:
+        hata.append("manset sayi %s gecmiyor" % tr(toplam))
+    for kalip in ESKI:
+        if re.search(kalip, acik):
+            hata.append("ESKI sayi kalmis: %s" % kalip)
+    return kaynak, hata
+
+
+if __name__ == "__main__" and "--paket" in sys.argv:
+    i = sys.argv.index("--paket")
+    yol = sys.argv[i + 1] if len(sys.argv) > i + 1 else None
+    kaynak, h = paket_denetle(yol)
+    print("\nPAKET DENETIMI (%s)" % kaynak)
+    if h:
+        for x in h:
+            print("  X", x)
+        sys.exit(1)
+    print("  yayimlanan aciklama veriyle TUTARLI ✓")
