@@ -76,15 +76,27 @@ class Yerel:
         """log P(aday | istem) — yalnız aday jetonları, karaktere bölünmüş."""
         t = self.torch
         with t.no_grad():
-            n_onek = len(self.tok(istem, add_special_tokens=True).input_ids)
+            onek_ids = self.tok(istem, add_special_tokens=True).input_ids
             ids = self.tok(istem + aday, return_tensors="pt").input_ids.to(self.model.device)
             if ids.shape[1] < 2:
                 return -1e9
+            # SINIR: istem tek başına ve istem+aday ayrı ayrı jetonlanır; BPE birleşimi
+            # sınırda jetonu DEĞİŞTİREBİLİR (istem ": " ile biter, "Ġ" + "kal" → "Ġkal").
+            # Aday jetonları, iki dizinin ORTAK ÖNEKİ bittiği yerden başlar: sınırı
+            # aşan jeton adaya SAYILIR (3.7.0; önce dışarıda kalıyordu — bkz. CHANGELOG).
+            ortak = self._ortak_onek(onek_ids, ids[0].tolist())
             lp = self.model(ids).logits[0, :-1].log_softmax(-1)
             tek = lp.gather(-1, ids[0, 1:].unsqueeze(-1)).squeeze(-1)
-            bas = max(0, n_onek - 1)
+            bas = max(0, ortak - 1)
             aday_jeton = tek[bas:] if tek[bas:].numel() else tek[-1:]
             return float(aday_jeton.sum()) / max(1, len(aday))
+
+    @staticmethod
+    def _ortak_onek(a, b):
+        n = 0
+        while n < min(len(a), len(b)) and a[n] == b[n]:
+            n += 1
+        return n
 
     def uret(self, istem, en_fazla=20):
         t = self.torch
@@ -156,10 +168,11 @@ class Uzak:
     def olasilik(self, istem, aday):
         """log P(aday | istem), karaktere bölünmüş.
 
-        `text_offset` her jetonun istem metnindeki başlangıcını verir; aday
-        jetonları, uzunluğu istemin uzunluğuna eşit ya da ondan büyük olan
-        ilk jetondan itibaren başlar. Bu alan olmadan aday jetonları
-        ayrılamaz ve ölçüm yerel arka uçla aynı şeyi ölçmez."""
+        `text_offset` her jetonun istem metnindeki başlangıcını verir. Aday
+        jetonları, metin sınırını (len(istem)) AŞAN ilk jetondan başlar: sınırın
+        üstüne oturan jeton (istem ": " ile biter, jeton "Ġkal" boşluğu da alır)
+        adaya SAYILIR — yerel arka uçla aynı kural (3.7.0). Bu alan olmadan aday
+        jetonları ayrılamaz ve ölçüm yerel arka uçla aynı şeyi ölçmez."""
         c = self._cagir({"model": self.model, "prompt": istem + aday, "max_tokens": 0,
                          "echo": True, "logprobs": 0, "temperature": 0})
         g = c.get("logprobs") or {}
@@ -168,7 +181,8 @@ class Uzak:
         if not lp:
             return -1e9
         if off and len(off) == len(lp):
-            secili = [x for x, o in zip(lp, off) if x is not None and o >= len(istem)]
+            son = list(off[1:]) + [len(istem) + len(aday)]      # her jetonun bitişi
+            secili = [x for x, b in zip(lp, son) if x is not None and b > len(istem)]
         else:
             secili = [x for x in lp if x is not None]
         if not secili:

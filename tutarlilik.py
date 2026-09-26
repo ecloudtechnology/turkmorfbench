@@ -146,6 +146,20 @@ for _ad in ("tam", "cekirdek"):
         if _n != len(_m):
             hata.append("%s.jsonl %d satir, %s.json %d madde — jsonl ESKI" % (_ad, _n, _ad, len(_m)))
 
+# 6) PAKET SABITLERI ve paket kaynak kodunda eski sayilar (veri.py TAM_N/CEKIRDEK_N veriyle ayni olmali)
+import glob as _glob
+for _py in _glob.glob(os.path.join(os.path.dirname(bul("paket/pyproject.toml") or "paket/pyproject.toml"), "turkmorfbench", "*.py")):
+    _s = open(_py, encoding="utf8").read()
+    for _eski in (r"465[.,]241", r"449[.,]?\d{3}", r"1[.,]856"):
+        if re.search(_eski, _s):
+            hata.append("%s: paket kodunda eski sayı %s" % (os.path.basename(_py), _eski))
+    if _py.endswith("veri.py"):
+        _m = re.search(r"TAM_N = ([\d_]+)", _s); _c = re.search(r"CEKIRDEK_N = ([\d_]+)", _s)
+        if not _m or int(_m.group(1).replace("_", "")) != toplam:
+            hata.append("veri.py: TAM_N %s, veri %s" % (_m.group(1) if _m else None, toplam))
+        if not _c or int(_c.group(1).replace("_", "")) != cekirdek_n:
+            hata.append("veri.py: CEKIRDEK_N %s, veri %s" % (_c.group(1) if _c else None, cekirdek_n))
+
 # 5) model karsilastirma tablosu basligi guncel surumun cekirdegini gostermeli
 for _ad, _s in _metin.items():
     for _eski in re.findall(r"TurkMorfBench (3\.\d) (?:çekirdek|core)", _s):

@@ -174,8 +174,8 @@ ve bu yanlış sayılıyordu. Çeldiriciler artık diğer kovalardaki gibi kural
 (*temerrütleryimiz*), sıra bozuk. Derinlik-1 maddeleri de bu sayede kovaya
 girdi (8.351 → 9.544). Bu düzeltme bütün modelleri eşit etkiler; 3.4.x ile
 alınan `ek_zinciri` sayıları karşılaştırılamaz, diğer 13 kova değişmedi.
-3.6 çekirdeğinde 15 modelin 14'ü bu kovada ≥%96 (tek istisna Qwen3.8-27B tabanı,
-%84,8): kova tabandan **tavana** geçti ve hâlâ ayırt etmiyor. Kural ihlali içeren
+3.6 çekirdeğinde 15 modelin 13'ü bu kovada ≥%96 (Qwen3.8-27B tabanı %85,7 ve
+Trendyol v1.0 %87,6 dışında): kova tabandan **tavana** geçti ve hâlâ ayırt etmiyor. Kural ihlali içeren
 çeldiriciler dil modeline fazla kolay geliyor; 3.7'de çeldiriciler dilbilgisel ama
 bağlamla uyuşmayan zincirler (kişi/sayı/durum uyuşmazlığı) olacak. 105 madde
 1.836'lık çekirdeğin %5,7'sidir; kova hariç sıralama aynı kalır (kartta verilir).
@@ -186,13 +186,13 @@ Bu kıyasta bir 2B model 32B'yi yakalayabilir. Bunun ne anlama geldiğini
 söylemek için aynı modelleri **aynı sabit betikle** TurkishMMLU'nun 652 temiz
 sorusunda da ölçtük (şık sırası dondurulmuş, kirli 113 soru dışarıda):
 
-| model | boyut | TurkMorfBench 3.6 çekirdek | TurkishMMLU (652) |
+| model | boyut | TurkMorfBench 3.6 çekirdek (3.7.0 puanlama) | TurkishMMLU (652) |
 |---|---|---|---|
-| kanarya-2b | 2B | 77,6 | **22,9** |
-| turkish-gpt2-large | 0,8B | 77,5 | **18,4** |
-| Kumru-2B | 2B | 77,1 | **19,6** |
-| Erk-32B | 32B | 75,7 | **71,0** |
-| Qwen3-32B (taban) | 32B | 74,0 | 67,6 |
+| turkish-gpt2-large | 0,8B | 79,1 | **18,4** |
+| kanarya-2b | 2B | 78,4 | **22,9** |
+| Kumru-2B | 2B | 76,2 | **19,6** |
+| Erk-32B | 32B | 75,0 | **71,0** |
+| Qwen3-32B (taban) | 32B | 73,4 | 67,6 |
 
 TurkishMMLU beş şıklıdır; şans %20. Sıfırdan Türkçe külliyatla eğitilen küçük
 modeller morfolojide 32B ile **istatistiksel olarak beraber**, genel yetenekte
@@ -205,18 +205,24 @@ koyuyoruz.
 
 ### Altı kural, aynı sıralama — ve iki kuralın çöktüğü yer
 
-3.4.0'daki duyarlılık altyapısı 16 modelde koşuldu. `harf` ile `esli` (ikili
-karşılaştırma) her modelde birebir aynı doğruluğu veriyor; `ham` ve `jeton`
-aynı sıralamayı 1–3 puan düşük düzeyde koruyor. Yani bulgular puanlama kuralına
-bağlı değil. `pmi` ve `pmi_harf` ise 21–51 aralığına çöküyor: koşulsuz olasılıkla
-normalleştirmek, ortak gövdeyi paylaşan adaylar arasında ayrımı yok ediyor. Bu
-iki kural bu görev için uygun değildir; pakette kalıyorlar ki okuyucu bunu
-kendisi görebilsin.
+3.7.0 puanlama koduyla 15 model yeniden koşuldu. `harf` (birincil), `ham` ve
+`jeton` aynı tabloyu verir: ilk iki ve son üç sıra üç kuralda aynı, ortadaki
+beraberlik bandında yer değişimleri var. `ham` 1–4, `jeton` 2–16 puan aşağıda
+kalır; jeton başına bölme en çok tam sözcük jetonlu küçük modelleri cezalandırır.
+`pmi` ve `pmi_harf` 21–51 aralığına çöker: koşulsuz olasılıkla normalleştirmek,
+ortak gövdeyi paylaşan adaylar arasındaki ayrımı yok eder. Bu iki kural bu görev
+için uygun değildir; pakette kalıyorlar ki okuyucu bunu kendisi görebilsin.
+`esli` 3.7.0'dan itibaren beş tekil kuralın uzlaşısıdır (Copeland). 3.6.x'te
+`harf` puanı üzerinde ikili turnuvaydı; tek sayıl puanda turnuva en büyüğü
+seçmekle aynıdır, `harf` ile birebir çıkması bir sağlamlık kanıtı değildi.
+Uzlaşı, çökmüş iki kuralın oyunu da taşıdığı için `harf`ın 2–12 puan altındadır.
+Sonuç: kural seçimi mutlak düzeyi değiştirir, sıralamanın uçlarını değiştirmez;
+birincil kural ve her karşılaştırmanın tabanı `harf`tır ve tabloda adıyla verilir.
 
 Tasarım etkisi (hücre kümeli / madde düzeyi aralık genişliği) modelden modele
-1,2× ile 4,7× arasında değişiyor. En yükseği Erk modellerinde: hücreler arası
-varyansı yüksek, yani bazı kural hücrelerinde çok güçlü bazılarında zayıf.
-Kumru-2B'de 1,2× — düz bir profil. Aynı ortalama, farklı biçim.
+1,2× ile 4,1× arasında değişiyor. En yükseği Erk modelleri ve Qwen3-32B tabanında
+(4,0–4,1×): hücreler arası varyans yüksek, bazı kural hücrelerinde güçlü,
+bazılarında zayıf. Kumru-2B'de 1,2× — düz bir profil. Aynı ortalama, farklı biçim.
 
 ### İnsan tavanı — ikinci ölçüm
 
@@ -449,8 +455,8 @@ probable *valid* form and is marked wrong. Distractors are now rule
 order. Depth-1 items now enter the bucket as well (8,351 → 9,544). The fix
 affects every model equally; `ek_zinciri` figures from 3.4.x are not comparable,
 the other 13 buckets are unchanged.
-On the 3.6 core, 14 of 15 models score ≥96% on this bucket (the exception is the
-Qwen3.8-27B base at 84.8%): the bucket moved from floor to **ceiling** and still does
+On the 3.6 core, 13 of 15 models score ≥96% on this bucket (all but the
+Qwen3.8-27B base at 85.7% and Trendyol v1.0 at 87.6%): the bucket moved from floor to **ceiling** and still does
 not discriminate. Rule-violating distractors are too easy for a language model; in
 3.7 the distractors will be grammatical chains that disagree with the context
 (person/number/case mismatch). The 105 items are 5.7% of the 1,836-item core; the
@@ -462,13 +468,13 @@ On this benchmark a 2B model can match a 32B one. To say what that means, we
 measured the same models with the **same pinned script** on the 652 clean
 TurkishMMLU questions (option order frozen, 113 contaminated items removed):
 
-| model | size | TurkMorfBench 3.6 core | TurkishMMLU (652) |
+| model | size | TurkMorfBench 3.6 core (3.7.0 scoring) | TurkishMMLU (652) |
 |---|---|---|---|
-| kanarya-2b | 2B | 77.6 | **22.9** |
-| turkish-gpt2-large | 0.8B | 77.5 | **18.4** |
-| Kumru-2B | 2B | 77.1 | **19.6** |
-| Erk-32B | 32B | 75.7 | **71.0** |
-| Qwen3-32B (base) | 32B | 74.0 | 67.6 |
+| turkish-gpt2-large | 0.8B | 79.1 | **18.4** |
+| kanarya-2b | 2B | 78.4 | **22.9** |
+| Kumru-2B | 2B | 76.2 | **19.6** |
+| Erk-32B | 32B | 75.0 | **71.0** |
+| Qwen3-32B (base) | 32B | 73.4 | 67.6 |
 
 TurkishMMLU is five-way; chance is 20%. Small models trained from scratch on
 Turkish are **statistically tied** with a 32B model on morphology and **at
@@ -480,18 +486,25 @@ a capability measure, and we publish that column next to the ranking.
 
 ### Six rules, one ranking — and where two rules collapse
 
-The 3.4.0 sensitivity machinery was run on 16 models. `harf` and `esli`
-(pairwise) give identical accuracy for every model; `ham` and `jeton` preserve
-the same order 1–3 points lower. The findings do not depend on the scoring rule.
-`pmi` and `pmi_harf` collapse to 21–51: normalising by the unconditional
-probability erases the distinction between candidates that share a stem. Those
-two rules are unsuitable for this task; they stay in the package so readers can
-see it for themselves.
+Fifteen models were re-run with the 3.7.0 scoring code. `harf` (primary), `ham`
+and `jeton` give the same table: the top two and bottom three are identical under
+all three, with swaps inside the tied middle band. `ham` sits 1–4 and `jeton`
+2–16 points lower; dividing by token count penalises small whole-word-token
+models most. `pmi` and `pmi_harf` collapse to 21–51: normalising by the
+unconditional probability erases the distinction between candidates that share
+a stem. Those two rules are unsuitable for this task; they stay in the package so
+readers can see it for themselves. Since 3.7.0 `esli` is a consensus of the five
+individual rules (Copeland). In 3.6.x it was a pairwise tournament over the
+`harf` scalar alone, which is identical to taking its maximum, so its agreement
+with `harf` was no evidence of robustness. Because the consensus also carries the
+votes of the two collapsed rules it sits 2–12 points below `harf`. The rule
+changes the absolute level, not the ends of the ranking; `harf` is the primary
+rule and the baseline of every comparison, and every table names it.
 
 The design effect (cell-clustered vs item-level interval width) ranges from 1.2×
-to 4.7× across models. It is highest for the Erk models — high between-cell
-variance, strong in some rule cells and weak in others. Kumru-2B sits at 1.2×, a
-flat profile. Same mean, different shape.
+to 4.1× across models. It is highest for the Erk models and the Qwen3-32B base
+(4.0–4.1×) — high between-cell variance, strong in some rule cells and weak in
+others. Kumru-2B sits at 1.2×, a flat profile. Same mean, different shape.
 
 ### Human ceiling — second measurement
 
@@ -600,8 +613,8 @@ rule changes.
 `turkmorfbench.duyarlilik` runs the model **once**, stores the raw sum, token
 count, character count and unconditional probability per candidate, and derives
 six rules from those three quantities: `ham` (raw), `jeton` (per token), `harf`
-(per character — the 3.3.0 choice), `pmi`, `pmi_harf` and `esli` (pairwise
-contrastive, Copeland). The model is not run six times.
+(per character — the 3.3.0 choice), `pmi`, `pmi_harf` and `esli` (consensus of
+the five rules, Copeland). The model is not run six times.
 
 The output states whether the **sign of the difference between two systems is the
 same under all six rules**. If it is, the residual length bias does not carry the
@@ -645,11 +658,13 @@ measurements was off by fifty points.
 ## Citation
 
 ```bibtex
-@misc{turkmorfbench2026,
-  title  = {TurkMorfBench: A Diagnostic Morphology Benchmark for Turkish Language Models},
-  author = {{eCloud Tech.}},
-  year   = {2026},
-  url    = {https://github.com/ecloudtechnology/turkmorfbench}
+@software{turkmorfbench2026,
+  title     = {TurkMorfBench: A Diagnostic Morphology Benchmark for Turkish Language Models},
+  author    = {{eCloud Tech.}},
+  year      = {2026},
+  version   = {3.7.0},
+  url       = {https://github.com/ecloudtechnology/turkmorfbench},
+  note      = {Data: https://huggingface.co/datasets/ecloudtech/TurkMorfBench. A paper citation will replace this entry when published.}
 }
 ```
 
@@ -713,7 +728,7 @@ kural değişince **sonucun** değişip değişmediğidir.
 `turkmorfbench.duyarlilik` modeli **bir kez** koşturur, her aday için ham toplam,
 jeton sayısı, karakter sayısı ve koşulsuz olasılığı saklar, ve altı kuralı bu üç
 büyüklükten türetir: `ham`, `jeton`, `harf` (3.3.0'da seçilen), `pmi`,
-`pmi_harf` ve `esli` (ikili karşılaştırma, Copeland). Model altı kez koşmaz.
+`pmi_harf` ve `esli` (beş kuralın uzlaşısı, Copeland). Model altı kez koşmaz.
 
 ```python
 from turkmorfbench.duyarlilik import bilesen_topla, karsilastir, rapor

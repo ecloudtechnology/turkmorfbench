@@ -2,7 +2,7 @@
 
 eCloud Tech. · kod Apache-2.0 · veri CC BY 4.0
 """
-__version__ = "3.6.3"
+__version__ = "3.7.0"
 __author__ = "eCloud Tech."
 __license__ = "Apache-2.0"
 

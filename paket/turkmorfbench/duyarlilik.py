@@ -28,7 +28,7 @@ ALTI KURAL
   harf         toplam / n_harf              KARAKTERE (3.3.0'da seçilen)
   pmi          toplam - kosulsuz            koşulsuzla normalleştirme
   pmi_harf     (toplam - kosulsuz) / n_harf PMI + uzunluk düzeltmesi
-  esli         ikili karşılaştırma          Copeland: her adayı her adaya karşı
+  esli         kural uzlaşısı               Copeland: her aday çifti beş tekil kuralda oylanır,
 """
 import itertools
 import json
@@ -56,20 +56,33 @@ def _puan(b, kural):
     raise ValueError(kural)
 
 
-def _esli_sec(bilesenler):
-    """Copeland: her aday her adaya karşı harf-normalize puanla yarışır.
+TEKIL_KURALLAR = ("ham", "jeton", "harf", "pmi", "pmi_harf")
 
-    İkili karşılaştırma, tüm adayları tek ölçeğe koymak yerine yalnız ÇİFT
-    içinde karşılaştırır; ölçek kayması çiftte sadeleşir.
+
+def _esli_sec(bilesenler):
+    """Kural uzlaşısı (Copeland): her aday çifti BEŞ tekil kuralın her birinde
+    karşılaştırılır; çifti çoğunluk kuralında kazanan aday galibiyet alır.
+    En çok galibiyet kazanan seçilir; eşitlikte `harf`.
+
+    3.6.x'te bu kural yalnız `harf` puanı üzerinde ikili turnuvaydı — tek
+    bir sayıl puan üzerinde turnuva, o puanın en büyüğünü seçmekle aynıdır;
+    dolayısıyla `harf` ile birebir aynı çıkması bir sağlamlık kanıtı DEĞİLDİ
+    (3.7.0'da düzeltildi). Şimdi kurallar arası uzlaşıyı ölçer: `harf`'tan
+    ayrıştığı maddeler, sonucun kurala bağlı olduğu maddelerdir.
     """
     adlar = list(bilesenler)
     galibiyet = dict.fromkeys(adlar, 0)
     for a, c in itertools.combinations(adlar, 2):
-        pa = _puan(bilesenler[a], "harf")
-        pc = _puan(bilesenler[c], "harf")
-        if pa > pc:
+        oy_a = oy_c = 0
+        for kural in TEKIL_KURALLAR:
+            pa, pc = _puan(bilesenler[a], kural), _puan(bilesenler[c], kural)
+            if pa > pc:
+                oy_a += 1
+            elif pc > pa:
+                oy_c += 1
+        if oy_a > oy_c:
             galibiyet[a] += 1
-        elif pc > pa:
+        elif oy_c > oy_a:
             galibiyet[c] += 1
     return max(adlar, key=lambda x: (galibiyet[x], _puan(bilesenler[x], "harf")))
 
@@ -160,10 +173,16 @@ def karsilastir(kayit_a, kayit_b, maddeler, ad_a="A", ad_b="B", anahtar="hucre")
             "en_kisa_%s" % ad_a: ca[kural]["en_kisa_orani"],
             "en_kisa_%s" % ad_b: cb[kural]["en_kisa_orani"],
         })
-    isaretler = {("+" if s["fark"] > 0 else "-") for s in satir if s["anlamli"]}
+    # yon_tutarli: TÜM kuralların farkı aynı işaretli (sıfır fark yönsüz sayılır).
+    # 3.6.x'te yalnız anlamlı satırlara bakıyordu; anlamsız ama ters yönlü bir
+    # kural "tutarlı" sayılabiliyordu (3.7.0'da düzeltildi). Yalnız anlamlı
+    # satırların yönü ayrıca `anlamli_yon_tutarli` olarak verilir.
+    isaretler = {("+" if s["fark"] > 0 else "-") for s in satir if s["fark"] != 0}
+    isaretler_anlamli = {("+" if s["fark"] > 0 else "-") for s in satir if s["anlamli"]}
     return {
         "satir": satir,
         "yon_tutarli": len(isaretler) <= 1,
+        "anlamli_yon_tutarli": len(isaretler_anlamli) <= 1,
         "tum_kurallarda_anlamli": all(s["anlamli"] for s in satir),
         "anahtar": anahtar,
     }

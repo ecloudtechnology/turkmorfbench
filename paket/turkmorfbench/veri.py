@@ -7,12 +7,14 @@ KOK = os.path.dirname(os.path.abspath(__file__))
 CEKIRDEK = os.path.join(KOK, "veri", "cekirdek.json")
 # Depodaki gerçek yol `json/` altında. 3.0.0'da kök dizin yazılmıştı ve
 # `--katman tam` indirmesi 404 dönüyordu.
+TAM_N = 466_517          # tek doğru kaynak: kova_sayilari.json (tutarlilik.py denetler)
+CEKIRDEK_N = 1_836
 TAM_ADRES = ("https://huggingface.co/datasets/ecloudtech/TurkMorfBench/"
              "resolve/main/json/turkmorfbench_v3_tam.json")
 
 
 def yukle(katman="cekirdek", onbellek=None):
-    """`cekirdek` (pakette gömülü, 1.856 madde) ya da `tam` (465.241, indirilir).
+    """`cekirdek` (pakette gömülü, CEKIRDEK_N madde) ya da `tam` (TAM_N madde, indirilir).
 
     Tam küme 152 MB; pakete konmaz, ilk kullanımda indirilip önbelleğe alınır.
     """

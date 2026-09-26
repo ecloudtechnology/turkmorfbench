@@ -63,7 +63,8 @@ def komut_bilgi(a):
     print("TurkMorfBench %s — eCloud Tech." % __version__)
     print("\nçekirdek katman: %d madde  (gerçek %d · uydurma %d)"
           % (len(m), g[True], g[False]))
-    print("tam katman:      465.241 madde (ilk kullanımda indirilir)")
+    from .veri import TAM_N
+    print("tam katman:      %s madde (ilk kullanımda indirilir)" % format(TAM_N, ",d").replace(",", "."))
     print("\nkovalar:")
     for a_, n in k.most_common():
         print("  %-28s %6d" % (a_, n))

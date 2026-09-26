@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Küme (cluster) bootstrap — 465.241 madde 465.241 bağımsız gözlem DEĞİLDİR.
+"""Küme (cluster) bootstrap — 466.517 madde 466.517 bağımsız gözlem DEĞİLDİR.
 
 NEDEN BU MODÜL VAR
   Kıyastaki maddeler birbirinden bağımsız üretilmez. Tek bir gövde (*kitap*)
@@ -28,7 +28,8 @@ ANAHTAR SEÇENEKLERİ
     "govde"        gövde (birincil öneri)
     "hucre"        fonolojik hücre
     "kova"         kova
-    "govde_gorev"  gövde × görev (hiyerarşik; en tutucu)
+    "govde_gorev"  gövde × görev ÇAPRAZ anahtarı — tek aşamalı küme bootstrap'ı, iki aşamalı
+                   (hiyerarşik) yeniden örnekleme DEĞİL; küme sayısı en çok olan anahtar
 """
 import math
 import random

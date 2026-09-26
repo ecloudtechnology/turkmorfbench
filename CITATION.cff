@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use TurkMorfBench, please cite it as below. A paper citation will replace this entry when published."
+title: "TurkMorfBench: A Diagnostic Morphology Benchmark for Turkish Language Models"
+type: software
+version: 3.7.0
+date-released: 2026-09-26
+authors:
+  - name: "eCloud Tech."
+    city: "Şanlıurfa"
+    country: TR
+repository-code: "https://github.com/ecloudtechnology/turkmorfbench"
+url: "https://huggingface.co/datasets/ecloudtech/TurkMorfBench"
+license: Apache-2.0
+keywords:
+  - Turkish
+  - morphology
+  - benchmark
+  - language models
+  - vowel harmony
+  - wug test

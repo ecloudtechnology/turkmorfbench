@@ -1,5 +1,34 @@
 # Değişiklik kaydı · Changelog
 
+## 3.7.0 — 2026-09-26
+
+**Puanlama kodu değişti; veri 3.6.0 ile aynı.** Dış inceleme dört noktayı doğru buldu, dördü de düzeltildi.
+(1) **Jeton sınırı.** İstem `"…Çekimli biçim: "` boşlukla bitiyordu; istem tek başına ve istem+aday ayrı
+jetonlanınca sınırdaki jeton değişiyor (`Ġ`+`kal` → `Ġkal`) ve adayın İLK jetonu puan dışı kalıyordu.
+3.6 çekirdeğinde adayların %93–99,7'si etkileniyordu (Erk %95,0 · kanarya %99,7 · Kumru %92,7 · Gemma %95,3).
+Yerel arka uç artık iki jeton dizisinin ortak önekinden başlar, uzak arka uç sınırı aşan jetonu sayar;
+iki arka uç aynı kuralı uygular. Bütün tablo sayıları bu kodla yeniden ölçüldü.
+(2) **`esli` kuralı** yalnız `harf` puanı üzerinde ikili turnuvaydı; tek sayıl puanda turnuva, en büyüğü
+seçmekle aynıdır — `harf` ile birebir çıkması sağlamlık kanıtı değildi. Şimdi beş tekil kuralın uzlaşısı
+(Copeland: her çift beş kuralda oylanır). (3) **`yon_tutarli`** yalnız anlamlı satırların işaretine
+bakıyordu; artık tüm kuralların işaretine bakar, anlamlı olanlar `anlamli_yon_tutarli`. (4) `govde_gorev`
+anahtarı "hiyerarşik" diye anılıyordu; çapraz anahtarlı tek aşamalı küme bootstrap'ıdır, öyle yazıldı.
+Paket kodundaki eski sayılar (465.241, 1.856) kaldırıldı; `veri.TAM_N/CEKIRDEK_N` sabitleri `tutarlilik.py`
+ile veriye bağlandı. Durum: Beta → Production/Stable. `CITATION.cff` eklendi, atıf `@software`.
+**Scoring code changed; data identical to 3.6.0.** An external review raised four points; all were correct
+and are fixed. (1) **Token boundary.** The prompt ends with a space; tokenising the prompt alone and
+prompt+candidate separately changes the boundary token (`Ġ`+`kal` → `Ġkal`) and the candidate's FIRST token
+was left out of the score. On the 3.6 core this affected 93–99.7% of candidates. The local backend now
+starts at the end of the common token prefix, the remote backend counts the token that crosses the boundary;
+both apply the same rule. All table numbers were re-measured with this code. (2) **`esli`** was a pairwise
+tournament over the `harf` scalar alone, which is identical to taking its maximum, so its agreement with
+`harf` was no evidence of robustness. It is now a consensus over the five individual rules (Copeland).
+(3) **`yon_tutarli`** looked only at significant rows; it now checks the sign of every rule, with
+`anlamli_yon_tutarli` for the significant ones. (4) `govde_gorev` is a crossed-key single-stage cluster
+bootstrap, not a hierarchical one; documented as such. Stale counts removed from package code;
+`veri.TAM_N/CEKIRDEK_N` are checked against the data. Status Beta → Production/Stable; `CITATION.cff` added.
+
+
 ## 3.6.3 — 2026-09-25
 
 Yalnızca belge, veri ve kod 3.6.0 ile aynı. (1) TDK-doğrulamalı üç kovanın toplamı
