@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+dist/
+build/
+*.egg-info/
+turkmorfbench_v3_tam.json
+turkmorfbench_v3_tam.jsonl
